@@ -7,7 +7,8 @@ public class DPI {
     public static void exec() {
         double inch = 2.54;
         double [][] variables = {
-             {3.0, 5.0,  1, 300.0}
+             {3.0, 5.0,  1, 120.0}
+            ,{3.0, 5.0,  1, 300.0}
             ,{3.0, 5.0,  2, 300.0}
             ,{3.0, 5.0,  2, 600.0}
             ,{6.0, 10.0,  1, 300.0}
@@ -39,6 +40,11 @@ public class DPI {
             double P2 = T2 * dpi;
             double answer = P1 * P2 * bytes;
             System.out.println(answer);
+            // OU
+            double cmPerDot = inch / dpi;
+            double dotsInWidth = (width / cmPerDot);
+            double dotsInHeight= (heigth / cmPerDot) ;
+            System.out.printf("Resultado %f\n", dotsInWidth  * dotsInHeight * bytes);
         }
     }
 
