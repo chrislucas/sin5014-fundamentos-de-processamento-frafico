@@ -1,0 +1,34 @@
+http://howtodoinjava.com/java-8/how-to-use-predicate-in-java-8/
+https://www.infoq.com/br/articles/java8-desmistificando-lambdas
+https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html
+
+https://docs.oracle.com/javase/tutorial/collections/interfaces/collection.html
+https://docs.oracle.com/javase/tutorial/java/generics/why.html
+
+
+Stream Java 8
+http://www.oracle.com/technetwork/pt/articles/java/streams-api-java-8-3410098-ptb.html
+
+Predicate Java 8
+http://www.java2s.com/Tutorials/Java/java.util.function/Predicate/index.htm
+http://howtodoinjava.com/java-8/how-to-use-predicate-in-java-8/
+
+
+Interesting question
+http://stackoverflow.com/questions/41841310/explain-how-this-lambda-can-be-assigned-to-an-iterable
+
+IntFunction java 8
+
+
+Functional interfaces
+https://www.oreilly.com/learning/java-8-functional-interfaces
+
+
+java.lang.IllegalStateException: stream has already been operated upon or closed
+https://blog.jooq.org/2014/06/13/java-8-friday-10-subtle-mistakes-when-using-the-streams-api/
+
+
+Lambda expression
+https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html
+
+https://www.sitepoint.com/java-8-streams-filter-map-reduce/
