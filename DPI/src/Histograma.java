@@ -18,7 +18,7 @@ public class Histograma {
         private static final int C_MIN_H = (int) (MIN_W * 0.6f);;
         private static final int C_MIN_W = (int) (MIN_H * 0.6f);
 
-        private static final int PADDING = 100;
+        private static final int PADDING = 50;
 
         private int width, height;
 
@@ -34,7 +34,7 @@ public class Histograma {
         }
 
         public CanvasHistogram(Map<Integer, Integer> histogram) {
-            
+
         }
 
         @Override
@@ -54,13 +54,22 @@ public class Histograma {
             RenderingHints rh = new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
             g2.setRenderingHints(rh);
 
+            // desenhar o eixo x
             int x1 = PADDING;
             int y1 = 10 + PADDING;
-            int x2 = width  - PADDING;
+            int x2 = PADDING;
             int y2 = height - PADDING;
             Line2D axisX = new Line2D.Double(x1, y1, x2, y2);
+            // desenhar o eixo y
+            x1 = PADDING;
+            y1 = height - PADDING;
+            x2 = width - PADDING;
+            y2 = height - PADDING;
+            Line2D axisY = new Line2D.Double(x1, y1, x2, y2);
             g2.draw(axisX);
+            g2.draw(axisY);
         }
+
     }
 
     public static void draw() {
