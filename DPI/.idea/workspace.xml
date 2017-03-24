@@ -12,6 +12,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/DPI$App.coverage" NAME="App Coverage Results" MODIFIED="1490386159986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -24,20 +27,20 @@
       <file leaf-file-name="HistogramaImageGrayScale.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/HistogramaImageGrayScale.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="118" column="43" lean-forward="false" selection-start-line="118" selection-start-column="43" selection-end-line="118" selection-end-column="43" />
+            <state relative-caret-position="308">
+              <caret line="123" column="72" lean-forward="false" selection-start-line="123" selection-start-column="72" selection-end-line="123" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#993#994#0" expanded="true" />
                 <element signature="e#1043#1044#0" expanded="true" />
                 <element signature="e#1105#1106#0" expanded="true" />
                 <element signature="e#1167#1168#0" expanded="true" />
-                <element signature="e#4497#4498#0" expanded="true" />
-                <element signature="e#4537#4538#0" expanded="true" />
-                <marker date="1490384027055" expanded="false" signature="684:699" ph=" { " />
-                <marker date="1490384027055" expanded="false" signature="731:741" ph=" }" />
-                <marker date="1490384027055" expanded="false" signature="795:810" ph=" { " />
-                <marker date="1490384027055" expanded="false" signature="824:834" ph=" }" />
+                <element signature="e#4768#4769#0" expanded="true" />
+                <element signature="e#4808#4809#0" expanded="true" />
+                <marker date="1490386137908" expanded="false" signature="684:699" ph=" { " />
+                <marker date="1490386137908" expanded="false" signature="731:741" ph=" }" />
+                <marker date="1490386137908" expanded="false" signature="795:810" ph=" { " />
+                <marker date="1490386137908" expanded="false" signature="824:834" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -465,6 +468,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3890909" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936803" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32848486" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -530,8 +534,14 @@
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/HistogramaImageGrayScale.java</url>
+          <line>109</line>
+          <properties />
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="16" />
+      <option name="time" value="17" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -571,12 +581,12 @@
             <element signature="e#1043#1044#0" expanded="true" />
             <element signature="e#1105#1106#0" expanded="true" />
             <element signature="e#1167#1168#0" expanded="true" />
-            <element signature="e#4497#4498#0" expanded="true" />
-            <element signature="e#4537#4538#0" expanded="true" />
-            <marker date="1490384027055" expanded="false" signature="684:699" ph=" { " />
-            <marker date="1490384027055" expanded="false" signature="731:741" ph=" }" />
-            <marker date="1490384027055" expanded="false" signature="795:810" ph=" { " />
-            <marker date="1490384027055" expanded="false" signature="824:834" ph=" }" />
+            <element signature="e#4768#4769#0" expanded="true" />
+            <element signature="e#4808#4809#0" expanded="true" />
+            <marker date="1490386137908" expanded="false" signature="684:699" ph=" { " />
+            <marker date="1490386137908" expanded="false" signature="731:741" ph=" }" />
+            <marker date="1490386137908" expanded="false" signature="795:810" ph=" { " />
+            <marker date="1490386137908" expanded="false" signature="824:834" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -641,20 +651,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/HistogramaImageGrayScale.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="118" column="43" lean-forward="false" selection-start-line="118" selection-start-column="43" selection-end-line="118" selection-end-column="43" />
+        <state relative-caret-position="308">
+          <caret line="123" column="72" lean-forward="false" selection-start-line="123" selection-start-column="72" selection-end-line="123" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#993#994#0" expanded="true" />
             <element signature="e#1043#1044#0" expanded="true" />
             <element signature="e#1105#1106#0" expanded="true" />
             <element signature="e#1167#1168#0" expanded="true" />
-            <element signature="e#4497#4498#0" expanded="true" />
-            <element signature="e#4537#4538#0" expanded="true" />
-            <marker date="1490384027055" expanded="false" signature="684:699" ph=" { " />
-            <marker date="1490384027055" expanded="false" signature="731:741" ph=" }" />
-            <marker date="1490384027055" expanded="false" signature="795:810" ph=" { " />
-            <marker date="1490384027055" expanded="false" signature="824:834" ph=" }" />
+            <element signature="e#4768#4769#0" expanded="true" />
+            <element signature="e#4808#4809#0" expanded="true" />
+            <marker date="1490386137908" expanded="false" signature="684:699" ph=" { " />
+            <marker date="1490386137908" expanded="false" signature="731:741" ph=" }" />
+            <marker date="1490386137908" expanded="false" signature="795:810" ph=" { " />
+            <marker date="1490386137908" expanded="false" signature="824:834" ph=" }" />
           </folding>
         </state>
       </provider>

@@ -99,7 +99,7 @@ public class HistogramaImageGrayScale {
             g2.draw(axisY);
             // aonde eu comeco a desenhar
             int startX          = PADDING + 10      // da um espacamento da bordar mais 10px depois da linha do euxo Y
-                ,startY         = height - PADDING  // partindo da linha do eixo X
+                ,startY         = (height - PADDING) - 6  // partindo da linha do eixo X
                 ,totalColors    = histogram.size()
                 ,widthRectangle = distanceAxisX / totalColors;
 
@@ -114,10 +114,16 @@ public class HistogramaImageGrayScale {
                  * Por padrao o java desenha na janela usando coordenada de dispositivos
                  * ou seja, de cima para baixo e da direita para esquerda.
                  * Assim o plano cartesiano é invertido
+                 *
+                 * largura do retangulo
+                 * widthRectangle - startX
+                 *
+                 * Altura do retangulo
                  * */
 
-                heightRectangle = height - heightRectangle;
-                g2.drawRect(startX, startY, widthRectangle, heightRectangle);
+                g2.fillRect(startX, 15 , widthRectangle, heightRectangle);
+                //g2.drawRect(startX, startY, widthRectangle, startY - heightRectangle);
+                // o proximo retangulo começa o valor de X do ultimo retangulo
                 startX += widthRectangle;
                 //Rectangle2D rect2D = new Rectangle2D.Double(startX, startY, widthRectangle, heightRectangle);
             }
