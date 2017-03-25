@@ -21,8 +21,9 @@ public class App {
         Map<Integer, Integer> histogram = new HashMap<>();
         acc = totalPixels;
         int repeat = 0;
+        int maxColor = 255;
         while(acc > 0 && repeat < 2) {
-            int colorPixel = r.nextInt(255) + 1;
+            int colorPixel = r.nextInt(maxColor);
             int quantityPixelsOnImage = r.nextInt(acc) + 1;
             acc -= quantityPixelsOnImage;
             histogram.put(colorPixel, quantityPixelsOnImage);

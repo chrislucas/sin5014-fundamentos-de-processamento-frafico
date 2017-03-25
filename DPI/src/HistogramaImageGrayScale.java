@@ -33,7 +33,6 @@ public class HistogramaImageGrayScale {
 
         private Map<Integer, Integer> histogram;
 
-
         public CanvasHistogram(Map<Integer, Integer> histogram) {
             this.histogram = histogram;
         }
@@ -42,8 +41,6 @@ public class HistogramaImageGrayScale {
         public Dimension preferredSize() {
             return new Dimension(C_MIN_W, C_MIN_H);
         }
-
-
 
         @Override
         protected void paintComponent(Graphics g) {
@@ -59,7 +56,7 @@ public class HistogramaImageGrayScale {
 
             // desenhar o eixo x
             int axisYx1 = PADDING;
-            int axisYy1 = 10 + PADDING;
+            int axisYy1 = PADDING;
             int axisYx2 = PADDING;
             int axisYy2 = height - PADDING;
             Line2D axisY = new Line2D.Double(axisYx1, axisYy1, axisYx2, axisYy2);
@@ -92,23 +89,35 @@ public class HistogramaImageGrayScale {
             int midAxisY = distanceAxisY / 2;
             */
             g2.drawString(String.format("%d", distanceAxisY), midXaxiX, midYaxiX + 15);
-
-
-
             g2.draw(axisX);
             g2.draw(axisY);
             // aonde eu comeco a desenhar
-            int startX          = PADDING + 10      // da um espacamento da bordar mais 10px depois da linha do euxo Y
-                ,startY         = (height - PADDING) - 6  // partindo da linha do eixo X
+            int startX          = PADDING + 10              // da um espacamento da bordar mais 10px depois da linha do euxo Y
                 ,totalColors    = histogram.size()
                 ,widthRectangle = distanceAxisX / totalColors;
 
+
+            long acc = histogram.keySet().stream().count();
+            int sumOfPixels = 0;
+            // O pixel que tiver a maior quantidade sera a referencia para desenhar as barras
+            int maxQuantityPixel = 0;
+            for(Map.Entry<Integer, Integer> data : histogram.entrySet()) {
+                if(maxQuantityPixel < data.getValue())
+                    maxQuantityPixel = data.getValue();
+                sumOfPixels += data.getValue();
+            }
+
             for(Map.Entry<Integer, Integer> data : histogram.entrySet()) {
                 int colorGrayScale = data.getKey();
-                int value = data.getValue();
-                int heightRectangle = (value * 100) / distanceAxisY;
-                g2.setColor(new Color(colorGrayScale, colorGrayScale, colorGrayScale));
+                int quantityPixels = data.getValue();
+                // quantidade de pixels proporcional a maior quantidade de Pixels encontradas de uma determinada
+                // color
+                int heightRectangle = (quantityPixels * 100) / maxQuantityPixel;
+                // tamanho do retangulo proporcional ao eixo Y
+                heightRectangle = heightRectangle * 50 / 100;
 
+                if(heightRectangle < 1)
+                    continue;
                 /**
                  *
                  * Por padrao o java desenha na janela usando coordenada de dispositivos
@@ -120,9 +129,14 @@ public class HistogramaImageGrayScale {
                  *
                  * Altura do retangulo
                  * */
-
-                g2.fillRect(startX, 15 , widthRectangle, heightRectangle);
-                //g2.drawRect(startX, startY, widthRectangle, startY - heightRectangle);
+                int startY = PADDING + (distanceAxisY - 100);
+                // definindo a cor do retangulo do histograma
+                Color c = new Color(colorGrayScale, colorGrayScale, colorGrayScale);
+                g2.setColor(c);
+                // preenchendo o retantgulo
+                g2.fillRect(startX, 100, widthRectangle, heightRectangle);
+                g2.setColor(Color.BLUE);
+                g2.drawRect(startX, 100, widthRectangle, heightRectangle);
                 // o proximo retangulo começa o valor de X do ultimo retangulo
                 startX += widthRectangle;
                 //Rectangle2D rect2D = new Rectangle2D.Double(startX, startY, widthRectangle, heightRectangle);
@@ -159,7 +173,6 @@ public class HistogramaImageGrayScale {
                 Dimension dimension = new Dimension();
                 dimension.setSize(MIN_W, MIN_H);
                 editor.setSize(dimension);
-
                 editor.setVisible(true);
             }
         });
