@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.geom.Line2D;
 import java.awt.geom.Rectangle2D;
 import java.util.Map;
@@ -35,11 +37,23 @@ public class HistogramaImageGrayScale {
 
         public CanvasHistogram(Map<Integer, Integer> histogram) {
             this.histogram = histogram;
+            super.setPreferredSize(new Dimension(C_MIN_W, C_MIN_H));
+        }
+
+        /**
+         * Substituindo metodo obsoleto
+         * http://www.math.uni-hamburg.de/doc/java/tutorial/post1.0/converting/deprecatedAWT.html
+         * */
+        @Override
+        public Dimension getPreferredSize() {
+            Dimension dimension = super.getPreferredSize();
+            return dimension; //new Dimension(C_MIN_W, C_MIN_H);
         }
 
         @Override
-        public Dimension preferredSize() {
-            return new Dimension(C_MIN_W, C_MIN_H);
+        public void paint(Graphics g) {
+            super.paint(g);
+            Graphics2D g2 = (Graphics2D) g;
         }
 
         @Override
@@ -110,7 +124,7 @@ public class HistogramaImageGrayScale {
             for(Map.Entry<Integer, Integer> data : histogram.entrySet()) {
                 int colorGrayScale = data.getKey();
                 int quantityPixels = data.getValue();
-                // quantidade de pixels proporcional a maior quantidade de Pixels encontradas de uma determinada
+                // quantidade de pixels proporcional a maior quantidade de Pixel encontradas de uma determinada
                 // color
                 int heightRectangle = (quantityPixels * 100) / maxQuantityPixel;
                 // tamanho do retangulo proporcional ao eixo Y
@@ -134,7 +148,7 @@ public class HistogramaImageGrayScale {
                  *
                  * Altura do Retangulo: 2 formular
                  *
-                 * Primeiro calculo a quantidade de Pixels de uma determinado Tom proporcional a quantidade
+                 * Primeiro calculo a quantidade de Pixel de uma determinado Tom proporcional a quantidade
                  * de pixels que tem na imagem, (o resultado sera em porcentagem)
                  *
                  * Para que a altura nao ultrapasse o eixo Y, uso o resultado da formula 1 para calcular
@@ -142,6 +156,13 @@ public class HistogramaImageGrayScale {
                  *
                  * Formula 1: H = (quantityPixels * 100) / maxQuantityPixel
                  * Formula 2: H = H * 100 / axisY
+                 *
+                 * Como desenhar o histograma
+                 *
+                 * Como dito, o computador desenha da esquerda para direita e de cima para baixo
+                 * assim temos uma coordenada invertida (quando comparamos com o plano cartesiano que aprendemos na escola)
+                 *
+                 * Para desenhar as barras utilizei os medotos fillRect e DrawRect
                  *
                  *
                  * */
@@ -167,22 +188,26 @@ public class HistogramaImageGrayScale {
 
 
 
-    public static void draw(Map<Integer, Integer> histogram) {
+
+    private JFrame editor;
+
+
+
+    public void draw(Map<Integer, Integer> histogram) {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                JFrame editor = new JFrame("HISTOGRAMA");
+                editor = new JFrame("HISTOGRAMA");
                 editor.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
                 HistogramaImageGrayScale.CanvasHistogram canvas = new HistogramaImageGrayScale().new CanvasHistogram(histogram);
-                Dimension d = new Dimension();
+                //Dimension d = new Dimension();
                 canvas.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY));
                 canvas.setBackground(Color.WHITE);
 
                 Container container = editor.getContentPane();
                 //container.setLayout(new GridBagLayout());
                 container.add(canvas);
-
 
                 editor.pack();
                 editor.setLocationRelativeTo(null);
