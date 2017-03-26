@@ -54,7 +54,7 @@ public class HistogramaImageGrayScale {
             RenderingHints rh = new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
             g2.setRenderingHints(rh);
 
-            // desenhar o eixo x
+            // desenhar o eixo Y
             int axisYx1 = PADDING;
             int axisYy1 = PADDING;
             int axisYx2 = PADDING;
@@ -70,7 +70,7 @@ public class HistogramaImageGrayScale {
 
             g2.drawString(String.format("%d", distanceAxisX), midXaxiY - 25, midYaxiY);
 
-            // desenhar o eixo y
+            // desenhar o eixo X
             int axisXx1 = PADDING;
             int axisXy1 = height - PADDING;
             int axisXx2 = width - PADDING;
@@ -93,8 +93,8 @@ public class HistogramaImageGrayScale {
             g2.draw(axisY);
             // aonde eu comeco a desenhar
             int startX          = PADDING + 10              // da um espacamento da bordar mais 10px depois da linha do euxo Y
-                ,totalColors    = histogram.size()
-                ,widthRectangle = distanceAxisX / totalColors;
+                ,totalDistinctColors    = histogram.size()
+                ,widthRectangle = distanceAxisX / totalDistinctColors;
 
 
             long acc = histogram.keySet().stream().count();
@@ -114,7 +114,7 @@ public class HistogramaImageGrayScale {
                 // color
                 int heightRectangle = (quantityPixels * 100) / maxQuantityPixel;
                 // tamanho do retangulo proporcional ao eixo Y
-                heightRectangle = heightRectangle * 50 / 100;
+                heightRectangle = heightRectangle * 100 / distanceAxisY;
 
                 if(heightRectangle < 1)
                     continue;
@@ -124,19 +124,35 @@ public class HistogramaImageGrayScale {
                  * ou seja, de cima para baixo e da direita para esquerda.
                  * Assim o plano cartesiano é invertido
                  *
-                 * largura do retangulo
-                 * widthRectangle - startX
+                 * largura do retangulo:
+                 * distancia do eixo X divido pelo numero de cores distintas encontrado na imagem
+                 * widthRectangle = distanceAxisX / totalDistinctColors;
                  *
-                 * Altura do retangulo
+                 * Distancia entre os retangulos:
+                 *
+                 * ponto onde comeca o eixo X + a largura do retangulo
+                 *
+                 * Altura do Retangulo: 2 formular
+                 *
+                 * Primeiro calculo a quantidade de Pixels de uma determinado Tom proporcional a quantidade
+                 * de pixels que tem na imagem, (o resultado sera em porcentagem)
+                 *
+                 * Para que a altura nao ultrapasse o eixo Y, uso o resultado da formula 1 para calcular
+                 * o valor proporcional da altura do retangulo em relacao ao eixo Y
+                 *
+                 * Formula 1: H = (quantityPixels * 100) / maxQuantityPixel
+                 * Formula 2: H = H * 100 / axisY
+                 *
+                 *
                  * */
-                int startY = PADDING + (distanceAxisY - 100);
+                int startY = height - PADDING;
                 // definindo a cor do retangulo do histograma
                 Color c = new Color(colorGrayScale, colorGrayScale, colorGrayScale);
                 g2.setColor(c);
                 // preenchendo o retantgulo
-                g2.fillRect(startX, 100, widthRectangle, heightRectangle);
+                g2.fillRect(startX, startY - heightRectangle, widthRectangle, heightRectangle);
                 g2.setColor(Color.BLUE);
-                g2.drawRect(startX, 100, widthRectangle, heightRectangle);
+                g2.drawRect(startX, startY - heightRectangle, widthRectangle, heightRectangle);
                 // o proximo retangulo começa o valor de X do ultimo retangulo
                 startX += widthRectangle;
                 //Rectangle2D rect2D = new Rectangle2D.Double(startX, startY, widthRectangle, heightRectangle);
