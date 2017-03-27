@@ -19,7 +19,7 @@ public class App {
 
     private JFrame mainFrame;
     private JMenuBar menuBar;
-    private JMenu menuFile, menuAlgorithms;
+    private JMenu menuFile, menuAlgorithms, menuFilters;
     private App ref;
 
     private Map<Integer, Integer> mapGrayScale;
@@ -27,14 +27,16 @@ public class App {
      * fonte : https://en.wikipedia.org/wiki/Grayscale#Converting_color_to_grayscale
      * http://stackoverflow.com/questions/17615963/standard-rgb-to-grayscale-conversion
      * */
-    private void rgbToGrayScale(int [] pixelsImage, int h, int w) {
+    private int[][] rgbToGrayScale(int [] pixelsImage, int h, int w) {
         mapGrayScale = new HashMap<>();
+        int matrix [][] = new int[h][w];
         for(int i=0; i<h; i++){ // linha
             for(int j=0; j<w; j++) {    // coluna
                 // i*w+j = num de linhas x qtd colunas + a qtd de linhas ja processadas da matriz
                 Color color = new Color(pixelsImage[i*h+j]);
                 int r = color.getRed(), g = color.getGreen(), b = color.getBlue();
                 int linearization = (int) (r * 0.2126F + g * 0.7152F + b * 0.0722F);
+                matrix[i][j] = linearization;
                 boolean containColor = mapGrayScale.containsKey(linearization);
                 if(containColor) {
                     mapGrayScale.put(linearization, mapGrayScale.get(linearization).intValue() + 1);
@@ -44,6 +46,18 @@ public class App {
                 }
             }
         }
+        return matrix;
+    }
+
+    private void createImageByMatrix(int [][] matrixPixels) {
+        //BufferedImage buffer = new BufferedImage();
+        int h = matrixPixels.length, w = matrixPixels[0].length;
+        int [] pixels = new int[h * w];
+        for(int i=0; i<h; i++)
+            for (int j=0; j<w; j++)
+                pixels[i*h+j] = matrixPixels[i][j];
+        WritableRaster raster = bufferedImage.getRaster();
+        raster.setPixels(0, 0, w, h, pixels);
     }
 
     private JMenu addMenuAlgorithms() {
@@ -52,22 +66,43 @@ public class App {
         itemHistogramGrayScale.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //drawMockHistogram();
-                /*
-                WritableRaster raster = bufferedImage.getRaster();
-                int w = raster.getWidth();
-                int h = raster.getHeight();
-                */
-                int w = bufferedImage.getWidth();
-                int h = bufferedImage.getHeight();
-                int pixelsImage [] = bufferedImage.getRGB(0, 0, w, h, null, 0, w);
-                rgbToGrayScale(pixelsImage, h, w);
-                HistogramaImageGrayScale hgs = new HistogramaImageGrayScale();
-                hgs.draw(mapGrayScale);
-                System.out.printf("%d %d", w, h);
+                if(bufferedImage != null) {
+                    //drawMockHistogram();
+                    int w = bufferedImage.getWidth();
+                    int h = bufferedImage.getHeight();
+                    int pixelsImage [] = bufferedImage.getRGB(0, 0, w, h, null, 0, w);
+                    int matrix[][] = rgbToGrayScale(pixelsImage, h, w);
+                    createImageByMatrix(matrix);
+                    HistogramImageGrayScale hgs = new HistogramImageGrayScale();
+                    hgs.draw(mapGrayScale);
+                    System.out.printf("%d %d", w, h);
+                }
+                else {
+
+                }
             }
         });
+
+        menuFilters = new JMenu("Filtros");
+        JMenuItem itemMenuMean          = new JMenuItem("Média");
+        itemMenuMean.addActionListener(Filters.filterMean);
+        JMenuItem itemMenuMedian        = new JMenuItem("Mediana");
+        itemMenuMedian.addActionListener(Filters.filterMedian);
+
+        JMenuItem itemMenuEqualization  = new JMenuItem("Equalização");
+        JMenuItem itemMenuPassaAlata    = new JMenuItem("Passa Alta");
+
+        menuFilters.add(itemMenuMean);
+        menuFilters.add(itemMenuMedian);
+        menuFilters.add(itemMenuEqualization);
+        menuFilters.add(itemMenuPassaAlata);
+
+        JMenu menuBorderAlgorithms = new JMenu("Operadores de Borda");
+        menuFilters.add(menuBorderAlgorithms);
+
         menuAlgorithms.add(itemHistogramGrayScale);
+        menuAlgorithms.add(menuFilters);
+
         return menuAlgorithms;
     }
 
@@ -90,8 +125,6 @@ public class App {
                         ImageIcon imageIcon     = new ImageIcon(bufferedImage);
                         JLabel imageContainer   = new JLabel();
                         imageContainer.setIcon(imageIcon);
-
-
 
                         //imageCanvas.add(imageContainer);
                         //imageCanvas.repaint();
@@ -183,7 +216,7 @@ public class App {
 
     private static void drawMockHistogram() {
         Map<Integer, Integer> histogram = mockHistogramGrayScale();
-        HistogramaImageGrayScale hgs = new HistogramaImageGrayScale();
+        HistogramImageGrayScale hgs = new HistogramImageGrayScale();
         hgs.draw(histogram);
     }
 

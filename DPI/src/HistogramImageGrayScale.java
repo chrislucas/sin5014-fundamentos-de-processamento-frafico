@@ -1,19 +1,15 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.geom.Line2D;
-import java.awt.geom.Rectangle2D;
 import java.util.Map;
 
 /**
  * Created by C.Lucas on 24/03/2017.
  */
-public class HistogramaImageGrayScale {
+public class HistogramImageGrayScale {
 
-
-    private static final int MIN_H = 400;
-    private static final int MIN_W = 600;
+    private static final int MIN_H = 800;
+    private static final int MIN_W = 1300;
 
     public class CanvasHistogram extends JPanel {
         private static final int C_MIN_H = (int) (MIN_W * 0.6f);;
@@ -63,6 +59,7 @@ public class HistogramaImageGrayScale {
             this.height = getHeight();
 
             Graphics2D g2 = (Graphics2D) g;
+            g2.drawString(String.format("%d %d", width, height), 10, 30);
 
             // https://docs.oracle.com/javase/tutorial/2d/advanced/quality.html
             RenderingHints rh = new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
@@ -162,7 +159,13 @@ public class HistogramaImageGrayScale {
                  * Como dito, o computador desenha da esquerda para direita e de cima para baixo
                  * assim temos uma coordenada invertida (quando comparamos com o plano cartesiano que aprendemos na escola)
                  *
-                 * Para desenhar as barras utilizei os medotos fillRect e DrawRect
+                 * Para desenhar as barras utilizei os medotos fillRect e DrawRect, esses metodos recebem como
+                 * arugmento o ponto X e Y de inicio a largura que se pretende ter do retangulo e a altura.
+                 *
+                 * No final o que o Java faz e usar esses argumentos para delimitar 4 pontos
+                 * (startX, startY)
+                 *
+                 *
                  *
                  *
                  * */
@@ -170,7 +173,9 @@ public class HistogramaImageGrayScale {
                 // definindo a cor do retangulo do histograma
                 Color c = new Color(colorGrayScale, colorGrayScale, colorGrayScale);
                 g2.setColor(c);
-                // preenchendo o retantgulo
+                /**
+                 * Preenchendo o Retangulo
+                 * */
                 g2.fillRect(startX, startY - heightRectangle, widthRectangle, heightRectangle);
                 g2.setColor(Color.BLUE);
                 g2.drawRect(startX, startY - heightRectangle, widthRectangle, heightRectangle);
@@ -200,7 +205,7 @@ public class HistogramaImageGrayScale {
                 editor = new JFrame("HISTOGRAMA");
                 editor.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-                HistogramaImageGrayScale.CanvasHistogram canvas = new HistogramaImageGrayScale().new CanvasHistogram(histogram);
+                HistogramImageGrayScale.CanvasHistogram canvas = new HistogramImageGrayScale().new CanvasHistogram(histogram);
                 //Dimension d = new Dimension();
                 canvas.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY));
                 canvas.setBackground(Color.WHITE);
@@ -219,4 +224,3 @@ public class HistogramaImageGrayScale {
         });
     }
 }
-
