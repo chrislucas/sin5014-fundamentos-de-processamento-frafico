@@ -22,10 +22,34 @@ public class App {
     private JMenu menuFile, menuAlgorithms;
     private App ref;
 
+    private Map<Integer, Integer> mapGrayScale;
+    /**
+     * fonte : https://en.wikipedia.org/wiki/Grayscale#Converting_color_to_grayscale
+     * http://stackoverflow.com/questions/17615963/standard-rgb-to-grayscale-conversion
+     * */
+    private void rgbToGrayScale(int [] pixelsImage, int h, int w) {
+        mapGrayScale = new HashMap<>();
+        for(int i=0; i<h; i++){ // linha
+            for(int j=0; j<w; j++) {    // coluna
+                // i*w+j = num de linhas x qtd colunas + a qtd de linhas ja processadas da matriz
+                Color color = new Color(pixelsImage[i*h+j]);
+                int r = color.getRed(), g = color.getGreen(), b = color.getBlue();
+                int linearization = (int) (r * 0.2126F + g * 0.7152F + b * 0.0722F);
+                boolean containColor = mapGrayScale.containsKey(linearization);
+                if(containColor) {
+                    mapGrayScale.put(linearization, mapGrayScale.get(linearization).intValue() + 1);
+                }
+                else {
+                    mapGrayScale.put(linearization, 1);
+                }
+            }
+        }
+    }
+
     private JMenu addMenuAlgorithms() {
         menuAlgorithms = new JMenu("Algoritmos");
-        JMenuItem histogramGrayScale = new JMenuItem("Histograma");
-        histogramGrayScale.addActionListener(new ActionListener() {
+        JMenuItem itemHistogramGrayScale = new JMenuItem("Histograma");
+        itemHistogramGrayScale.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //drawMockHistogram();
@@ -36,14 +60,14 @@ public class App {
                 */
                 int w = bufferedImage.getWidth();
                 int h = bufferedImage.getHeight();
-                int pixels [] = bufferedImage.getRGB(0, 0, w, h, null, 0, w);
-
-                
+                int pixelsImage [] = bufferedImage.getRGB(0, 0, w, h, null, 0, w);
+                rgbToGrayScale(pixelsImage, h, w);
+                HistogramaImageGrayScale hgs = new HistogramaImageGrayScale();
+                hgs.draw(mapGrayScale);
                 System.out.printf("%d %d", w, h);
-
             }
         });
-        menuAlgorithms.add(histogramGrayScale);
+        menuAlgorithms.add(itemHistogramGrayScale);
         return menuAlgorithms;
     }
 
@@ -66,8 +90,11 @@ public class App {
                         ImageIcon imageIcon     = new ImageIcon(bufferedImage);
                         JLabel imageContainer   = new JLabel();
                         imageContainer.setIcon(imageIcon);
-                        imageCanvas.add(imageContainer);
-                        imageCanvas.repaint();
+
+
+
+                        //imageCanvas.add(imageContainer);
+                        //imageCanvas.repaint();
                     } catch (Exception ex) {
                         System.out.println(ex.getMessage());
                     }
