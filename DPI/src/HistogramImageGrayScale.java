@@ -103,8 +103,8 @@ public class HistogramImageGrayScale {
             g2.draw(axisX);
             g2.draw(axisY);
             // aonde eu comeco a desenhar
-            int startX          = PADDING + 10              // da um espacamento da bordar mais 10px depois da linha do euxo Y
-                ,totalDistinctColors    = histogram.size()
+            int startX  = PADDING + 10              // da um espacamento da bordar mais 10px depois da linha do euxo Y
+                ,totalDistinctColors = histogram.size()
                 ,widthRectangle = distanceAxisX / totalDistinctColors;
 
 
