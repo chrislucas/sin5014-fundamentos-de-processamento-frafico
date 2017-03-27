@@ -8,8 +8,8 @@ import java.util.Map;
  */
 public class HistogramImageGrayScale {
 
-    private static final int MIN_H = 800;
-    private static final int MIN_W = 1300;
+    private static final int MIN_H = 480;//800;
+    private static final int MIN_W = 480; //1300;
 
     public class CanvasHistogram extends JPanel {
         private static final int C_MIN_H = (int) (MIN_W * 0.6f);;

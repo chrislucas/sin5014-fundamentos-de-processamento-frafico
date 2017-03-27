@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fe6a551-5d59-4f47-9d32-0d11a6878207" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.java" afterPath="$PROJECT_DIR$/src/App.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Filters.java" afterPath="$PROJECT_DIR$/src/Filters.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/Filters$2.class" afterPath="$PROJECT_DIR$/out/production/DPI/Filters$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/HistogramImageGrayScale$1.class" afterPath="$PROJECT_DIR$/out/production/DPI/HistogramImageGrayScale$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/HistogramImageGrayScale$CanvasHistogram.class" afterPath="$PROJECT_DIR$/out/production/DPI/HistogramImageGrayScale$CanvasHistogram.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/HistogramImageGrayScale.class" afterPath="$PROJECT_DIR$/out/production/DPI/HistogramImageGrayScale.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HistogramImageGrayScale.java" afterPath="$PROJECT_DIR$/src/HistogramImageGrayScale.java" />
     </list>
     <ignored path="DPI.iws" />
@@ -29,15 +32,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HistogramImageGrayScale.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HistogramImageGrayScale.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/HistogramImageGrayScale.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1766">
-              <caret line="106" column="37" selection-start-line="106" selection-start-column="37" selection-end-line="106" selection-end-column="37" />
+            <state relative-caret-position="151">
+              <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#7928#7929#0" expanded="true" />
-                <element signature="e#7968#7969#0" expanded="true" />
+                <element signature="e#7941#7942#0" expanded="true" />
+                <element signature="e#7981#7982#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -66,11 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Filters.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Filters.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Filters.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="53" column="22" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
+            <state relative-caret-position="322">
+              <caret line="45" column="14" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -106,9 +109,9 @@
         <option value="$PROJECT_DIR$/src/Pixel.java" />
         <option value="$PROJECT_DIR$/src/links/estatistica" />
         <option value="$PROJECT_DIR$/src/HistogramaImageGrayScale.java" />
-        <option value="$PROJECT_DIR$/src/HistogramImageGrayScale.java" />
         <option value="$PROJECT_DIR$/src/App.java" />
         <option value="$PROJECT_DIR$/src/Filters.java" />
+        <option value="$PROJECT_DIR$/src/HistogramImageGrayScale.java" />
       </list>
     </option>
   </component>
@@ -488,7 +491,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -543,12 +546,6 @@
           <line>46</line>
           <properties />
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Filters.java</url>
-          <line>48</line>
-          <properties />
-          <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/App.java</url>
@@ -618,8 +615,8 @@
           <caret line="65" column="24" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7928#7929#0" expanded="true" />
-            <element signature="e#7968#7969#0" expanded="true" />
+            <element signature="e#7941#7942#0" expanded="true" />
+            <element signature="e#7981#7982#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -715,18 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HistogramImageGrayScale.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1766">
-          <caret line="106" column="37" selection-start-line="106" selection-start-column="37" selection-end-line="106" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#7928#7929#0" expanded="true" />
-            <element signature="e#7968#7969#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="94">
@@ -750,10 +735,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Filters.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="53" column="22" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
+        <state relative-caret-position="322">
+          <caret line="45" column="14" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HistogramImageGrayScale.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#7941#7942#0" expanded="true" />
+            <element signature="e#7981#7982#0" expanded="true" />
           </folding>
         </state>
       </provider>
