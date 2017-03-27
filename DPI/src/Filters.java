@@ -6,14 +6,20 @@ import java.awt.event.ActionListener;
  */
 public class Filters {
 
-    public static final ActionListener filterMean = new ActionListener() {
+    private int [] pixelsImage;
+
+    public Filters(int [] pixelsImage) {
+        this.pixelsImage = pixelsImage;
+    }
+
+    public final ActionListener filterMean = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
             System.out.println("Mean");
         }
     };
 
-    public static final ActionListener filterMedian = new ActionListener() {
+    public final ActionListener filterMedian = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
             System.out.println("Median");

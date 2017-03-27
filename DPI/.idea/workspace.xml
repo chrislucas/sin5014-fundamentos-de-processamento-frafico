@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fe6a551-5d59-4f47-9d32-0d11a6878207" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Filters.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DPI/HistogramaImageGrayScale$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DPI/HistogramaImageGrayScale$CanvasHistogram.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DPI/HistogramaImageGrayScale.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/App$1.class" afterPath="$PROJECT_DIR$/out/production/DPI/App$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/App$2.class" afterPath="$PROJECT_DIR$/out/production/DPI/App$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/App$3.class" afterPath="$PROJECT_DIR$/out/production/DPI/App$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/App$4.class" afterPath="$PROJECT_DIR$/out/production/DPI/App$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/App$ImageCanvas.class" afterPath="$PROJECT_DIR$/out/production/DPI/App$ImageCanvas.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/App.class" afterPath="$PROJECT_DIR$/out/production/DPI/App.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.java" afterPath="$PROJECT_DIR$/src/App.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/HistogramaImageGrayScale.java" afterPath="$PROJECT_DIR$/src/HistogramImageGrayScale.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Filters.java" afterPath="$PROJECT_DIR$/src/Filters.java" />
     </list>
     <ignored path="DPI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,16 +45,16 @@
       <file leaf-file-name="App.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="89" column="22" selection-start-line="89" selection-start-column="22" selection-end-line="89" selection-end-column="22" />
+            <state relative-caret-position="114">
+              <caret line="131" column="22" selection-start-line="131" selection-start-column="22" selection-end-line="131" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5978#5979#0" expanded="true" />
-                <element signature="e#6016#6017#0" expanded="true" />
-                <element signature="e#6575#6576#0" expanded="true" />
-                <element signature="e#6619#6620#0" expanded="true" />
-                <element signature="e#6687#6688#0" expanded="true" />
-                <element signature="e#6730#6731#0" expanded="true" />
+                <element signature="e#7598#7599#0" expanded="true" />
+                <element signature="e#7636#7637#0" expanded="true" />
+                <element signature="e#8195#8196#0" expanded="true" />
+                <element signature="e#8239#8240#0" expanded="true" />
+                <element signature="e#8307#8308#0" expanded="true" />
+                <element signature="e#8350#8351#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -74,14 +63,16 @@
       <file leaf-file-name="Filters.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Filters.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+            <state relative-caret-position="167">
+              <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#287#288#0" expanded="true" />
-                <element signature="e#337#338#0" expanded="true" />
-                <element signature="e#493#494#0" expanded="true" />
-                <element signature="e#545#546#0" expanded="true" />
+                <element signature="e#215#216#0" expanded="true" />
+                <element signature="e#261#262#0" expanded="true" />
+                <element signature="e#401#402#0" expanded="true" />
+                <element signature="e#451#452#0" expanded="true" />
+                <element signature="e#600#601#0" expanded="true" />
+                <element signature="e#652#653#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -620,24 +611,24 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/App.java</url>
-          <line>157</line>
-          <properties />
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/App.java</url>
-          <line>123</line>
+          <line>161</line>
           <properties />
           <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/App.java</url>
-          <line>39</line>
+          <line>88</line>
           <properties />
-          <option name="timeStamp" value="46" />
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/App.java</url>
+          <line>51</line>
+          <properties />
+          <option name="timeStamp" value="52" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="51" />
+      <option name="time" value="53" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -706,14 +697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0/src.zip!/java/awt/Color.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="92" column="30" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/links/Graphics2D">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -765,6 +748,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0/src.zip!/java/awt/Color.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1897">
+          <caret line="625" column="17" selection-start-line="625" selection-start-column="17" selection-end-line="625" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/HistogramImageGrayScale.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
@@ -779,30 +770,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Filters.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        <state relative-caret-position="167">
+          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#287#288#0" expanded="true" />
-            <element signature="e#337#338#0" expanded="true" />
-            <element signature="e#493#494#0" expanded="true" />
-            <element signature="e#545#546#0" expanded="true" />
+            <element signature="e#215#216#0" expanded="true" />
+            <element signature="e#261#262#0" expanded="true" />
+            <element signature="e#401#402#0" expanded="true" />
+            <element signature="e#451#452#0" expanded="true" />
+            <element signature="e#600#601#0" expanded="true" />
+            <element signature="e#652#653#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="89" column="22" selection-start-line="89" selection-start-column="22" selection-end-line="89" selection-end-column="22" />
+        <state relative-caret-position="114">
+          <caret line="131" column="22" selection-start-line="131" selection-start-column="22" selection-end-line="131" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5978#5979#0" expanded="true" />
-            <element signature="e#6016#6017#0" expanded="true" />
-            <element signature="e#6575#6576#0" expanded="true" />
-            <element signature="e#6619#6620#0" expanded="true" />
-            <element signature="e#6687#6688#0" expanded="true" />
-            <element signature="e#6730#6731#0" expanded="true" />
+            <element signature="e#7598#7599#0" expanded="true" />
+            <element signature="e#7636#7637#0" expanded="true" />
+            <element signature="e#8195#8196#0" expanded="true" />
+            <element signature="e#8239#8240#0" expanded="true" />
+            <element signature="e#8307#8308#0" expanded="true" />
+            <element signature="e#8350#8351#0" expanded="true" />
           </folding>
         </state>
       </provider>
