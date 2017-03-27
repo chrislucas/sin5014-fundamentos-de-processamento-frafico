@@ -22,7 +22,7 @@ public class Filters {
         this.heightImage    = h;
     }
 
-    private static final void createImage(BufferedImage buffer, String pathfile) {
+    private final void createImage(BufferedImage buffer, String pathfile) {
         File outputFile = new File(pathfile);
         if( ! outputFile.exists() ) {
             String path = outputFile.getParent();
@@ -96,5 +96,10 @@ public class Filters {
             createImage(buffer, "images/median.jpg");
         }
     };
+
+
+    public void operatorMask(int [][] matrix) {
+
+    }
 
 }

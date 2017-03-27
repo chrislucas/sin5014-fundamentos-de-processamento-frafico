@@ -35,11 +35,10 @@ public class App {
         int matrix [] = new int[h * w];
         for(int i=0; i<h; i++){ // linha
             for(int j=0; j<w; j++) {    // coluna
-                // i*w+j = num de linhas x qtd colunas + a qtd de linhas ja processadas da matriz
-                Color color = new Color(pixelsImage[i*h+j]);
+                Color color = new Color(pixelsImage[i*w+j]);
                 int r = color.getRed(), g = color.getGreen(), b = color.getBlue();
                 int linearization = (int) (r * 0.2126F + g * 0.7152F + b * 0.0722F);
-                matrix[i*h+j] = linearization;
+                matrix[i*w+j] = linearization;
                 boolean containColor = mapGrayScale.containsKey(linearization);
                 if(containColor) {
                     mapGrayScale.put(linearization, mapGrayScale.get(linearization).intValue() + 1);
@@ -52,7 +51,6 @@ public class App {
         return matrix;
     }
 
-
     private int getIntFromColor(int r, int g, int b){
         r = (r << 16) & 0x00FF0000; //Shift red 16-bits and mask out other stuff
         g = (g << 8) & 0x0000FF00; //Shift Green 8-bits and mask out other stuff
@@ -64,67 +62,53 @@ public class App {
         int newPixelsImage [] = new int[pixelsImage.length];
         for(int i=0; i<heightImage; i++) {
             for (int j = 0; j < widthImage; j++) {
-                Color color = new Color(pixelsImage[i * heightImage + j]);
+                Color color = new Color(pixelsImage[i * widthImage + j]);
                 int  r = color.getRed() + constant
                     ,g = color.getGreen() + constant
                     ,b = color.getBlue() + constant;
                 r = r > 255 ? 255 : r < 0 ? 0 : r;
                 g = g > 255 ? 255 : g < 0 ? 0 : g;
                 b = b > 255 ? 255 : b < 0 ? 0 : b;
-                newPixelsImage[i * heightImage + j] = getIntFromColor(r, g, b);
+                newPixelsImage[i * widthImage + j] = getIntFromColor(r, g, b);
             }
         }
         createImageByMatrix(newPixelsImage);
     }
 
-
-    private void createImageByMatrix(int [] matrixPixels) {
-        BufferedImage buffer = new BufferedImage(widthImage, heightImage, BufferedImage.TYPE_INT_RGB);
-        /*
-        for(int i=0; i<heightImage; i++) {
-            for (int j=0; j<widthImage; j++) {
-                int color = matrixPixels[i*heightImage+j];
-                buffer.setRGB(j, i, color);
-            }
-        }
-        */
-        for(int i=0; i<widthImage; i++) {
-            for (int j=0; j<heightImage; j++) {
-                int color = matrixPixels[heightImage*j+i];
-                buffer.setRGB(i, j, color);
-            }
-        }
-        File outputFile = new File("images/new_image.jpg");
-        try {
-            ImageIO.write(buffer, "jpg", outputFile);
-        }
-        catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-    }
-
-    private void createImageByMatrix(int [][] matrixPixels) {
-        BufferedImage buffer = new BufferedImage(heightImage, widthImage, BufferedImage.TYPE_INT_RGB);
-        int h = matrixPixels.length, w = matrixPixels[0].length;
-        int [] pixels = new int[h * w];
-        for(int i=0; i<h; i++) {
-            for (int j=0; j<w; j++) {
-                //pixels[i*h+j] = matrixPixels[i][j];
-                buffer.setRGB(i, j, matrixPixels[i][j]);
-            }
-        }
-        File outputFile = new File("images/output.jpg");
+    private void saveFile(BufferedImage buffer, String pathname) {
+        File outputFile = new File(pathname);
         if( ! outputFile.exists() ) {
-            String path = outputFile.getParent();
-            new File(path).mkdirs();
+            String pathfile = outputFile.getParent();
+            new File(pathfile).mkdirs();
         }
-
         try {
             ImageIO.write(buffer, "jpg", outputFile);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        return;
+    }
+
+    private void createImageByMatrix(int [] matrixPixels) {
+        BufferedImage buffer = new BufferedImage(widthImage, heightImage, BufferedImage.TYPE_INT_RGB);
+        for(int i=0; i<heightImage; i++) {
+            for (int j=0; j<widthImage; j++) {
+                int color = matrixPixels[i*widthImage+j];
+                buffer.setRGB(j, i, color);
+            }
+        }
+        saveFile(buffer, "images/new_image.jpg");
+    }
+
+    private void createImageByMatrix(int [][] matrixPixels) {
+        BufferedImage buffer = new BufferedImage(widthImage, heightImage, BufferedImage.TYPE_INT_RGB);
+        int h = matrixPixels.length, w = matrixPixels[0].length;
+        int [] pixels = new int[h * w];
+        for(int i=0; i<h; i++) {
+            for (int j=0; j<w; j++) {
+                buffer.setRGB(j, i, matrixPixels[i][j]);
+            }
+        }
+        saveFile(buffer, "images/new_image_matrix.jpg");
     }
 
     private void buildMenuAlgorithms() {
@@ -179,7 +163,10 @@ public class App {
                     int w = bufferedImage.getWidth();
                     int h = bufferedImage.getHeight();
                     int pixelsImage []  = bufferedImage.getRGB(0, 0, w, h, null, 0, w);
-                    int newImage []     = rgbToGrayScale(pixelsImage, h, w);
+                    int newImage [] = rgbToGrayScale(pixelsImage, h, w);
+
+                    createImageByMatrix(newImage);
+
                     createImageByMatrix(newImage);
                     HistogramImageGrayScale hgs = new HistogramImageGrayScale();
                     hgs.draw(mapGrayScale);
@@ -215,7 +202,16 @@ public class App {
                         widthImage       = bufferedImage.getWidth();
                         heightImage      = bufferedImage.getHeight();
                         pixelsImage      = bufferedImage.getRGB(0, 0, widthImage, heightImage, null, 0, widthImage);
+                        createImageByMatrix(pixelsImage);
                         buildMenuAlgorithms();
+/*
+                        int matrix [][] = new int[heightImage][widthImage];
+                        for(int i=0; i<heightImage; i++)
+                            for (int j=0; j<widthImage; j++)
+                                matrix[i][j] = bufferedImage.getRGB(j, i);
+                        createImageByMatrix(matrix);
+*/
+
                         //imageCanvas.add(imageContainer);
                         //imageCanvas.repaint();
                     } catch (Exception ex) {
@@ -269,6 +265,7 @@ public class App {
                 return null;
             }
         });
+
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
