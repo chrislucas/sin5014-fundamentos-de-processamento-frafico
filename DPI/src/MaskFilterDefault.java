@@ -58,4 +58,21 @@ public class MaskFilterDefault {
         ,{0,0,0}
         ,{-1,-1,-1}
     };
+
+    public static int [][] meanFilter1 = {
+         {5,3,6}
+        ,{2,1,9}
+        ,{8,4,7}
+    };
+
+    public static int [][] meanFilter2 = {
+         {1,1,1}
+        ,{1,1,1}
+        ,{1,1,1}
+    };
+
+
+
+
+
 }

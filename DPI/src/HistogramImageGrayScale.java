@@ -203,7 +203,7 @@ public class HistogramImageGrayScale {
             @Override
             public void run() {
                 editor = new JFrame("HISTOGRAMA");
-                editor.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+                editor.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 
                 HistogramImageGrayScale.CanvasHistogram canvas = new HistogramImageGrayScale().new CanvasHistogram(histogram);
                 //Dimension d = new Dimension();

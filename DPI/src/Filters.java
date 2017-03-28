@@ -38,22 +38,23 @@ public class Filters {
     public final ActionListener filterMean = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
-
-            int filter[][] = {
-                 {1,1,1}
-                ,{1,1,1}
-                ,{1,1,1}
-            };
-
+            int [][] filter = MaskFilterDefault.laplacian;
             BufferedImage buffer = new BufferedImage(heightImage, widthImage, BufferedImage.TYPE_INT_RGB);
-            for(int i=0; i<widthImage; i++) {
-                for (int j=0; j<heightImage; j++) {
-                    int color = pixelsImage[heightImage*j+i];
-                    for (int x=0; x<filter.length; x++) {
-                        for (int y=0; y<filter[0].length; y++) {
-                            buffer.setRGB(i, j, color + filter[x][y]);
+            int limitI = filter.length, limitJ = filter[0].length;
+
+            for(int i=0; i<heightImage-limitJ+1; i++) {
+                for (int j=0; j<widthImage-limitI+1; j++) {
+                    //int oolor = bufferedImage.getRGB(i, j);
+                    //int color = pixelsImage[i*widthImage+j];
+                    int acc = 0;
+                    for (int x=0; x<limitI; x++) {
+                        for (int y=0; y<limitJ; y++) {
+                            int newX = i+x, newY = j+y;
+                            int colorInBorder = bufferedImage.getRGB(newX, newY);
+                            acc += colorInBorder * filter[x][y];
                         }
                     }
+                    buffer.setRGB(i, j, new Color(acc, acc, acc).getRGB());
                 }
             }
             createImage(buffer, "images/mean.jpg");
@@ -98,8 +99,26 @@ public class Filters {
     };
 
 
-    public void operatorMask(int [][] matrix) {
-
+    public void applyMask(int [][] matrix) {
+        BufferedImage buffer = new BufferedImage(heightImage, widthImage, BufferedImage.TYPE_INT_RGB);
+        int limitI = matrix.length, limitJ = matrix[0].length;
+        for(int i=0; i<heightImage-limitJ+1; i++) {
+            for (int j=0; j<widthImage-limitI+1; j++) {
+                //int oolor = bufferedImage.getRGB(i, j);
+                //int color = pixelsImage[i*widthImage+j];
+                int acc = 0;
+                for (int x=0; x<limitI; x++) {
+                    for (int y=0; y<limitJ; y++) {
+                        int newX = i+x, newY = j+y;
+                        int colorInBorder = bufferedImage.getRGB(newX, newY);
+                        acc += colorInBorder * matrix[x][y];
+                    }
+                }
+                acc = acc < 0 ? 0 : acc > 255 ? 255 : acc;
+                buffer.setRGB(i, j, new Color(acc, acc, acc).getRGB());
+            }
+        }
+        createImage(buffer, "images/mean.jpg");
     }
 
 }

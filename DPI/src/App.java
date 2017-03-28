@@ -25,11 +25,26 @@ public class App {
     private Map<Integer, Integer> mapGrayScale;
     private int pixelsImage [];
     private int widthImage, heightImage;
+    private Filters filters;
 
     /**
      * fonte : https://en.wikipedia.org/wiki/Grayscale#Converting_color_to_grayscale
      * http://stackoverflow.com/questions/17615963/standard-rgb-to-grayscale-conversion
      * */
+
+    private int luminosityMethod(int r, int g, int b) {
+        int l = (int) (r * 0.2126F + g * 0.7152F + b * 0.0722F);
+        return l;
+    }
+
+    private int ligthenessMethod(int r, int g, int b) {
+        return ( Math.max(g,Math.max(r,b)) + Math.min(g,Math.min(r,b)) ) / 2;
+    }
+
+    private int averageMethod(int r, int g, int b) {
+        return (r+g+b) / 3;
+    }
+
     private int [] rgbToGrayScale(int [] pixelsImage, int h, int w) {
         mapGrayScale = new HashMap<>();
         int matrix [] = new int[h * w];
@@ -37,14 +52,14 @@ public class App {
             for(int j=0; j<w; j++) {    // coluna
                 Color color = new Color(pixelsImage[i*w+j]);
                 int r = color.getRed(), g = color.getGreen(), b = color.getBlue();
-                int linearization = (int) (r * 0.2126F + g * 0.7152F + b * 0.0722F);
-                matrix[i*w+j] = linearization;
-                boolean containColor = mapGrayScale.containsKey(linearization);
+                int l = averageMethod(r, g, b);
+                matrix[i*w+j] = l;
+                boolean containColor = mapGrayScale.containsKey(l);
                 if(containColor) {
-                    mapGrayScale.put(linearization, mapGrayScale.get(linearization).intValue() + 1);
+                    mapGrayScale.put(l, mapGrayScale.get(l).intValue() + 1);
                 }
                 else {
-                    mapGrayScale.put(linearization, 1);
+                    mapGrayScale.put(l, 1);
                 }
             }
         }
@@ -89,7 +104,7 @@ public class App {
     }
 
     private void createImageByMatrix(int [] matrixPixels) {
-        BufferedImage buffer = new BufferedImage(widthImage, heightImage, BufferedImage.TYPE_INT_RGB);
+        BufferedImage buffer = new BufferedImage(widthImage, heightImage, BufferedImage.TYPE_BYTE_GRAY);
         for(int i=0; i<heightImage; i++) {
             for (int j=0; j<widthImage; j++) {
                 int color = matrixPixels[i*widthImage+j];
@@ -100,7 +115,7 @@ public class App {
     }
 
     private void createImageByMatrix(int [][] matrixPixels) {
-        BufferedImage buffer = new BufferedImage(widthImage, heightImage, BufferedImage.TYPE_INT_RGB);
+        BufferedImage buffer = new BufferedImage(widthImage, heightImage, BufferedImage.TYPE_BYTE_GRAY);
         int h = matrixPixels.length, w = matrixPixels[0].length;
         int [] pixels = new int[h * w];
         for(int i=0; i<h; i++) {
@@ -112,7 +127,7 @@ public class App {
     }
 
     private void buildMenuAlgorithms() {
-        Filters filters = new Filters(bufferedImage, widthImage, heightImage);
+        filters = new Filters(bufferedImage, widthImage, heightImage);
 
         menuFilters = new JMenu("Filtros");
         JMenuItem itemMenuMean          = new JMenuItem("Média");
@@ -164,9 +179,6 @@ public class App {
                     int h = bufferedImage.getHeight();
                     int pixelsImage []  = bufferedImage.getRGB(0, 0, w, h, null, 0, w);
                     int newImage [] = rgbToGrayScale(pixelsImage, h, w);
-
-                    createImageByMatrix(newImage);
-
                     createImageByMatrix(newImage);
                     HistogramImageGrayScale hgs = new HistogramImageGrayScale();
                     hgs.draw(mapGrayScale);
@@ -197,13 +209,32 @@ public class App {
                     try {
                         bufferedImage = ImageIO.read(file);
                         ImageIcon imageIcon     = new ImageIcon(bufferedImage);
+                        int wp = imageCanvas.getWidth() /* 80 / 100*/;
+                        int hp = imageCanvas.getHeight() /* 80 / 100 */;
+/*
+                        Image image = imageIcon.getImage().getScaledInstance(wp, hp, 100);
+                        Graphics g = imageCanvas.getGraphics();
+                        g.drawImage(image, 1, 1, wp, hp, imageCanvas);
+*/
+
                         JLabel imageContainer   = new JLabel();
                         imageContainer.setIcon(imageIcon);
+                        imageCanvas.add(imageContainer);
+                        imageCanvas.revalidate();
+                        imageCanvas.repaint();
                         widthImage       = bufferedImage.getWidth();
                         heightImage      = bufferedImage.getHeight();
                         pixelsImage      = bufferedImage.getRGB(0, 0, widthImage, heightImage, null, 0, widthImage);
-                        createImageByMatrix(pixelsImage);
+                        //createImageByMatrix(pixelsImage);
                         buildMenuAlgorithms();
+                        BufferedImage bi = new BufferedImage(widthImage, heightImage,  BufferedImage.TYPE_BYTE_GRAY);
+                        int [] T = rgbToGrayScale(pixelsImage, widthImage, heightImage);
+                        // http://stackoverflow.com/questions/14416107/int-array-to-bufferedimage
+                        WritableRaster wr = bi.getRaster();
+                        wr.setPixels(0,0, widthImage, heightImage, T);
+
+
+                        filters.applyMask(MaskFilterDefault.meanFilter1);
 /*
                         int matrix [][] = new int[heightImage][widthImage];
                         for(int i=0; i<heightImage; i++)
@@ -212,9 +243,8 @@ public class App {
                         createImageByMatrix(matrix);
 */
 
-                        //imageCanvas.add(imageContainer);
-                        //imageCanvas.repaint();
-                    } catch (Exception ex) {
+                    }
+                    catch (Exception ex) {
                         System.out.println(ex.getMessage());
                     }
                 }
@@ -228,8 +258,8 @@ public class App {
         private int widthCanvas, heightCanvas;
 
         public ImageCanvas(int widthFrame, int heightFrame) {
-            this.widthCanvas = widthFrame * 80 / 100;
-            this.heightCanvas = heightFrame * 80 / 100;
+            this.widthCanvas = widthFrame  * 80 / 100;
+            this.heightCanvas = heightFrame  * 80 / 100;
             Dimension dimension = new Dimension(widthCanvas, heightCanvas);
             super.setPreferredSize(dimension);
         }
@@ -247,12 +277,10 @@ public class App {
     }
 
     public static void main(String[] args) {
-        final App ref   = new App();
-        ref.mainFrame   = new JFrame("Projeto Fundamentos de Computação gráfica");
-        ref.mainFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        ref.width       = 800;
-        ref.height      = 600;
-        final Dimension dimension = new Dimension(ref.width, ref.height);
+        final App ref = new App();
+
+        ref.mainFrame = new JFrame("Projeto Fundamentos de Computação gráfica");
+        ref.mainFrame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         ref.imageChooser = new JFileChooser();
         ref.imageChooser.setFileFilter(new FileFilter() {
             @Override
@@ -269,26 +297,47 @@ public class App {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
+                Dimension dimension = new Dimension(1200, 800);
+                GridBagLayout gridBagLayout = new GridBagLayout();
+                GridBagConstraints gridBagConstraints = new GridBagConstraints();
+
                 ref.menuBar = new JMenuBar();
                 ref.mainFrame.setLocationRelativeTo(null);
                 ref.menuBar.add( ref.addMenuFile() );
                 ref.menuBar.add( ref.addMenuAlgorithms() );
 
-                imageCanvas = new App().new ImageCanvas(ref.width, ref.height);
+                imageCanvas = new App().new ImageCanvas(dimension.width, dimension.height);
                 imageCanvas.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY));
                 //imageCanvas.setLocation(ref.width/2, ref.height/2);
                 imageCanvas.setBackground(new Color(230,230,230));
 
+                gridBagConstraints.insets = new Insets(3, 3, 3, 3);
+                gridBagConstraints.gridx        = 0;
+                gridBagConstraints.gridy        = 0;
+                gridBagConstraints.gridwidth    = 2;
+                gridBagConstraints.gridheight   = 2;
+                gridBagConstraints.weightx      = 0.4;
+                gridBagConstraints.weighty      = 0.6;
+                //gridBagConstraints.anchor   = GridBagConstraints.FIRST_LINE_START;
+                gridBagConstraints.fill     = GridBagConstraints.BOTH;
+                //layout.setConstraints(imageCanvas, gridBagConstraints);
+
                 Container container = ref.mainFrame.getContentPane();
-                //container.setLayout(new GridBagLayout());
-                container.add(imageCanvas);
+
+                container.setLayout(gridBagLayout);
+                container.add(imageCanvas, gridBagConstraints);
 
                 ref.mainFrame.setJMenuBar(ref.menuBar);
                 ref.mainFrame.pack();
 
-                dimension.setSize(dimension);
                 ref.mainFrame.setSize(dimension);
                 ref.mainFrame.setVisible(true);
+/*
+                Toolkit tk = Toolkit.getDefaultToolkit();
+                int xSize = ((int) tk.getScreenSize().getWidth());
+                int ySize = ((int) tk.getScreenSize().getHeight());
+*/
+                ref.mainFrame.setLocationRelativeTo(null);
                 ref.mainFrame.setResizable(false);
             }
         });
