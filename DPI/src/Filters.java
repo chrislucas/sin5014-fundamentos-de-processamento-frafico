@@ -11,13 +11,15 @@ import java.util.Arrays;
  */
 public class Filters {
 
-    private int [] pixelsImage;
+    //private int [] pixelsImage;
+    private int [][] matrixPixels;
     private int widthImage, heightImage;
     private BufferedImage bufferedImage;
 
     public Filters(BufferedImage bufferedImage, int w, int h) {
         this.bufferedImage  = bufferedImage;
-        this.pixelsImage    = bufferedImage.getRGB(0, 0, w, h , null, 0, w);
+        //this.pixelsImage  = bufferedImage.getRGB(0, 0, w, h , null, 0, w);
+        matrixPixels        = getPixels(bufferedImage);
         this.widthImage     = w;
         this.heightImage    = h;
     }
@@ -64,7 +66,7 @@ public class Filters {
     public final ActionListener filterMedian = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
-            BufferedImage buffer = new BufferedImage(heightImage, widthImage, BufferedImage.TYPE_INT_RGB);
+            BufferedImage buffer = new BufferedImage(widthImage, heightImage, BufferedImage.TYPE_INT_RGB);
             int r [] = new int [4];
             int g [] = new int [4];
             int b [] = new int [4];
@@ -98,10 +100,19 @@ public class Filters {
         }
     };
 
+    public int [][] getPixels(BufferedImage bufferedImage) {
+        int w = bufferedImage.getWidth();
+        int h = bufferedImage.getHeight();
+        int matrix [][] = new int[h][w];
+        for(int i=0; i<h; i++)
+            for (int j=0; j<w; j++)
+                matrix[i][j] = bufferedImage.getRGB(j, i);
+        return matrix;
+    }
 
-    public void applyMask(int [][] matrix) {
-        BufferedImage buffer = new BufferedImage(heightImage, widthImage, BufferedImage.TYPE_INT_RGB);
-        int limitI = matrix.length, limitJ = matrix[0].length;
+    public void applyMask(int [][] mask) {
+        BufferedImage buffer = new BufferedImage(widthImage, heightImage, BufferedImage.TYPE_BYTE_GRAY);
+        int limitI = mask.length, limitJ = mask[0].length;
         for(int i=0; i<heightImage-limitJ+1; i++) {
             for (int j=0; j<widthImage-limitI+1; j++) {
                 //int oolor = bufferedImage.getRGB(i, j);
@@ -110,15 +121,16 @@ public class Filters {
                 for (int x=0; x<limitI; x++) {
                     for (int y=0; y<limitJ; y++) {
                         int newX = i+x, newY = j+y;
-                        int colorInBorder = bufferedImage.getRGB(newX, newY);
-                        acc += colorInBorder * matrix[x][y];
+                        int colorInBorder = matrixPixels[newX][newY];
+                        acc += colorInBorder * mask[x][y];
                     }
                 }
                 acc = acc < 0 ? 0 : acc > 255 ? 255 : acc;
-                buffer.setRGB(i, j, new Color(acc, acc, acc).getRGB());
+                buffer.setRGB(j, i, new Color(acc, acc, acc).getRGB());
             }
         }
         createImage(buffer, "images/mean.jpg");
+        System.out.println("Imagem criada apos o filtro");
     }
 
 }
