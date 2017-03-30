@@ -12,16 +12,16 @@ import java.util.Arrays;
 public class Filters {
 
     //private int [] pixelsImage;
-    private int [][] matrixPixels;
+    private int [][] matrixPixelsGrayScale;
     private int widthImage, heightImage;
     private BufferedImage bufferedImage;
 
     public Filters(BufferedImage bufferedImage, int w, int h) {
-        this.bufferedImage  = bufferedImage;
-        //this.pixelsImage  = bufferedImage.getRGB(0, 0, w, h , null, 0, w);
-        matrixPixels        = getPixels(bufferedImage);
-        this.widthImage     = w;
-        this.heightImage    = h;
+        this.bufferedImage      = bufferedImage;
+        //this.pixelsImage      = bufferedImage.getRGB(0, 0, w, h , null, 0, w);
+        matrixPixelsGrayScale   = getPixelsInGrayScale(bufferedImage);
+        this.widthImage         = w;
+        this.heightImage        = h;
     }
 
     private final void createImage(BufferedImage buffer, String pathfile) {
@@ -44,8 +44,8 @@ public class Filters {
             BufferedImage buffer = new BufferedImage(heightImage, widthImage, BufferedImage.TYPE_INT_RGB);
             int limitI = filter.length, limitJ = filter[0].length;
 
-            for(int i=0; i<heightImage-limitJ+1; i++) {
-                for (int j=0; j<widthImage-limitI+1; j++) {
+            for(int i=0; i<(heightImage-limitJ)+1; i++) {
+                for (int j=0; j<(widthImage-limitI)+1; j++) {
                     //int oolor = bufferedImage.getRGB(i, j);
                     //int color = pixelsImage[i*widthImage+j];
                     int acc = 0;
@@ -100,18 +100,58 @@ public class Filters {
         }
     };
 
-    public int [][] getPixels(BufferedImage bufferedImage) {
+    public int [][] getPixelsInGrayScale(BufferedImage bufferedImage) {
         int w = bufferedImage.getWidth();
         int h = bufferedImage.getHeight();
         int matrix [][] = new int[h][w];
-        for(int i=0; i<h; i++)
-            for (int j=0; j<w; j++)
-                matrix[i][j] = bufferedImage.getRGB(j, i);
+        for(int i=0; i<h; i++){
+            for (int j=0; j<w; j++) {
+                int c = bufferedImage.getRGB(j, i);
+                Color color = new Color(c);
+                int r = color.getRed(), g = color.getGreen(), b = color.getBlue();
+                int mean = (r+g+b)/3;
+                matrix[i][j] =mean;
+                bufferedImage.setRGB(j, i, new Color(mean, mean, mean).getRGB());
+            }
+        }
         return matrix;
     }
 
-    public void applyMask(int [][] mask) {
-        BufferedImage buffer = new BufferedImage(widthImage, heightImage, BufferedImage.TYPE_BYTE_GRAY);
+
+    public BufferedImage applyMeanFilter(String filename) {
+        int mask [][] = {
+             {1,1,1}
+            ,{1,1,1}
+            ,{1,1,1}
+        };
+        createImage(bufferedImage, String.format("images/before_%s", filename));
+        BufferedImage buffer = bufferedImage;
+        int limitI = mask.length, limitJ = mask[0].length;
+        for(int i=0; i<heightImage-limitJ+1; i++) {
+            for (int j=0; j<widthImage-limitI+1; j++) {
+                int acc = 0;
+                for (int x=0; x<limitI; x++) {
+                    for (int y=0; y<limitJ; y++) {
+                        int newX = i+x, newY = j+y;
+                        int colorInBorder = matrixPixelsGrayScale[newX][newY];
+                        acc += colorInBorder * mask[x][y];
+                    }
+                }
+                acc /= (limitI * limitJ);
+                buffer.setRGB(j+1, i+1, new Color(acc, acc, acc).getRGB());
+            }
+        }
+        createImage(buffer, String.format("images/after_%s", filename));
+        System.out.println("Imagem criada apos o filtro");
+        return buffer;
+    }
+
+
+    public BufferedImage applyMask(int [][] mask, String filename) {
+
+        createImage(bufferedImage, String.format("images/before_%s", filename));
+        BufferedImage buffer = bufferedImage;
+
         int limitI = mask.length, limitJ = mask[0].length;
         for(int i=0; i<heightImage-limitJ+1; i++) {
             for (int j=0; j<widthImage-limitI+1; j++) {
@@ -121,16 +161,18 @@ public class Filters {
                 for (int x=0; x<limitI; x++) {
                     for (int y=0; y<limitJ; y++) {
                         int newX = i+x, newY = j+y;
-                        int colorInBorder = matrixPixels[newX][newY];
+                        int colorInBorder = matrixPixelsGrayScale[newX][newY];
                         acc += colorInBorder * mask[x][y];
                     }
                 }
+                acc /= (limitI * limitJ);
                 acc = acc < 0 ? 0 : acc > 255 ? 255 : acc;
-                buffer.setRGB(j, i, new Color(acc, acc, acc).getRGB());
+                buffer.setRGB(j+1, i+1, new Color(acc, acc, acc).getRGB());
             }
         }
-        createImage(buffer, "images/mean.jpg");
+        createImage(buffer, String.format("images/%s", filename));
         System.out.println("Imagem criada apos o filtro");
+        return buffer;
     }
 
 }
