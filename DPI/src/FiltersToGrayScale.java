@@ -11,7 +11,7 @@ import java.util.Calendar;
 /**
  * Created by C.Lucas on 27/03/2017.
  */
-public class FiltersInGrayScale {
+public class FiltersToGrayScale {
 
     //private int [] pixelsImage;
     private int [][] matrixPixelsGrayScale;
@@ -37,7 +37,7 @@ public class FiltersInGrayScale {
 
     private BufferedImage bufferedImage;
 
-    public FiltersInGrayScale(BufferedImage bufferedImage, int w, int h) {
+    public FiltersToGrayScale(BufferedImage bufferedImage, int w, int h) {
         this.bufferedImage      = bufferedImage;
         //this.pixelsImage      = bufferedImage.getRGB(0, 0, w, h , null, 0, w);
         matrixPixelsGrayScale   = getPixelsInGrayScale(bufferedImage);
@@ -48,7 +48,7 @@ public class FiltersInGrayScale {
     }
 
 
-    public FiltersInGrayScale(CallbackApplyFilter callbackApplyFilter, BufferedImage bufferedImage, int w, int h) {
+    public FiltersToGrayScale(CallbackApplyFilter callbackApplyFilter, BufferedImage bufferedImage, int w, int h) {
         this.bufferedImage      = bufferedImage;
         //this.pixelsImage      = bufferedImage.getRGB(0, 0, w, h , null, 0, w);
         this.matrixPixelsGrayScale   = getPixelsInGrayScale(bufferedImage);
@@ -59,7 +59,7 @@ public class FiltersInGrayScale {
         this.callbackApplyFilter = callbackApplyFilter;
     }
 
-    private final void createImage(BufferedImage buffer, String pathfile) {
+    public static final void createImage(BufferedImage buffer, String pathfile) {
         File outputFile = new File(pathfile);
         if( ! outputFile.exists() ) {
             String path = outputFile.getParent();

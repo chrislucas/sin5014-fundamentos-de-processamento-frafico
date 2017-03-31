@@ -23,7 +23,7 @@ public class App implements CallbackApplyFilter{
     private Map<Integer, Integer> mapGrayScale;
     private BufferedImage bufferedImage;
     private int widthImage, heightImage;
-    private FiltersInGrayScale filters;
+    private FiltersToGrayScale filters;
 
     /**
      * fonte : https://en.wikipedia.org/wiki/Grayscale#Converting_color_to_grayscale
@@ -155,7 +155,7 @@ public class App implements CallbackApplyFilter{
     }
 
     private void buildMenuAlgorithms() {
-        filters = new FiltersInGrayScale(this, bufferedImage, widthImage, heightImage);
+        filters = new FiltersToGrayScale(this, bufferedImage, widthImage, heightImage);
 
         menuFilters = new JMenu("Filtros");
         JMenuItem itemMenuMean   = new JMenuItem("Média");
@@ -267,6 +267,11 @@ public class App implements CallbackApplyFilter{
 
     public static boolean buildOnceMenuFilter = true;
 
+    private void testRGB(BufferedImage bufferedImage) {
+        FiltersToRGB filtersToRGB = new FiltersToRGB(bufferedImage);
+        filtersToRGB.applyMask(MaskFilterDefault.MaskToRGB.laplacian, "filtro_passa_alta", "jpg");
+    }
+
     private JMenu addMenuFile() {
         menuFile = new JMenu("Arquivo");
         JMenuItem uploadFileMenu = new JMenuItem("Abrir imagem");
@@ -278,13 +283,18 @@ public class App implements CallbackApplyFilter{
                     File file = imageChooser.getSelectedFile();
                     try {
                         bufferedImage = ImageIO.read(file);
-                        addImageOnCanvas(bufferedImage);
+                        testRGB(bufferedImage);
                         widthImage          = bufferedImage.getWidth();
                         heightImage         = bufferedImage.getHeight();
                         int [] pixelsImage  = bufferedImage.getRGB(0, 0, widthImage, heightImage, null, 0, widthImage);
                         if(buildOnceMenuFilter) {
                             buildMenuAlgorithms();
                             buildOnceMenuFilter = false;
+                            addImageOnCanvas(bufferedImage);
+                        }
+
+                        else {
+                            updateImageOnCanvas(bufferedImage);
                         }
                     }
                     catch (Exception ex) {
