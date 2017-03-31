@@ -1,1 +1,45 @@
 http://www.devmedia.com.br/processamento-assincrono-em-java-com-future-e-futuretask/33851
+
+0 3 6
+3 6 9
+
+
+ 00 - 22
+,03 - 25
+,06 - 28;
+
+ 30 - 52
+,33 - 55
+,36 - 58;
+
+ 60 - 82
+,63 - 85
+,66 - 88
+
+
+
+
+1)
+limit i = 3, limit j = 3
+2)
+limit i = 6, limit j = 3
+3)
+limit i = 9, limit j = 3
+4)
+limit i = 3, limit j = 6
+5)
+limit i = 6, limit j = 6
+6)
+limit i = 9, limit j = 6
+7)
+limit i = 3, limit j = 9
+8)
+limit i = 6, limit j = 9
+9)
+limit i = 9, limit j = 9
+
+
+Image Noise
+http://www.codemiles.com/java-examples/image-noise-filter-in-java-t10946.html
+http://www.codemiles.com/finished-projects/image-viewer-image-processing-filters-noise-enhancements-t639.html
+https://en.wikipedia.org/wiki/Image_noise
