@@ -32,6 +32,17 @@ public class App {
      * http://stackoverflow.com/questions/17615963/standard-rgb-to-grayscale-conversion
      * */
 
+    /*
+    *
+    * Formula para passar por um vetor como se fosse uma matriz
+    * 2D
+    *
+    * i=0 ate h
+    * j=0 ate w
+    * i * w + j     // a linha atual vezes a quantidade de colunas da linha mas a coluna atual
+    *
+    * */
+
     private int luminosityMethod(int r, int g, int b) {
         int l = (int) (r * 0.2126F + g * 0.7152F + b * 0.0722F);
         return l;
@@ -73,7 +84,8 @@ public class App {
         return 0xFF000000 | r | g | b; //0xFF000000 for 100% Alpha. Bitwise OR everything together.
     }
 
-    private void brightenImage(int pixelsImage[], int constant) {
+    private void brightenImage(int pixelsImage[], int constant, int type) {
+        BufferedImage buffer = new BufferedImage(widthImage, heightImage, BufferedImage.TYPE_BYTE_GRAY);
         int newPixelsImage [] = new int[pixelsImage.length];
         for(int i=0; i<heightImage; i++) {
             for (int j = 0; j < widthImage; j++) {
@@ -85,9 +97,11 @@ public class App {
                 g = g > 255 ? 255 : g < 0 ? 0 : g;
                 b = b > 255 ? 255 : b < 0 ? 0 : b;
                 newPixelsImage[i * widthImage + j] = getIntFromColor(r, g, b);
+                buffer.setRGB(j, i, getIntFromColor(r, g, b));
             }
         }
-        createImageByMatrix(newPixelsImage);
+        createImageByMatrix(newPixelsImage, type);
+        updateCanvas(buffer);
     }
 
     private void saveFile(BufferedImage buffer, String pathname) {
@@ -103,8 +117,8 @@ public class App {
         }
     }
 
-    private void createImageByMatrix(int [] matrixPixels) {
-        BufferedImage buffer = new BufferedImage(widthImage, heightImage, BufferedImage.TYPE_BYTE_GRAY);
+    private void createImageByMatrix(int [] matrixPixels, int type) {
+        BufferedImage buffer = new BufferedImage(widthImage, heightImage, type);
         for(int i=0; i<heightImage; i++) {
             for (int j=0; j<widthImage; j++) {
                 int color = matrixPixels[i*widthImage+j];
@@ -151,14 +165,14 @@ public class App {
         brighten.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                brightenImage(pixelsImage, 100);
+                brightenImage(pixelsImage, 100, BufferedImage.TYPE_INT_RGB);
             }
         });
         JMenuItem darken        = new JMenuItem("Escurecer");
         darken.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                brightenImage(pixelsImage, -100);
+                brightenImage(pixelsImage, -100, BufferedImage.TYPE_INT_RGB);
             }
         });
 
@@ -179,7 +193,7 @@ public class App {
                     int h = bufferedImage.getHeight();
                     int pixelsImage []  = bufferedImage.getRGB(0, 0, w, h, null, 0, w);
                     int newImage [] = rgbToGrayScale(pixelsImage, h, w);
-                    createImageByMatrix(newImage);
+                    createImageByMatrix(newImage, BufferedImage.TYPE_BYTE_GRAY);
                     HistogramImageGrayScale hgs = new HistogramImageGrayScale();
                     hgs.draw(mapGrayScale);
                     System.out.printf("%d %d", w, h);
@@ -197,6 +211,22 @@ public class App {
     private int width, height;
     private static App.ImageCanvas imageCanvas;
 
+    private void updateCanvas(BufferedImage bufferedImage) {
+        ImageIcon imageIcon  = new ImageIcon(bufferedImage);
+        int wp = imageCanvas.getWidth() /* 80 / 100*/;
+        int hp = imageCanvas.getHeight() /* 80 / 100 */;
+/*
+        Image image = imageIcon.getImage().getScaledInstance(wp, hp, 100);
+        Graphics g = imageCanvas.getGraphics();
+        g.drawImage(image, 1, 1, wp, hp, imageCanvas);
+*/
+        JLabel imageContainer = new JLabel();
+        imageContainer.setIcon(imageIcon);
+        imageCanvas.add(imageContainer);
+        imageCanvas.revalidate();
+        imageCanvas.repaint();
+    }
+
     private JMenu addMenuFile() {
         menuFile = new JMenu("Arquivo");
         JMenuItem uploadFileMenu = new JMenuItem("Abrir imagem");
@@ -208,31 +238,19 @@ public class App {
                     File file = imageChooser.getSelectedFile();
                     try {
                         bufferedImage = ImageIO.read(file);
-                        ImageIcon imageIcon     = new ImageIcon(bufferedImage);
-                        int wp = imageCanvas.getWidth() /* 80 / 100*/;
-                        int hp = imageCanvas.getHeight() /* 80 / 100 */;
-/*
-                        Image image = imageIcon.getImage().getScaledInstance(wp, hp, 100);
-                        Graphics g = imageCanvas.getGraphics();
-                        g.drawImage(image, 1, 1, wp, hp, imageCanvas);
-*/
-
-                        JLabel imageContainer   = new JLabel();
-                        imageContainer.setIcon(imageIcon);
-                        imageCanvas.add(imageContainer);
-                        imageCanvas.revalidate();
-                        imageCanvas.repaint();
+                        updateCanvas(bufferedImage);
                         widthImage       = bufferedImage.getWidth();
                         heightImage      = bufferedImage.getHeight();
                         pixelsImage      = bufferedImage.getRGB(0, 0, widthImage, heightImage, null, 0, widthImage);
-                        //createImageByMatrix(pixelsImage);
                         buildMenuAlgorithms();
-                        BufferedImage bi = new BufferedImage(widthImage, heightImage,  BufferedImage.TYPE_BYTE_GRAY);
                         int [] T = rgbToGrayScale(pixelsImage, widthImage, heightImage);
-                        // http://stackoverflow.com/questions/14416107/int-array-to-bufferedimage
-                        WritableRaster wr = bi.getRaster();
-                        wr.setPixels(0,0, widthImage, heightImage, T);
+                        createImageByMatrix(T, BufferedImage.TYPE_BYTE_GRAY);
 
+
+                        //BufferedImage bi = new BufferedImage(widthImage, heightImage,  BufferedImage.TYPE_BYTE_GRAY);
+                        // http://stackoverflow.com/questions/14416107/int-array-to-bufferedimage
+                        //WritableRaster wr = bi.getRaster();
+                        //wr.setPixels(0,0, widthImage, heightImage, T);
 
                         filters.applyMask(MaskFilterDefault.meanFilter1);
 /*
