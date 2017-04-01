@@ -16,6 +16,20 @@ public class MaskFilterDefault {
     };
 
 
+    public static int [][] passaAlta2 = {
+            {1,1,1}
+            ,{1,-8,1}
+            ,{1,1,1}
+    };
+
+
+    public static int [][] passaAlta3 = {
+            {1,1,1}
+            ,{1,8,1}
+            ,{1,1,1}
+    };
+
+
     public static int [][] laplacian = {
          {0,-1,0}
         ,{-1,4,-1}
@@ -65,10 +79,10 @@ public class MaskFilterDefault {
         ,{8,4,7}
     };
 
-    public static int [][] meanFilter2 = {
-         {1,1,1}
-        ,{1,1,1}
-        ,{1,1,1}
+    public static double [][] meanFilter2 = {
+         {1/9,1/9,1/9}
+        ,{1/9,1/9,1/9}
+        ,{1/9,1/9,1/9}
     };
 
 
