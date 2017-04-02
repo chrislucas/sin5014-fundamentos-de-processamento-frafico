@@ -1,0 +1,48 @@
+com.br.editor.utils.FiltersToGrayScale.java
+    public final ActionListener filterMean = new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            int [][] filter = meanFilter9;
+            bufferedImage = applyMask(filter, "meanfilter.jpg");
+            /*
+            BufferedImage buffer = new BufferedImage(heightImage, widthImage, BufferedImage.TYPE_INT_RGB);
+            int limitI = filter.length, limitJ = filter[0].length;
+            for(int i=0; i<(heightImage-limitJ)+1; i++) {
+                for (int j=0; j<(widthImage-limitI)+1; j++) {
+                    //int oolor = bufferedImage.getRGB(i, j);
+                    //int color = pixelsImage[i*widthImage+j];
+                    int acc = 0;
+                    for (int x=0; x<limitI; x++) {
+                        for (int y=0; y<limitJ; y++) {
+                            int newX = i+x, newY = j+y;
+                            int colorInBorder = bufferedImage.getRGB(newX, newY);
+                            acc += colorInBorder * filter[x][y];
+                        }
+                    }
+                    buffer.setRGB(i, j, new Color(acc, acc, acc).getRGB());
+                }
+            }
+            */
+        }
+    };
+
+
+                            /*
+                            int [] T = rgbToGrayScale(pixelsImage, widthImage, heightImage);
+                            BufferedImage newBufferImage = createImageGrayScaleByMatrix(T, BufferedImage.TYPE_INT_RGB);
+                            */
+
+                            //updateCanvas(newBufferImage);
+                            //BufferedImage bi = new BufferedImage(widthImage, heightImage,  BufferedImage.TYPE_BYTE_GRAY);
+
+                            // http://stackoverflow.com/questions/14416107/int-array-to-bufferedimage
+                            //WritableRaster wr = bi.getRaster();
+                            //wr.setPixels(0,0, widthImage, heightImage, T);
+
+    /*
+                            int matrix [][] = new int[heightImage][widthImage];
+                            for(int i=0; i<heightImage; i++)
+                                for (int j=0; j<widthImage; j++)
+                                    matrix[i][j] = bufferedImage.getRGB(j, i);
+                            createImageGrayScaleByMatrix(matrix);
+    */
