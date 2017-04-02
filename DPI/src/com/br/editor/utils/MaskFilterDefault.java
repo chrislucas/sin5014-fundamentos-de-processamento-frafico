@@ -53,6 +53,41 @@ public class MaskFilterDefault {
 
     }
 
+    public static class MaskBorderDetector {
+        public static int [][] horizontalGradient = {
+             {-1,-1}
+            ,{1,1}
+        };
+
+        public static int [][] verticalGradient = {
+                {-1,1}
+                ,{-1,1}
+        };
+        public static int [][] sobelHorizontal = {
+                {1,0,-1}
+                ,{2,0,-2}
+                ,{1,0,-1}
+        };
+
+        public static int [][] sobelVertical = {
+                {1,2,1}
+                ,{0,0,0}
+                ,{-1,-2,-1}
+        };
+
+        public static int [][] prewittHorizontal = {
+                {-1,0,1}
+                ,{-1,0,1}
+                ,{-1,0,1}
+        };
+
+        public static int [][] prewittVertical = {
+                {1,2,1}
+                ,{0,0,0}
+                ,{-1,-1,-1}
+        };
+    }
+
     public static int [][] passaAlta = {
          {1,1,1}
         ,{1,8,1}
@@ -66,42 +101,6 @@ public class MaskFilterDefault {
     };
 
 
-    public static int [][] gradientBorderHorizontal = {
-        {-1,-1}
-        ,{1,1}
-    };
-
-    public static int [][] gradientBorderVertical= {
-         {-1,1}
-        ,{-1,1}
-    };
-
-    public static int [][] sobelHorizontal = {
-         {1,0,-1}
-        ,{2,0,-2}
-        ,{1,0,-1}
-    };
-
-
-    public static int [][] sobelVertical = {
-        {1,2,1}
-        ,{0,0,0}
-        ,{-1,-2,-1}
-    };
-
-
-    public static int [][] prewittHorizontal = {
-        {-1,0,1}
-        ,{-1,0,1}
-        ,{-1,0,1}
-    };
-
-
-    public static int [][] prewittVertical = {
-        {1,2,1}
-        ,{0,0,0}
-        ,{-1,-1,-1}
-    };
 
     public static int [][] meanFilter45 = {
          {5,3,6}

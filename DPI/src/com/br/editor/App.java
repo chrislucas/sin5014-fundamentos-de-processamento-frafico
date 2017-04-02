@@ -120,40 +120,6 @@ public class App implements CallbackApplyFilter {
     }
 
 
-    /**
-     *
-     * Esse algoritmo me permite gerar um histograma com uma quantidade especifica de niveis de cinza.
-     *
-     * Ao inves de gerar um histograma com niveis de cinda de 0 a 255, faço de 0 a 'quantityLevels'
-     * Funciona da seguinte forma
-     *
-     * Se quantityLevels = 10 e o valor maximo de um pixel (maxScale) for = 255
-     * queremos que os valores de 0 a 255 se encaixem entre 0 e 10 precisamos fazer o seguinte
-     *
-     * sets = 255/10 -> descobrinmos que em cada quantidade de pixels temos a´rpximadamente 25 cores
-     * [0] -> 0 - 24
-     * [1] -> 25 - 49
-     * [2] -> 50 - 74, son on
-     *
-     * Entao para uma cor C, basta dividir essa cor por 25 e sabemos onde encaixa-la no vetor
-     *
-     *
-     * */
-    public int[] getMatrixHistogramGrayScale(int [] pixelsImage, int h, int w, int maxScale, int quantityLevels) {
-        int [] histogramGrayScale = new int[quantityLevels];
-        int sets = maxScale/quantityLevels;
-        for(int i=0; i<h; i++){ // linha
-            for(int j=0; j<w; j++) {    // coluna
-                Color color = new Color(pixelsImage[i*w+j]);
-                int r = color.getRed(), g = color.getGreen(), b = color.getBlue();
-                int l = averageMethod(r, g, b);
-                l = l > 255 ? 0 : l < 0 ? 0 : l;
-                histogramGrayScale[l/sets] += 1;
-            }
-        }
-        return histogramGrayScale ;
-    }
-
     private int getIntFromColor(int r, int g, int b){
         r = (r << 16) & 0x00FF0000; //Shift red 16-bits and mask out other stuff
         g = (g << 8) & 0x0000FF00; //Shift Green 8-bits and mask out other stuff
@@ -257,9 +223,6 @@ public class App implements CallbackApplyFilter {
         menuGrayScale.add(itemEqualizationFilter);
         menuGrayScale.add(itemPassaAltaFilter);
 
-        JMenu menuBorderAlgorithms = new JMenu("Operadores de Borda");
-        menuFilters.add(menuBorderAlgorithms);
-
         JMenu menuBrightness    = new JMenu("Luminosidade");
         JMenuItem brighten      = new JMenuItem("Clarear");
         brighten.addActionListener(new ActionListener() {
@@ -313,6 +276,18 @@ public class App implements CallbackApplyFilter {
         menuRGB.add(itemEqualizationFilterRGB);
         menuRGB.add(itemMean9);
         menuRGB.add(itemMean16);
+
+        JMenu menuOpBorderDetector = new JMenu("Operadores detecção de borda");
+        JMenuItem itemGradientBorderDectectorHorizontal = new JMenuItem("Gradiente Horizontal");
+        itemGradientBorderDectectorHorizontal.addActionListener(filtersToRGB.gradientBorderDetectorHorizontal);
+
+        JMenuItem itemGradientBorderDectectorVertical= new JMenuItem("Gradiente Vertical");
+        itemGradientBorderDectectorVertical.addActionListener(filtersToRGB.gradientBorderDetectorVertical);
+
+        menuOpBorderDetector.add(itemGradientBorderDectectorHorizontal);
+        menuOpBorderDetector.add(itemGradientBorderDectectorVertical);
+
+        menuRGB.add(menuOpBorderDetector);
 
         menuFilters.add(menuGrayScale);
         menuFilters.add(menuRGB);

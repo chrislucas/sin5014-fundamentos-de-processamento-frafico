@@ -1,5 +1,6 @@
 package com.br.editor.utils;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -144,6 +145,20 @@ public class FiltersToRGB {
         return buffer;
     }
 
+    public final ActionListener gradientBorderDetectorHorizontal = new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            apply(MaskFilterDefault.MaskBorderDetector.horizontalGradient, "HorizontalBorderDetector", "jpg");
+        }
+    };
+
+    public final ActionListener gradientBorderDetectorVertical= new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            apply(MaskFilterDefault.MaskBorderDetector.verticalGradient, "VerticalBorderDetector", "jpg");
+        }
+    };
+
     public final ActionListener laplacianFilter = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -210,6 +225,37 @@ public class FiltersToRGB {
         return mat;
     }
 
+    public final class Splitting implements ActionListener {
+        private int maxGrayScale, interval, constant;
+        private CallbackApplyFilter callbackApplyFilter;
+
+        public Splitting(CallbackApplyFilter callbackApplyFilter, int interval, int maxGrayScale, int constant) {
+            this.interval = interval;
+            this.maxGrayScale = maxGrayScale;
+            this.constant = constant;
+            this.callbackApplyFilter = callbackApplyFilter;
+        }
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            int [][] matrixGS = matrixGrayScale(getMatrixPixels());
+            int w = matrixGS[0].length, h = matrixGS.length;
+
+            for (int i = 0; i <h ; i++) {
+                for (int j = 0; j<w ; j++) {
+                    int c = matrixGS[i][j];
+                    matrixGS[i][j] += (this.maxGrayScale / interval) > c ? constant : (-constant);
+                }
+            }
+
+            if(callbackApplyFilter != null) {
+                BufferedImage buffer = matrixToBuffer(matrixGS);
+                callbackApplyFilter.after(buffer);
+            }
+        }
+    }
+
+
     public final class EqualizationInGrayScale implements ActionListener {
         private int quantityGrayScaleLevel = 10;
         private int[] histogram;
@@ -267,6 +313,48 @@ public class FiltersToRGB {
             }
 
             matrixGrayScalePixels = newMatrixPixels;
+        }
+    }
+
+
+    public final class QuantizationInGrayScale implements  ActionListener {
+
+        /**
+         *
+         * Esse algoritmo me permite gerar um histograma com uma quantidade especifica de niveis de cinza.
+         *
+         * Ao inves de gerar um histograma com niveis de cinda de 0 a 255, faço de 0 a 'quantityLevels'
+         * Funciona da seguinte forma
+         *
+         * Se quantityLevels = 10 e o valor maximo de um pixel (maxScale) for = 255
+         * queremos que os valores de 0 a 255 se encaixem entre 0 e 10 precisamos fazer o seguinte
+         *
+         * sets = 255/10 -> descobrinmos que em cada quantidade de pixels temos a´rpximadamente 25 cores
+         * [0] -> 0 - 24
+         * [1] -> 25 - 49
+         * [2] -> 50 - 74, son on
+         *
+         * Entao para uma cor C, basta dividir essa cor por 25 e sabemos onde encaixa-la no vetor
+         *
+         *
+         * */
+        public int[] getMatrixHistogramGrayScale(int [] pixelsImage, int h, int w, int maxScale, int quantityLevels) {
+            int [] histogramGrayScale = new int[quantityLevels];
+            int sets = maxScale/quantityLevels;
+            for(int i=0; i<h; i++){ // linha
+                for(int j=0; j<w; j++) {    // coluna
+                    Color color = new Color(pixelsImage[i*w+j]);
+                    int r = color.getRed(), g = color.getGreen(), b = color.getBlue();
+                    int l = r+g+b/3;
+                    l = l > 255 ? 0 : l < 0 ? 0 : l;
+                    histogramGrayScale[l/sets] += 1;
+                }
+            }
+            return histogramGrayScale ;
+        }
+        @Override
+        public void actionPerformed(ActionEvent e) {
+
         }
     }
 }

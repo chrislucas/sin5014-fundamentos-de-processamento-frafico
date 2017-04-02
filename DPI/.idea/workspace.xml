@@ -2,44 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7531cede-7118-422d-abad-0e7f3454c4af" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/new_image_gray.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FutureTask/out/production/FutureTask/LearningRunnable$TransverveMatrix.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FutureTask/out/production/FutureTask/LearningRunnable.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/DPI/old" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/br/editor/utils/CallbackApplyFilter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/old" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FutureTask/out/production/FutureTask/runnable" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FutureTask/src/LearningRunnable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../FutureTask/src/runnable" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/DPI.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DPI/App$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DPI/App$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DPI/App$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DPI/App$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DPI/App$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DPI/App$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DPI/App$ImageCanvas.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DPI/App.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DPI/Filters$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DPI/Filters$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DPI/Filters.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DPI/HistogramImageGrayScale$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DPI/HistogramImageGrayScale$CanvasHistogram.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DPI/HistogramImageGrayScale.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DPI/MaskFilterDefault.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DPI/Pixel.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/out/production/DPI/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/links/masks" afterPath="$PROJECT_DIR$/out/production/DPI/links/masks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/links/masks" afterPath="$PROJECT_DIR$/src/links/masks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../FutureTask/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../FutureTask/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/App.java" afterPath="$PROJECT_DIR$/src/com/br/editor/App.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Filters.java" afterPath="$PROJECT_DIR$/src/com/br/editor/utils/FiltersToGrayScale.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/HistogramImageGrayScale.java" afterPath="$PROJECT_DIR$/src/com/br/editor/HistogramImageGrayScale.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/MaskFilterDefault.java" afterPath="$PROJECT_DIR$/src/com/br/editor/utils/MaskFilterDefault.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Pixel.java" afterPath="$PROJECT_DIR$/src/com/br/editor/Pixel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/br/editor/App.java" afterPath="$PROJECT_DIR$/src/com/br/editor/App.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java" afterPath="$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/br/editor/utils/MaskFilterDefault.java" afterPath="$PROJECT_DIR$/src/com/br/editor/utils/MaskFilterDefault.java" />
     </list>
     <ignored path="DPI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -67,8 +32,8 @@
       <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/br/editor/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="411" column="0" selection-start-line="411" selection-start-column="0" selection-end-line="411" selection-end-column="0" />
+            <state relative-caret-position="119">
+              <caret line="224" column="0" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
               <folding>
                 <element signature="method#saveFile#0;class#App#0" expanded="false" />
                 <element signature="method#createImageGrayScaleByMatrix#0;class#App#0" expanded="false" />
@@ -82,24 +47,25 @@
       <file leaf-file-name="FiltersToRGB.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1166">
-              <caret line="86" column="77" selection-start-line="86" selection-start-column="77" selection-end-line="86" selection-end-column="77" />
+            <state relative-caret-position="66">
+              <caret line="150" column="61" selection-start-line="150" selection-start-column="61" selection-end-line="150" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#354#355#0" expanded="true" />
-                <element signature="e#389#390#0" expanded="true" />
-                <element signature="e#1182#1183#0" expanded="true" />
-                <element signature="e#1227#1228#0" expanded="true" />
-                <element signature="e#1283#1284#0" expanded="true" />
-                <element signature="e#1328#1329#0" expanded="true" />
-                <element signature="e#6376#6377#0" expanded="true" />
-                <element signature="e#6459#6460#0" expanded="true" />
-                <element signature="e#6602#6603#0" expanded="true" />
-                <element signature="e#6687#6688#0" expanded="true" />
-                <element signature="e#8856#8857#0" expanded="true" />
-                <element signature="e#8939#8940#0" expanded="true" />
-                <element signature="e#8972#8973#0" expanded="true" />
-                <element signature="e#9031#9032#0" expanded="true" />
+                <element signature="e#376#377#0" expanded="true" />
+                <element signature="e#411#412#0" expanded="true" />
+                <element signature="e#1204#1205#0" expanded="true" />
+                <element signature="e#1249#1250#0" expanded="true" />
+                <element signature="e#1305#1306#0" expanded="true" />
+                <element signature="e#1350#1351#0" expanded="true" />
+                <element signature="e#6971#6972#0" expanded="true" />
+                <element signature="e#7054#7055#0" expanded="true" />
+                <element signature="e#7197#7198#0" expanded="true" />
+                <element signature="e#7282#7283#0" expanded="true" />
+                <element signature="class#EqualizationInGrayScale#0;class#FiltersToRGB#0" expanded="false" />
+                <element signature="e#10589#10590#0" expanded="true" />
+                <element signature="e#10672#10673#0" expanded="true" />
+                <element signature="e#10705#10706#0" expanded="true" />
+                <element signature="e#10764#10765#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -108,8 +74,8 @@
       <file leaf-file-name="MaskFilterDefault.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/br/editor/utils/MaskFilterDefault.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="111" column="38" selection-start-line="111" selection-start-column="27" selection-end-line="111" selection-end-column="38" />
+            <state relative-caret-position="134">
+              <caret line="56" column="31" selection-start-line="56" selection-start-column="31" selection-end-line="56" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -148,8 +114,8 @@
         <option value="$PROJECT_DIR$/src/com/br/editor/utils/CallbackApplyFilter.java" />
         <option value="$PROJECT_DIR$/src/com/br/editor/utils/FiltersToGrayScale.java" />
         <option value="$PROJECT_DIR$/src/com/br/editor/utils/MaskFilterDefault.java" />
-        <option value="$PROJECT_DIR$/src/com/br/editor/App.java" />
         <option value="$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java" />
+        <option value="$PROJECT_DIR$/src/com/br/editor/App.java" />
       </list>
     </option>
   </component>
@@ -591,7 +557,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -659,7 +625,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/br/editor/App.java</url>
-          <line>220</line>
+          <line>186</line>
           <properties />
           <option name="timeStamp" value="61" />
         </line-breakpoint>
@@ -689,7 +655,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/br/editor/App.java</url>
-          <line>193</line>
+          <line>159</line>
           <properties />
           <option name="timeStamp" value="98" />
         </line-breakpoint>
@@ -707,31 +673,25 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/br/editor/App.java</url>
-          <line>305</line>
+          <line>268</line>
           <properties />
           <option name="timeStamp" value="108" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java</url>
-          <line>245</line>
+          <line>291</line>
           <properties />
           <option name="timeStamp" value="110" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java</url>
-          <line>250</line>
+          <line>296</line>
           <properties />
           <option name="timeStamp" value="112" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/br/editor/App.java</url>
-          <line>142</line>
-          <properties />
-          <option name="timeStamp" value="113" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/br/editor/App.java</url>
-          <line>322</line>
+          <line>297</line>
           <properties />
           <option name="timeStamp" value="118" />
         </line-breakpoint>
@@ -743,13 +703,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/br/editor/App.java</url>
-          <line>277</line>
+          <line>240</line>
           <properties />
           <option name="timeStamp" value="123" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/br/editor/App.java</url>
-          <line>267</line>
+          <line>230</line>
           <properties />
           <option name="timeStamp" value="124" />
         </line-breakpoint>
@@ -761,49 +721,49 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/br/editor/App.java</url>
-          <line>411</line>
+          <line>386</line>
           <properties />
           <option name="timeStamp" value="126" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java</url>
-          <line>23</line>
+          <line>24</line>
           <properties />
           <option name="timeStamp" value="128" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java</url>
-          <line>240</line>
+          <line>286</line>
           <properties />
           <option name="timeStamp" value="129" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java</url>
-          <line>265</line>
+          <line>311</line>
           <properties />
           <option name="timeStamp" value="131" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java</url>
-          <line>258</line>
+          <line>304</line>
           <properties />
           <option name="timeStamp" value="132" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/br/editor/App.java</url>
-          <line>404</line>
+          <line>379</line>
           <properties />
           <option name="timeStamp" value="134" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java</url>
-          <line>188</line>
+          <line>203</line>
           <properties />
           <option name="timeStamp" value="135" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java</url>
-          <line>196</line>
+          <line>211</line>
           <properties />
           <option name="timeStamp" value="136" />
         </line-breakpoint>
@@ -1126,16 +1086,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/br/editor/utils/MaskFilterDefault.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="111" column="38" selection-start-line="111" selection-start-column="27" selection-end-line="111" selection-end-column="38" />
+        <state relative-caret-position="134">
+          <caret line="56" column="31" selection-start-line="56" selection-start-column="31" selection-end-line="56" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/br/editor/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="411" column="0" selection-start-line="411" selection-start-column="0" selection-end-line="411" selection-end-column="0" />
+        <state relative-caret-position="119">
+          <caret line="224" column="0" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
           <folding>
             <element signature="method#saveFile#0;class#App#0" expanded="false" />
             <element signature="method#createImageGrayScaleByMatrix#0;class#App#0" expanded="false" />
@@ -1147,24 +1107,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1166">
-          <caret line="86" column="77" selection-start-line="86" selection-start-column="77" selection-end-line="86" selection-end-column="77" />
+        <state relative-caret-position="66">
+          <caret line="150" column="61" selection-start-line="150" selection-start-column="61" selection-end-line="150" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#354#355#0" expanded="true" />
-            <element signature="e#389#390#0" expanded="true" />
-            <element signature="e#1182#1183#0" expanded="true" />
-            <element signature="e#1227#1228#0" expanded="true" />
-            <element signature="e#1283#1284#0" expanded="true" />
-            <element signature="e#1328#1329#0" expanded="true" />
-            <element signature="e#6376#6377#0" expanded="true" />
-            <element signature="e#6459#6460#0" expanded="true" />
-            <element signature="e#6602#6603#0" expanded="true" />
-            <element signature="e#6687#6688#0" expanded="true" />
-            <element signature="e#8856#8857#0" expanded="true" />
-            <element signature="e#8939#8940#0" expanded="true" />
-            <element signature="e#8972#8973#0" expanded="true" />
-            <element signature="e#9031#9032#0" expanded="true" />
+            <element signature="e#376#377#0" expanded="true" />
+            <element signature="e#411#412#0" expanded="true" />
+            <element signature="e#1204#1205#0" expanded="true" />
+            <element signature="e#1249#1250#0" expanded="true" />
+            <element signature="e#1305#1306#0" expanded="true" />
+            <element signature="e#1350#1351#0" expanded="true" />
+            <element signature="e#6971#6972#0" expanded="true" />
+            <element signature="e#7054#7055#0" expanded="true" />
+            <element signature="e#7197#7198#0" expanded="true" />
+            <element signature="e#7282#7283#0" expanded="true" />
+            <element signature="class#EqualizationInGrayScale#0;class#FiltersToRGB#0" expanded="false" />
+            <element signature="e#10589#10590#0" expanded="true" />
+            <element signature="e#10672#10673#0" expanded="true" />
+            <element signature="e#10705#10706#0" expanded="true" />
+            <element signature="e#10764#10765#0" expanded="true" />
           </folding>
         </state>
       </provider>
