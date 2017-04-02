@@ -261,9 +261,9 @@ public class FiltersToRGB {
         private int[] histogram;
         private CallbackApplyFilter callbackApplyFilter;
         private int [][] matrixGrayScalePixels;
-        public EqualizationInGrayScale(int range, int[] histogram, CallbackApplyFilter callbackApplyFilter) {
+        public EqualizationInGrayScale(int quantityGrayScaleLevel, int[] histogram, CallbackApplyFilter callbackApplyFilter) {
             // quantidade de niveis de cinza
-            this.quantityGrayScaleLevel = range;
+            this.quantityGrayScaleLevel = quantityGrayScaleLevel;
             this.histogram              = histogram;
             this.callbackApplyFilter    = callbackApplyFilter;
             // convertendo a matriz de uma imagem em RGB para uma matriz em nivel de cinza
@@ -274,7 +274,7 @@ public class FiltersToRGB {
             this.matrixGrayScalePixels  = matrixGrayScale(matrixPixels);
         }
 
-        public int getRange() {
+        public int getQuantityGrayScaleLevel() {
             return  this.quantityGrayScaleLevel;
         }
 
@@ -289,10 +289,9 @@ public class FiltersToRGB {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            int quantityGrayScaleLevel  = getRange();                       // novo intervalo d cores de (0,10) ao inves (0,255)
+            int quantityGrayScaleLevel  = getQuantityGrayScaleLevel();
             /**
-             * Quantidade de pixels
-             *
+             * Quantidade de pixels ideais
              * */
             int quantityIdealPixels = widthImage * heightImage / quantityGrayScaleLevel;
             int accHistogram [] = getAccumulateHistogram();

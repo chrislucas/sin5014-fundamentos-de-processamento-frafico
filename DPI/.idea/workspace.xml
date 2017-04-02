@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7531cede-7118-422d-abad-0e7f3454c4af" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/br/editor/views/CanvasImageResult.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/br/editor/views/ContainerView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/br/editor/views/tests/ExamplelayoutImageCompare.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/new_image_gray.jpg" afterPath="$PROJECT_DIR$/images/new_image_gray.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/DPI.jar" afterPath="$PROJECT_DIR$/out/DPI.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB$EqualizationInGrayScale.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB$EqualizationInGrayScale.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB$QuantizationInGrayScale.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB$QuantizationInGrayScale.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/br/editor/App.java" afterPath="$PROJECT_DIR$/src/com/br/editor/App.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/br/editor/HistogramImageGrayScale.java" afterPath="$PROJECT_DIR$/src/com/br/editor/HistogramImageGrayScale.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java" afterPath="$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/br/editor/utils/MaskFilterDefault.java" afterPath="$PROJECT_DIR$/src/com/br/editor/utils/MaskFilterDefault.java" />
     </list>
     <ignored path="DPI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,8 +40,8 @@
       <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/br/editor/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="224" column="0" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
+            <state relative-caret-position="154">
+              <caret line="317" column="67" selection-start-line="317" selection-start-column="67" selection-end-line="317" selection-end-column="67" />
               <folding>
                 <element signature="method#saveFile#0;class#App#0" expanded="false" />
                 <element signature="method#createImageGrayScaleByMatrix#0;class#App#0" expanded="false" />
@@ -44,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FiltersToRGB.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FiltersToRGB.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="150" column="61" selection-start-line="150" selection-start-column="61" selection-end-line="150" selection-end-column="61" />
+            <state relative-caret-position="119">
+              <caret line="293" column="42" selection-start-line="293" selection-start-column="42" selection-end-line="293" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#376#377#0" expanded="true" />
@@ -61,27 +69,71 @@
                 <element signature="e#7054#7055#0" expanded="true" />
                 <element signature="e#7197#7198#0" expanded="true" />
                 <element signature="e#7282#7283#0" expanded="true" />
-                <element signature="class#EqualizationInGrayScale#0;class#FiltersToRGB#0" expanded="false" />
-                <element signature="e#10589#10590#0" expanded="true" />
-                <element signature="e#10672#10673#0" expanded="true" />
-                <element signature="e#10705#10706#0" expanded="true" />
-                <element signature="e#10764#10765#0" expanded="true" />
+                <element signature="e#10623#10624#0" expanded="true" />
+                <element signature="e#10706#10707#0" expanded="true" />
+                <element signature="e#10756#10757#0" expanded="true" />
+                <element signature="e#10815#10816#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MaskFilterDefault.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/br/editor/utils/MaskFilterDefault.java">
+      <file leaf-file-name="HistogramImageGrayScale.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/br/editor/HistogramImageGrayScale.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="56" column="31" selection-start-line="56" selection-start-column="31" selection-end-line="56" selection-end-column="31" />
+            <state relative-caret-position="193">
+              <caret line="112" column="35" selection-start-line="112" selection-start-column="35" selection-end-line="112" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="CanvasImageResult.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/br/editor/views/CanvasImageResult.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="37">
+              <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1465#1466#0" expanded="true" />
+                <element signature="e#1492#1493#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContainerView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/br/editor/views/ContainerView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExamplelayoutImageCompare.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/br/editor/views/tests/ExamplelayoutImageCompare.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -115,7 +167,13 @@
         <option value="$PROJECT_DIR$/src/com/br/editor/utils/FiltersToGrayScale.java" />
         <option value="$PROJECT_DIR$/src/com/br/editor/utils/MaskFilterDefault.java" />
         <option value="$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java" />
+        <option value="$PROJECT_DIR$/src/com/br/editor/views/CanvasImageResult.java" />
+        <option value="$PROJECT_DIR$/src/com/br/editor/views/MainFrame.java" />
+        <option value="$PROJECT_DIR$/src/com/br/editor/views/Container.java" />
+        <option value="$PROJECT_DIR$/src/com/br/editor/views/tests/ExamplelayoutImageCompare.java" />
+        <option value="$PROJECT_DIR$/src/com/br/editor/views/ContainerView.java" />
         <option value="$PROJECT_DIR$/src/com/br/editor/App.java" />
+        <option value="$PROJECT_DIR$/src/com/br/editor/HistogramImageGrayScale.java" />
       </list>
     </option>
   </component>
@@ -214,7 +272,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.br.editor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -557,8 +637,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914925" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -569,7 +649,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295362" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="REPL" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39748955" sideWeight="0.4922879" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39748955" sideWeight="0.4922879" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32750398" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -685,7 +765,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java</url>
-          <line>296</line>
+          <line>295</line>
           <properties />
           <option name="timeStamp" value="112" />
         </line-breakpoint>
@@ -739,13 +819,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java</url>
-          <line>311</line>
+          <line>310</line>
           <properties />
           <option name="timeStamp" value="131" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java</url>
-          <line>304</line>
+          <line>303</line>
           <properties />
           <option name="timeStamp" value="132" />
         </line-breakpoint>
@@ -782,7 +862,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Filters.java" />
     <entry file="file://$PROJECT_DIR$/src/com/br/editor/App.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1017,14 +1096,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/br/editor/HistogramImageGrayScale.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/br/editor/Pixel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -1092,10 +1163,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0/src.zip!/javax/swing/JPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/br/editor/views/CanvasImageResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1465#1466#0" expanded="true" />
+            <element signature="e#1492#1493#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/br/editor/views/ContainerView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/br/editor/views/tests/ExamplelayoutImageCompare.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/br/editor/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="224" column="0" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
+        <state relative-caret-position="154">
+          <caret line="317" column="67" selection-start-line="317" selection-start-column="67" selection-end-line="317" selection-end-column="67" />
           <folding>
             <element signature="method#saveFile#0;class#App#0" expanded="false" />
             <element signature="method#createImageGrayScaleByMatrix#0;class#App#0" expanded="false" />
@@ -1107,8 +1218,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="150" column="61" selection-start-line="150" selection-start-column="61" selection-end-line="150" selection-end-column="61" />
+        <state relative-caret-position="119">
+          <caret line="293" column="42" selection-start-line="293" selection-start-column="42" selection-end-line="293" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#376#377#0" expanded="true" />
@@ -1121,12 +1232,19 @@
             <element signature="e#7054#7055#0" expanded="true" />
             <element signature="e#7197#7198#0" expanded="true" />
             <element signature="e#7282#7283#0" expanded="true" />
-            <element signature="class#EqualizationInGrayScale#0;class#FiltersToRGB#0" expanded="false" />
-            <element signature="e#10589#10590#0" expanded="true" />
-            <element signature="e#10672#10673#0" expanded="true" />
-            <element signature="e#10705#10706#0" expanded="true" />
-            <element signature="e#10764#10765#0" expanded="true" />
+            <element signature="e#10623#10624#0" expanded="true" />
+            <element signature="e#10706#10707#0" expanded="true" />
+            <element signature="e#10756#10757#0" expanded="true" />
+            <element signature="e#10815#10816#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/br/editor/HistogramImageGrayScale.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="112" column="35" selection-start-line="112" selection-start-column="35" selection-end-line="112" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>

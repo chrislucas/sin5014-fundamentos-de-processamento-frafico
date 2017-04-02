@@ -10,8 +10,8 @@ import java.util.Map;
  */
 public class HistogramImageGrayScale {
 
-    private static final int MIN_H = 480;//800;
-    private static final int MIN_W = 480; //1300;
+    private static final int MIN_H = 350; //800;
+    private static final int MIN_W = 1500; //1300;
 
     public class CanvasHistogram extends JPanel {
         private static final int C_MIN_H = (int) (MIN_W * 0.6f);;
@@ -60,8 +60,10 @@ public class HistogramImageGrayScale {
             this.width  = getWidth();
             this.height = getHeight();
 
+            int totalDistinctColors = histogram.size();
+
             Graphics2D g2 = (Graphics2D) g;
-            g2.drawString(String.format("%d %d", width, height), 10, 30);
+            g2.drawString(String.format("%d %d colores distintas %d", width, height, totalDistinctColors), 10, 30);
 
             // https://docs.oracle.com/javase/tutorial/2d/advanced/quality.html
             RenderingHints rh = new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
@@ -73,15 +75,16 @@ public class HistogramImageGrayScale {
             int axisYx2 = PADDING;
             int axisYy2 = height - PADDING;
             Line2D axisY = new Line2D.Double(axisYx1, axisYy1, axisYx2, axisYy2);
+            System.out.printf("Eixo Y: P1(%d, %d), P2 (%d, %d)", axisYx1, axisYy1, axisYx2, axisYy2);
 
             int diffX = (axisYx2 - axisYx1);
             int diffY = (axisYy2 - axisYy1);
             // MID POINT Axis X
             int midXaxiY = (axisYx2 + axisYx1) / 2;
             int midYaxiY = (axisYy2 + axisYy1) / 2;
-            int distanceAxisX = (int) Math.sqrt( diffX * diffX + diffY * diffY );
-
-            g2.drawString(String.format("%d", distanceAxisX), midXaxiY - 25, midYaxiY);
+            int distanceAxisY = (int) Math.sqrt( diffX * diffX + diffY * diffY );
+            System.out.printf("Eixo Y: P1(%d, %d), P2 (%d, %d), distance: %d\n", axisYx1, axisYy1, axisYx2, axisYy2, distanceAxisY);
+            g2.drawString(String.format("%d", distanceAxisY), midXaxiY - 25, midYaxiY);
 
             // desenhar o eixo X
             int axisXx1 = PADDING;
@@ -92,7 +95,8 @@ public class HistogramImageGrayScale {
 
             diffX = (axisXx2 - axisXx1);
             diffY = (axisXy2 - axisXy1);
-            int distanceAxisY = (int) Math.sqrt( diffX * diffX + diffY * diffY);
+            int distanceAxisX = (int) Math.sqrt( diffX * diffX + diffY * diffY);
+            System.out.printf("Eixo X: P1(%d, %d), P2 (%d, %d) distance: %d\n", axisXx1, axisXy1, axisXx2, axisXy2, distanceAxisX);
             // MID POINT Axis Y
             int midXaxiX = (axisXx2 + axisXx1) / 2;
             int midYaxiX = (axisXy2 + axisXy1) / 2;
@@ -101,13 +105,12 @@ public class HistogramImageGrayScale {
             int midAxisX = distanceAxisX / 2;
             int midAxisY = distanceAxisY / 2;
             */
-            g2.drawString(String.format("%d", distanceAxisY), midXaxiX, midYaxiX + 15);
+            g2.drawString(String.format("%d", distanceAxisX), midXaxiX, midYaxiX + 15);
             g2.draw(axisX);
             g2.draw(axisY);
             // aonde eu comeco a desenhar
-            int startX  = PADDING + 10              // da um espacamento da bordar mais 10px depois da linha do euxo Y
-                ,totalDistinctColors = histogram.size()
-                ,widthRectangle = distanceAxisX / totalDistinctColors;
+            int startX  = PADDING + 10              // da um espacamento da bordar mais 10px depois da linha do eixo Y
+                ,widthRectangle = 6; //distanceAxisX / totalDistinctColors;
 
 
             long acc = histogram.keySet().stream().count();
@@ -193,12 +196,7 @@ public class HistogramImageGrayScale {
         }
     }
 
-
-
-
     private JFrame editor;
-
-
 
     public void draw(Map<Integer, Integer> histogram) {
         SwingUtilities.invokeLater(new Runnable() {

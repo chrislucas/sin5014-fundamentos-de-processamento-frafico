@@ -315,7 +315,7 @@ public class App implements CallbackApplyFilter {
 
                     HistogramImageGrayScale hgs = new HistogramImageGrayScale();
                     hgs.draw(mapGrayScale);
-                    System.out.printf("%d %d", w, h);
+                    System.out.printf("Dimension(%d, %d)\n", w, h);
                 }
                 else {}
             }
