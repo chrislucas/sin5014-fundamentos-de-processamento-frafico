@@ -253,7 +253,7 @@ public class App implements CallbackApplyFilter {
         itemMean16.addActionListener(filtersToRGB.mean16);
 
         JMenuItem itemMedian= new JMenuItem("Mediana");
-        itemMedian.addActionListener(filtersToRGB.medianFilter);
+        itemMedian.addActionListener(filtersToRGB.medianFilter4);
 
         JMenuItem itemEqualizationFilterRGB = new JMenuItem("Equalizador");
         int h = bufferedImage.getHeight();

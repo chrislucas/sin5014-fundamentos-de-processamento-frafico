@@ -259,7 +259,18 @@ public class FiltersToRGB {
         }
     }
 
-    public final ActionListener medianFilter = new ActionListener() {
+    private final ArrayList<Color> getNeighboors(int matrix [][], int quantity) {
+        ArrayList<Color> colors = new ArrayList<>();
+        switch (quantity) {
+            case 4:
+                break;
+            case 8:
+                break;
+        }
+        return colors;
+    }
+
+    public final ActionListener medianFilter4 = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
             BufferedImage buffer = new BufferedImage(widthImage, heightImage, BufferedImage.TYPE_INT_RGB);

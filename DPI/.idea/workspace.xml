@@ -2,12 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7531cede-7118-422d-abad-0e7f3454c4af" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/links/transformacoes-R" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToGrayScale$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToGrayScale$4.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/new_image_gray.jpg" afterPath="$PROJECT_DIR$/images/new_image_gray.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/DPI.jar" afterPath="$PROJECT_DIR$/out/DPI.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/App$1.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/App$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/App$2.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/App$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/App$3.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/App$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/App$4.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/App$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/App$5.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/App$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/App$6.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/App$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/App$ImageCanvas.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/App$ImageCanvas.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/App.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/App.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToGrayScale$2.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToGrayScale$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToGrayScale.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToGrayScale.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB$8.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB$EqualizationInGrayScale.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB$EqualizationInGrayScale.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB$QuantizationInGrayScale.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB$QuantizationInGrayScale.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/br/editor/App.java" afterPath="$PROJECT_DIR$/src/com/br/editor/App.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/br/editor/utils/FiltersToGrayScale.java" afterPath="$PROJECT_DIR$/src/com/br/editor/utils/FiltersToGrayScale.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java" afterPath="$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/br/editor/views/tests/ExamplelayoutImageCompare.java" afterPath="$PROJECT_DIR$/src/com/br/editor/views/tests/ExamplelayoutImageCompare.java" />
     </list>
     <ignored path="DPI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,7 +48,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="App.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/br/editor/App.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="147">
@@ -46,28 +62,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FiltersToGrayScale.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/br/editor/utils/FiltersToGrayScale.java">
+      <file leaf-file-name="FiltersToRGB.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="94" column="32" selection-start-line="94" selection-start-column="32" selection-end-line="94" selection-end-column="32" />
+            <state relative-caret-position="176">
+              <caret line="174" column="50" selection-start-line="174" selection-start-column="50" selection-end-line="174" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1257#1258#0" expanded="true" />
+                <element signature="e#1302#1303#0" expanded="true" />
+                <element signature="e#13337#13338#0" expanded="true" />
+                <element signature="e#13420#13421#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MaskFilterDefault.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/br/editor/utils/MaskFilterDefault.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="287">
+              <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FiltersToRGB.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java">
+      <file leaf-file-name="transformacoes-R" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/links/transformacoes-R">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="382" column="0" selection-start-line="382" selection-start-column="0" selection-end-line="382" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1257#1258#0" expanded="true" />
-                <element signature="e#1302#1303#0" expanded="true" />
-                <element signature="e#13047#13048#0" expanded="true" />
-                <element signature="e#13130#13131#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="119">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -117,9 +143,10 @@
         <option value="$PROJECT_DIR$/src/com/br/editor/views/ContainerView.java" />
         <option value="$PROJECT_DIR$/src/com/br/editor/HistogramImageGrayScale.java" />
         <option value="$PROJECT_DIR$/src/com/br/editor/views/tests/ExamplelayoutImageCompare.java" />
-        <option value="$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java" />
         <option value="$PROJECT_DIR$/src/com/br/editor/utils/FiltersToGrayScale.java" />
         <option value="$PROJECT_DIR$/src/com/br/editor/App.java" />
+        <option value="$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java" />
+        <option value="$PROJECT_DIR$/src/links/transformacoes-R" />
       </list>
     </option>
   </component>
@@ -250,42 +277,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="com.br.editor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DPI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DPI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.br.editor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DPI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DPI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.br.editor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -501,6 +492,36 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -555,6 +576,21 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
       <method />
     </configuration>
     <list size="1">
@@ -710,13 +746,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java</url>
-          <line>359</line>
+          <line>370</line>
           <properties />
           <option name="timeStamp" value="110" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java</url>
-          <line>363</line>
+          <line>374</line>
           <properties />
           <option name="timeStamp" value="112" />
         </line-breakpoint>
@@ -746,19 +782,19 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java</url>
-          <line>354</line>
+          <line>365</line>
           <properties />
           <option name="timeStamp" value="129" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java</url>
-          <line>386</line>
+          <line>397</line>
           <properties />
           <option name="timeStamp" value="131" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java</url>
-          <line>375</line>
+          <line>386</line>
           <properties />
           <option name="timeStamp" value="132" />
         </line-breakpoint>
@@ -782,13 +818,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java</url>
-          <line>306</line>
+          <line>317</line>
           <properties />
           <option name="timeStamp" value="145" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java</url>
-          <line>266</line>
+          <line>277</line>
           <properties />
           <option name="timeStamp" value="146" />
         </line-breakpoint>
@@ -807,18 +843,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/br/editor/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#saveFile#0;class#App#0" expanded="false" />
-            <element signature="method#createImageGrayScaleByMatrix#0;class#App#0" expanded="false" />
-            <element signature="method#createImageGrayScaleByMatrix#1;class#App#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/links/multicore-process">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1078,14 +1102,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/br/editor/utils/MaskFilterDefault.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="56" column="31" selection-start-line="56" selection-start-column="31" selection-end-line="56" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0/src.zip!/javax/swing/JPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="129">
@@ -1140,28 +1156,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="382" column="0" selection-start-line="382" selection-start-column="0" selection-end-line="382" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1257#1258#0" expanded="true" />
-            <element signature="e#1302#1303#0" expanded="true" />
-            <element signature="e#13047#13048#0" expanded="true" />
-            <element signature="e#13130#13131#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/br/editor/utils/FiltersToGrayScale.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="94" column="32" selection-start-line="94" selection-start-column="32" selection-end-line="94" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/br/editor/App.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -1171,6 +1165,44 @@
             <element signature="method#createImageGrayScaleByMatrix#0;class#App#0" expanded="false" />
             <element signature="method#createImageGrayScaleByMatrix#1;class#App#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/br/editor/utils/FiltersToGrayScale.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="128" column="20" selection-start-line="128" selection-start-column="20" selection-end-line="128" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="174" column="50" selection-start-line="174" selection-start-column="50" selection-end-line="174" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1257#1258#0" expanded="true" />
+            <element signature="e#1302#1303#0" expanded="true" />
+            <element signature="e#13337#13338#0" expanded="true" />
+            <element signature="e#13420#13421#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/br/editor/utils/MaskFilterDefault.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/links/transformacoes-R">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
