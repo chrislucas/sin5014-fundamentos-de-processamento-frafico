@@ -209,18 +209,10 @@ public class App implements CallbackApplyFilter {
         JMenuItem itemMeanFilter   = new JMenuItem("Média");
         itemMeanFilter.addActionListener(filtersToGrayScale.filterMean);
 
-        JMenuItem itemMedianFilter  = new JMenuItem("Mediana");
-        itemMedianFilter.addActionListener(filtersToGrayScale.filterMedian);
-
-        JMenuItem itemEqualizationFilter  = new JMenuItem("Equalização");
-        itemEqualizationFilter.addActionListener(filtersToGrayScale.equalizator);
-
-        JMenuItem itemPassaAltaFilter    = new JMenuItem("Passa Alta");
+        JMenuItem itemPassaAltaFilter = new JMenuItem("Passa Alta");
         itemPassaAltaFilter.addActionListener(filtersToGrayScale.filterPassaAlta);
 
         menuGrayScale.add(itemMeanFilter);
-        menuGrayScale.add(itemMedianFilter);
-        menuGrayScale.add(itemEqualizationFilter);
         menuGrayScale.add(itemPassaAltaFilter);
 
         JMenu menuBrightness    = new JMenu("Luminosidade");
@@ -260,6 +252,8 @@ public class App implements CallbackApplyFilter {
         JMenuItem itemMean16= new JMenuItem("Média 16");
         itemMean16.addActionListener(filtersToRGB.mean16);
 
+        JMenuItem itemMedian= new JMenuItem("Mediana");
+        itemMedian.addActionListener(filtersToRGB.medianFilter);
 
         JMenuItem itemEqualizationFilterRGB = new JMenuItem("Equalizador");
         int h = bufferedImage.getHeight();
@@ -276,6 +270,7 @@ public class App implements CallbackApplyFilter {
         menuRGB.add(itemEqualizationFilterRGB);
         menuRGB.add(itemMean9);
         menuRGB.add(itemMean16);
+        menuRGB.add(itemMedian);
 
         JMenu menuOpBorderDetector = new JMenu("Operadores detecção de borda");
         JMenuItem itemGradientBorderDectectorHorizontal = new JMenuItem("Gradiente Horizontal");
@@ -341,7 +336,7 @@ public class App implements CallbackApplyFilter {
         this.imageCanvas.remove(imageContainer);
         this.imageContainer.setIcon(imageIcon);
         this.imageCanvas.add(imageContainer);
-        this.imageCanvas.add(new JScrollPane(imageContainer));
+        //this.imageCanvas.add(new JScrollPane(imageContainer));
         this.imageCanvas.revalidate();
         this.imageCanvas.repaint();
     }
@@ -351,7 +346,7 @@ public class App implements CallbackApplyFilter {
         this.imageContainer     = new JLabel();
         this.imageContainer.setIcon(imageIcon);
         this.imageCanvas.add(imageContainer);
-        this.imageCanvas.add(new JScrollPane(imageContainer));
+        //this.imageCanvas.add(new JScrollPane(imageContainer));
         this.imageCanvas.revalidate();
         this.imageCanvas.repaint();
     }

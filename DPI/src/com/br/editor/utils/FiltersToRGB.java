@@ -5,6 +5,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Created by r028367 on 31/03/2017.
@@ -91,7 +93,8 @@ public class FiltersToRGB {
         BufferedImage buffer = applyMask(mask, filename, format);
         if(callbackApplyFilter != null)
             callbackApplyFilter.after(buffer);
-        bufferedImage = buffer;
+        //bufferedImage = buffer;
+        redefineBufferedImage(buffer);
     }
 
     public BufferedImage applyMeanOp(int typeOfMask, String filename, String format) {
@@ -193,9 +196,10 @@ public class FiltersToRGB {
         public void actionPerformed(ActionEvent e) {
             if(callbackApplyFilter != null)
                 callbackApplyFilter.before(bufferedImage);
-            bufferedImage = applyMeanOp(2, "filtro_gaussiano3por3", "jpg");
+            BufferedImage buffer = applyMeanOp(2, "filtro_gaussiano3por3", "jpg");
             if(callbackApplyFilter != null)
-                callbackApplyFilter.after(bufferedImage);
+                callbackApplyFilter.after(buffer);
+            redefineBufferedImage(buffer);
         }
     };
 
@@ -230,9 +234,9 @@ public class FiltersToRGB {
         private CallbackApplyFilter callbackApplyFilter;
 
         public Splitting(CallbackApplyFilter callbackApplyFilter, int interval, int maxGrayScale, int constant) {
-            this.interval = interval;
-            this.maxGrayScale = maxGrayScale;
-            this.constant = constant;
+            this.interval       = interval;
+            this.maxGrayScale   = maxGrayScale;
+            this.constant       = constant;
             this.callbackApplyFilter = callbackApplyFilter;
         }
 
@@ -254,6 +258,56 @@ public class FiltersToRGB {
             }
         }
     }
+
+    public final ActionListener medianFilter = new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            BufferedImage buffer = new BufferedImage(widthImage, heightImage, BufferedImage.TYPE_INT_RGB);
+            ArrayList<Color> colors;
+            int matrixGC [][] = matrixGrayScale(matrixPixels);
+            for(int i=1; i<heightImage-1; i++) {
+                for (int j=1; j<widthImage-1; j++) {
+                    colors = new ArrayList<>();
+                    if(i>0) {
+                        int c = matrixGC[i-1][j];
+                        colors.add(new Color(c, c, c)/*new Color(bufferedImage.getRGB(i-1, j))*/); // cima
+                    }
+                    if(j<widthImage-1) {
+                        int c = matrixGC[i][j+1];
+                        colors.add(new Color(c, c, c)/*new Color(bufferedImage.getRGB(i, j + 1))*/); // direita
+                    }
+                    if(i<heightImage-1) {
+                        int c = matrixGC[i+1][j];
+                        colors.add(new Color(c, c, c)/*new Color(bufferedImage.getRGB(i + 1, j))*/); // embaixo
+                    }
+                    if(j>0) {
+                        int c = matrixGC[i][j-1];
+                        colors.add(new Color(c, c, c)/*new Color(bufferedImage.getRGB(i, j - 1))*/); // esquerda
+                    }
+                    int sz = colors.size();
+                    int hl = sz / 2;
+                    int r [] = new int [sz];
+                    int g [] = new int [sz];
+                    int b [] = new int [sz];
+                    int x=0;
+                    for(Color color : colors) {
+                        r[x] = color.getRed();
+                        g[x] = color.getGreen();
+                        b[x] = color.getBlue();
+                        x++;
+                    }
+                    Arrays.sort(r);
+                    Arrays.sort(g);
+                    Arrays.sort(b);
+                    buffer.setRGB(j,i,new Color(r[hl],g[hl],b[hl]).getRGB());
+                }
+            }
+            if(callbackApplyFilter != null)
+                callbackApplyFilter.after(buffer);
+            //bufferedImage = buffer;
+            redefineBufferedImage(buffer);
+        }
+    };
 
 
     public final class EqualizationInGrayScale implements ActionListener {
@@ -278,6 +332,20 @@ public class FiltersToRGB {
             return  this.quantityGrayScaleLevel;
         }
 
+        public int[] getMatrixHistogramGrayScale(int [] pixelsImage, int h, int w) {
+            int [] histogramGrayScale = new int[256];
+            for(int i=0; i<h; i++){ // linha
+                for(int j=0; j<w; j++) {    // coluna
+                    Color color = new Color(pixelsImage[i*w+j]);
+                    int r = color.getRed(), g = color.getGreen(), b = color.getBlue();
+                    int l = (r+g+b)/3;
+                    l = l > 255 ? 255 : l < 0 ? 0 : l;
+                    histogramGrayScale[l] += 1;
+                }
+            }
+            return histogramGrayScale ;
+        }
+
         public int [] getAccumulateHistogram() {
             int [] accHistogram = new int [histogram.length];
             accHistogram[0] = histogram[0];
@@ -296,22 +364,34 @@ public class FiltersToRGB {
             int quantityIdealPixels = widthImage * heightImage / quantityGrayScaleLevel;
             int accHistogram [] = getAccumulateHistogram();
             int q[] = new int [accHistogram.length];
+            /**
+             * Geramdo vetor Q []
+             * A partir desse novo vetor podemos modificar os valores dos pixels
+             * da imagem original afim de equalizar os valores dos tons de cinza
+             * */
             for(int i=0; i<accHistogram.length; i++) {
                 int v = accHistogram[i]/quantityIdealPixels - 1;
                 q[i] = 0 > v ? 0 : v;
             }
-
             int [][] newMatrixPixels = new int[heightImage][widthImage];
             for(int i=0; i<heightImage; i++) {
                 for (int j = 0; j < widthImage; j++) {
+                    // criando uma nova imagem a partir do vetor Q
                     newMatrixPixels[i][j] = q[matrixGrayScalePixels[i][j]];
                 }
             }
+
+            BufferedImage buffer = matrixToBuffer(newMatrixPixels);
             if(callbackApplyFilter != null) {
-                callbackApplyFilter.after(matrixToBuffer(newMatrixPixels));
+                // redesenhado a imagem no canvas
+                callbackApplyFilter.after(buffer);
             }
 
-            matrixGrayScalePixels = newMatrixPixels;
+            redefineBufferedImage(buffer);
+            int w = buffer.getWidth(), h = buffer.getHeight();
+            this.histogram = getMatrixHistogramGrayScale(buffer.getRGB(0, 0, w, h, null, 0, w), h, w);
+            // imagem antiga recebe o valor novo
+            // matrixGrayScalePixels = newMatrixPixels;
         }
     }
 

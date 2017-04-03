@@ -21,6 +21,7 @@ public class ExamplelayoutImageCompare {
     private void init() {
         GridBagLayout gridBagLayout = new GridBagLayout();
         CanvasImageResult canvasImageResult = new CanvasImageResult(gridBagLayout, before, after);
+
     }
 
 }

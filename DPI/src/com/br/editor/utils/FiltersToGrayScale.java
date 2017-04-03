@@ -92,43 +92,6 @@ public class FiltersToGrayScale {
         }
     };
 
-    public final ActionListener filterMedian = new ActionListener() {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            BufferedImage buffer = new BufferedImage(widthImage, heightImage, BufferedImage.TYPE_INT_RGB);
-            int r [] = new int [4];
-            int g [] = new int [4];
-            int b [] = new int [4];
-            Color pixel [] = new Color[4];
-            for(int i=0; i<widthImage; i++) {
-                for (int j=0; j<heightImage; j++) {
-                    if(i > 0) {
-                        pixel[0] = new Color(bufferedImage.getRGB(i - 1, j)); // cima
-                    }
-                    if(j < heightImage) {
-                        pixel[1] = new Color(bufferedImage.getRGB(i, j + 1)); // direita
-                    }
-                    if(j<heightImage) {
-                        pixel[2] = new Color(bufferedImage.getRGB(i + 1, j)); // embaixo
-                    }
-                    if(j>0) {
-                        pixel[3] = new Color(bufferedImage.getRGB(i, j - 1)); // esquerda
-                    }
-                    for(int x=0; x<pixel.length; x++) {
-                        r[x] = pixel[x].getRed();
-                        g[x] = pixel[x].getGreen();
-                        b[x] = pixel[x].getBlue();
-                    }
-                    Arrays.sort(r);
-                    Arrays.sort(g);
-                    Arrays.sort(b);
-                    buffer.setRGB(i,j,new Color(r[2],g[2],b[2]).getRGB());
-                }
-            }
-            createImage(buffer, "images/median.jpg");
-        }
-    };
-
     public final ActionListener filterPassaAlta = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -140,12 +103,6 @@ public class FiltersToGrayScale {
         }
     };
 
-    public final ActionListener equalizator = new ActionListener() {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-
-        }
-    };
 
     public int [][] getPixelsInGrayScale(BufferedImage bufferedImage) {
         int w = bufferedImage.getWidth();
