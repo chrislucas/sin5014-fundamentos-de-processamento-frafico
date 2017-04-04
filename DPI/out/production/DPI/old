@@ -1,4 +1,4 @@
-FiltersToGrayScale.java
+com.br.editor.utils.FiltersToGrayScale.java
     public final ActionListener filterMean = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {

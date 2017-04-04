@@ -7,5 +7,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+<<<<<<< HEAD
+=======
+    <orderEntry type="library" name="scala-sdk-2.11.8" level="application" />
+>>>>>>> e773434a30031d74d10c8b8040ec7411767f14e6
   </component>
 </module>

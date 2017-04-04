@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="dpi">
+    <output-path>$PROJECT_DIR$/out/artifacts/dpi</output-path>
+    <root id="archive" name="dpi.jar" />
+  </artifact>
+</component>
