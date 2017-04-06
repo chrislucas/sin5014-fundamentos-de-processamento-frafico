@@ -12,7 +12,7 @@ public class LearningRunnable {
     public class TransverveMatrix implements Callable<int [][]> {
         private int matrix [][];
         private int i, j, value, w, h;
-        public TransverveMatrix(int [][] matrix, int w, int h, int i, int j, int value) {
+        public TransverveMatrix(int [][] matrix, int h, int w, int i, int j, int value) {
             this.matrix = matrix;
             this.i      = i;
             this.j      = j;
@@ -32,36 +32,59 @@ public class LearningRunnable {
         }
     }
 
-    public static void main(String[] args) {
-        // Java 8 eh lindo
-        matrix = new int[9][9];
+    public class TransverveMatrix2 implements Callable<Integer> {
+        private int matrix [][];
+        private int i, j, value, w, h;
+        public TransverveMatrix2(int [][] matrix, int h, int w, int i, int j, int value) {
+            this.matrix = matrix;
+            this.i      = i;
+            this.j      = j;
+            this.h      = h;
+            this.w      = w;
+            this.value  = value;
+        }
 
+        @Override
+        public Integer call() throws Exception {
+            for(int x=i; x<h; x++) {
+                for(int y=j; y<w; y++) {
+                    matrix[x][y] = value++;
+                }
+            }
+            return value;
+        }
+    }
 
+    private static void exampleLambda() {
         Runnable runnable = () -> {
             System.out.println("Teste");
         };
         runnable.run();
+    }
 
+
+    private static void fillMatrix() {
+        // Java 8 eh lindo
+        matrix = new int[6][6];
         ExecutorService executorService = Executors.newFixedThreadPool(9);
         List<Future<int [][]>> tasks = new ArrayList<>();
-        int limitW = 3, limitH = 3, initI = 0, initJ = 0, value = 1, accH = 3, accW = 3;
+        int limitW = 3, limitH = 3
+                ,i = 0, j= 0
+                ,value = 1, h = 3, w = 3;
         int H = matrix.length, W = matrix[0].length;
-        for(int i=0; i<9; i++) {
-            Callable<int[][]> tm = new LearningRunnable()
-                    .new TransverveMatrix(matrix, accH, accW, initI, initJ, value);
-            Future<int [][]> futureTasks = executorService.submit(tm);
-            initI = (initI + limitH);
-            initJ = (initJ + limitW);
-            value += limitW;
-            accH = (accH + limitH) % (limitH+1);
-            accW = (accW + limitW) % (limitW+1);
+        for(int x=1; x<H+1; x++) {
+            Callable<int[][]> tm = new LearningRunnable().new TransverveMatrix(matrix, h, w, i, j, value);
+            Future<int[][]> futureTasks = executorService.submit(tm);
+            i = (x / limitH) * limitH;
+            j = (j + limitW) % W;
+            h = i + limitH;
+            w = j + limitW;
+            value += H;
             tasks.add(futureTasks);
         }
 
         for(Future<int [][]> task : tasks) {
-            while ( ! task.isDone() ) {
-                System.out.println(task.hashCode());
-            }
+            while ( ! task.isDone() ) {}
             try {
                 matrix = task.get();
                 executorService.shutdown();
@@ -72,17 +95,48 @@ public class LearningRunnable {
             }
         }
 
-
-/*
-        Future<int [][]> future = executorService.submit(tm);
-        executorService.execute(new Runnable() {
-                @Override
-                public void run() {
-
-                }
+        for(i=0; i<H; i++) {
+            for(j=0; j<W; j++) {
+                System.out.printf("%d ", matrix[i][j]);
             }
-        );
-        */
+            System.out.println("");
+        }
+    }
+
+    private static void fillMatrix2() {
+        matrix = new int[12][12];
+        int limitW = 3, limitH = 3, i = 0, j= 0, value = 1, h = 3, w = 3;
+        int H = matrix.length, W = matrix[0].length;
+        ExecutorService executorService = Executors.newFixedThreadPool(H);
+        for(int x=1; x<H+1; x++) {
+            Callable<Integer> tm = new LearningRunnable().new TransverveMatrix2(matrix, h, w, i, j, value);
+            Future<Integer> futureTasks = executorService.submit(tm);
+            while( ! futureTasks.isDone() ) {}
+            try {
+                value = futureTasks.get();
+            } catch (InterruptedException e) {
+                System.out.printf("InterruptedException: %s\n", e.getCause());
+            } catch (ExecutionException e) {
+                System.out.printf("ExecutionException: %s\n", e.getCause());
+            }
+
+            i = (x / limitH) * limitH;
+            j = (j + limitW) % W;
+            h = i + limitH;
+            w = j + limitW;
+        }
+        executorService.shutdown();
+
+        for(i=0; i<H; i++) {
+            for(j=0; j<W; j++) {
+                System.out.printf("%d ", matrix[i][j]);
+            }
+            System.out.println("");
+        }
+    }
+
+    public static void main(String[] args) {
+        fillMatrix2();
     }
 
 }

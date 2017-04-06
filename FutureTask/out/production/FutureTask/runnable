@@ -2,4 +2,17 @@ http://winterbe.com/posts/2015/04/07/java8-concurrency-tutorial-thread-executor-
 
 https://martin-thoma.com/part-iii-matrix-multiplication-on-multiple-cores-in-python-java-and-c/
 http://tutorials.jenkov.com/java-util-concurrent/executorservice.html
-chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#uri=http://winterbe.com/posts/2015/04/07/java8-concurrency-tutorial-thread-executor-examples/
+http://winterbe.com/posts/2015/04/07/java8-concurrency-tutorial-thread-executor-examples/
+
+
+
+/*
+        Future<int [][]> future = executorService.submit(tm);
+        executorService.execute(new Runnable() {
+                @Override
+                public void run() {
+
+                }
+            }
+        );
+*/
