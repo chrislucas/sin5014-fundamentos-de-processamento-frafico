@@ -8,7 +8,7 @@ import static java.lang.Math.sin;
 import static java.lang.Math.cos;
 import static java.lang.Math.tan;
 
-public class Trigonometry {
+public class Transformation {
 
 
     public static double toRadian(double degree) {
