@@ -12,12 +12,18 @@ public class Canvas2D extends JPanel {
         super(layout);
     }
 
-    public Canvas2D() {
+    private int width, height;
+    public Canvas2D(int width, int height) {
+        this.width = width;
+        this.height = height;
+        Dimension dimension = new Dimension(width, height);
+        super.setPreferredSize(dimension);
     }
 
     @Override
     public Dimension getPreferredSize() {
-        return super.getPreferredSize();
+        Dimension d = super.getPreferredSize();
+        return d;
     }
 
     @Override
