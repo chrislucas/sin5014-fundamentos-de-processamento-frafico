@@ -10,16 +10,13 @@ public class AppGeoTransformation {
 
     private JFrame frame;
     private Canvas2D canvas2D;
-    private JSlider sliderTransformation;
     private GridBagLayout gridBagLayout;
-
 
     public AppGeoTransformation() {
         this.frame = new JFrame();
         this.frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         this.gridBagLayout = new GridBagLayout();
         this.frame.setLayout(this.gridBagLayout);
-        this.sliderTransformation = new JSlider(JSlider.VERTICAL, 0, 360, 0);
     }
 
 
@@ -42,6 +39,7 @@ public class AppGeoTransformation {
                 GridBagConstraints gridBagConstraints = new GridBagConstraints();
 
                 JFrame frame = appGeoTransformation.getFrame();
+                frame.setTitle("Transformação geométrica");
 
                 Container container = frame.getContentPane();
                 Canvas2D canvas2D = new Canvas2D(400, 400);
@@ -50,26 +48,26 @@ public class AppGeoTransformation {
 
                 gridBagConstraints.gridx        = 0;
                 gridBagConstraints.gridy        = 0;
-                gridBagConstraints.gridwidth    = 2;
-                gridBagConstraints.gridheight   = 2;
+                gridBagConstraints.gridwidth    = 1;
+                gridBagConstraints.gridheight   = 1;
 
-                //gridBagConstraints.weightx      = 0.10;
-                //gridBagConstraints.weighty      = 10;
+                //gridBagConstraints.weightx    = 1;
+                //gridBagConstraints.weighty    = 1;
                 //gridBagConstraints.anchor     = GridBagConstraints.FIRST_LINE_START;
-
-                gridBagConstraints.fill         = GridBagConstraints.BOTH;
-
+                //gridBagConstraints.fill       = GridBagConstraints.BOTH;
                 container.add(canvas2D, gridBagConstraints);
 
                 gridBagConstraints.gridx            = 0;
                 gridBagConstraints.gridy            = 1;
-                gridBagConstraints.gridwidth        = 3;
-                container.add(appGeoTransformation.sliderTransformation, gridBagConstraints);
+                //gridBagConstraints.gridwidth        = 1;
+                //gridBagConstraints.gridheight       = 1;
+                JSlider jSlider = canvas2D.getSliderTransformation();
+                container.add(jSlider, gridBagConstraints);
 
-                frame.setSize(new Dimension(1280,600));
                 frame.pack();
-                frame.setLocationRelativeTo(null);
+                frame.setSize(new Dimension(1280,600));
                 frame.setVisible(true);
+                frame.setLocationRelativeTo(null);
                 frame.setResizable(true);
             }
         });
