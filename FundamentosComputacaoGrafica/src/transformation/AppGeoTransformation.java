@@ -11,6 +11,7 @@ public class AppGeoTransformation {
     private JFrame frame;
     private Canvas2D canvas2D;
     private GridBagLayout gridBagLayout;
+    private JMenu mainMenu;
 
     public AppGeoTransformation() {
         this.frame = new JFrame();
@@ -24,9 +25,7 @@ public class AppGeoTransformation {
         return frame;
     }
 
-    private void defineConstraintLayout() {
-
-    }
+    private void defineConstraintLayout() {}
 
     public static void main(String[] args) {
 
@@ -42,14 +41,14 @@ public class AppGeoTransformation {
                 frame.setTitle("Transformação geométrica");
 
                 Container container = frame.getContentPane();
-                Canvas2D canvas2D = new Canvas2D(400, 400);
+                Canvas2D canvas2D = new Canvas2D(600, 600);
                 canvas2D.setBorder(BorderFactory.createLineBorder(Color.BLUE));
                 canvas2D.setBackground(new Color(250,255,230));
 
                 gridBagConstraints.gridx        = 0;
                 gridBagConstraints.gridy        = 0;
-                gridBagConstraints.gridwidth    = 1;
-                gridBagConstraints.gridheight   = 1;
+                gridBagConstraints.gridwidth    = 2;
+                gridBagConstraints.gridheight   = 2;
 
                 //gridBagConstraints.weightx    = 1;
                 //gridBagConstraints.weighty    = 1;
@@ -58,14 +57,14 @@ public class AppGeoTransformation {
                 container.add(canvas2D, gridBagConstraints);
 
                 gridBagConstraints.gridx            = 0;
-                gridBagConstraints.gridy            = 1;
-                //gridBagConstraints.gridwidth        = 1;
-                //gridBagConstraints.gridheight       = 1;
+                gridBagConstraints.gridy            = 6;
+                gridBagConstraints.gridwidth        = 0;
+                gridBagConstraints.gridheight       = 2;
                 JSlider jSlider = canvas2D.getSliderTransformation();
                 container.add(jSlider, gridBagConstraints);
 
                 frame.pack();
-                frame.setSize(new Dimension(1280,600));
+                frame.setSize(new Dimension(1400,800));
                 frame.setVisible(true);
                 frame.setLocationRelativeTo(null);
                 frame.setResizable(true);

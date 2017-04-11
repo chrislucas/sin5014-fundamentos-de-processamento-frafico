@@ -6,7 +6,6 @@ package utils;
 
 import static java.lang.Math.sin;
 import static java.lang.Math.cos;
-import static java.lang.Math.tan;
 
 public class Transformation {
 
@@ -36,21 +35,44 @@ public class Transformation {
         System.out.printf("%f %f %f %f", np1[0], np1[1], np2[0], np2[1]);
     }
 */
-    public static double[][] matrixRotation(double degree) {
+    public static double[][] matrixRotationDegree(double degree) {
         return new double [][] {
-             {cos(toRadian(degree)), sin(toRadian(degree))}
-            ,{-sin(toRadian(degree)), cos(toRadian(degree))}
+             {Math.floor(cos(toDegree(degree))), Math.floor(sin(toDegree(degree)))}
+            ,{Math.floor(-sin(toDegree(degree))), Math.floor(cos(toDegree(degree)))}
+        };
+    }
+
+
+    public static double[][] matrixRotationRadian(double degree) {
+        return new double [][] {
+             {Math.floor(cos(toRadian(degree))), Math.floor(sin(toRadian(degree)))}
+            ,{Math.floor(-sin(toRadian(degree))), Math.floor(cos(toRadian(degree)))}
+        };
+    }
+
+    public static double[][] matrixScale2D(double scaleX, double scaleY) {
+        return new double [][] {
+             {scaleX, 0}
+            ,{0, scaleY}
+        };
+    }
+
+    public static double[][] matrixScale2D(double scaleX, double scaleY, double scaleZ) {
+        return new double [][] {
+             {scaleX, 0, 0}
+            ,{0, scaleY, 0}
+            ,{0, 0, scaleZ}
         };
     }
 
     public static double [] rotate2D(double degree, double point []) {
-        double rotation [][] = matrixRotation(degree);
+        double rotation [][] = matrixRotationRadian(degree);
         int l = rotation.length, c = rotation[0].length;
         double newPoints [] = new double[2];
-        for(int i=0; i<point.length; i++) {
-            for(int j=0; j<c; j++) {
-                for(int k=0; k<l; k++) {
-                    newPoints [i] += point[k] * rotation[k][j];
+        for(int i=0; i<1; i++) {     // colunas do vetor
+            for(int j=0; j<c; j++) {            // linhas do vetor
+                for(int k=0; k<l; k++) {        // linhas da matriz
+                    newPoints [j] += point[k] * rotation[k][j];
                 }
             }
         }
@@ -58,5 +80,12 @@ public class Transformation {
     }
 
 
-
+    /**
+     * http://stackoverflow.com/questions/36562488/2d-point-rotation-based-off-a-matrix
+     * */
+    public static void main(String[] args) {
+        System.out.println(Math.floor(cos(toRadian(-90))));
+        rotate2D(-90, new double[] {4, 0});
+        rotate2D(-90, new double[] {0, -4});
+    }
 }
