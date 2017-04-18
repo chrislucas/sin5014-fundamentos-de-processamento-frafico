@@ -13,6 +13,12 @@ import java.util.List;
 /**
  * Created by r028367 on 07/04/2017.
  */
+
+
+
+
+import static  java.lang.Math.*;
+
 public class Canvas2D extends JPanel {
 
     private JSlider sliderTransformation;
@@ -83,17 +89,20 @@ public class Canvas2D extends JPanel {
             double diffX = defaultMatrixLine[0][0] - B[0];
             double diffY = defaultMatrixLine[0][1] - B[1];
             double distance = Math.sqrt((diffX*diffX) + (diffY*diffY));
-/*
-            double diffX = matrix[1][0] - matrix[0][0];
-            double diffY = matrix[1][1] - matrix[0][1];
-            double distance = Math.sqrt( (diffX*diffX) + (diffY*diffY));
-            double x = distance * Math.cos(Transformation.toRadian(degree));
-            double y = distance * Math.sin(Transformation.toRadian(degree));
 
-            double B[] = {defaultMatrixLine[1][0]+x, defaultMatrixLine[1][1]+y};
-*/
+            // segunda forma
+            double diffX2 = matrix[1][0] - matrix[0][0];
+            double diffY2 = matrix[1][1] - matrix[0][1];
+            double distance2 = floor(sqrt( (diffX2*diffX2) + (diffY2*diffY2)));
+            double x = distance2 * floor(cos(Transformation.toRadian(degree)));
+            double y = distance2 * floor(sin(Transformation.toRadian(degree)));
+            double [] B2 = {defaultMatrixLine[1][0]+x, defaultMatrixLine[1][1]+y};
+
             double A[] = {defaultMatrixLine[0][0], defaultMatrixLine[0][1]};
-            System.out.printf("Distance: %f\n %f %f %f %f\n",distance
+            System.out.printf("Distance: %f %f\nGraus: %d\n %f %f %f %f\n"
+                    ,distance
+                    ,distance2
+                    ,degree
                     ,A[0], A[1], B[0], B[1]);
 
             matrix = new double[][]{

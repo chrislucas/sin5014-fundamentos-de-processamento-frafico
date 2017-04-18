@@ -4,8 +4,8 @@ package utils;
  * Created by C.Lucas on 04/04/2017.
  */
 
-import static java.lang.Math.sin;
-import static java.lang.Math.cos;
+import static java.lang.Math.*;
+
 
 public class Transformation {
 
@@ -37,16 +37,16 @@ public class Transformation {
 */
     public static double[][] matrixRotationDegree(double degree) {
         return new double [][] {
-             {Math.floor(cos(toDegree(degree))), Math.floor(sin(toDegree(degree)))}
-            ,{Math.floor(-sin(toDegree(degree))), Math.floor(cos(toDegree(degree)))}
+             {floor(cos(toDegree(degree))), floor(sin(toDegree(degree)))}
+            ,{floor(-sin(toDegree(degree))), floor(cos(toDegree(degree)))}
         };
     }
 
 
     public static double[][] matrixRotationRadian(double degree) {
         return new double [][] {
-             {Math.floor(cos(toRadian(degree))), Math.floor(sin(toRadian(degree)))}
-            ,{Math.floor(-sin(toRadian(degree))), Math.floor(cos(toRadian(degree)))}
+             {floor(cos(toRadian(degree))), floor(sin(toRadian(degree)))}
+            ,{floor(-sin(toRadian(degree))),floor(cos(toRadian(degree)))}
         };
     }
 

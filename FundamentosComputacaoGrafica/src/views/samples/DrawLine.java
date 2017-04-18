@@ -1,4 +1,4 @@
-package views;
+package views.samples;
 
 import utils.Transformation;
 
