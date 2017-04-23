@@ -41,7 +41,7 @@ public class AppGeoTransformation {
                 frame.setTitle("Transformação geométrica");
 
                 Container container = frame.getContentPane();
-                Canvas2D canvas2D = new Canvas2D(600, 600);
+                Canvas2D canvas2D = new Canvas2D(600, 400);
                 canvas2D.setBorder(BorderFactory.createLineBorder(Color.BLUE));
                 canvas2D.setBackground(new Color(250,255,230));
 
@@ -64,7 +64,7 @@ public class AppGeoTransformation {
                 container.add(jSlider, gridBagConstraints);
 
                 frame.pack();
-                frame.setSize(new Dimension(1400,800));
+                frame.setSize(new Dimension(800, 600));
                 frame.setVisible(true);
                 frame.setLocationRelativeTo(null);
                 frame.setResizable(true);
