@@ -4,6 +4,8 @@ package utils;
  * Created by C.Lucas on 04/04/2017.
  */
 
+import java.awt.geom.AffineTransform;
+
 import static java.lang.Math.*;
 
 
@@ -203,7 +205,7 @@ public class Transformation {
         rotate2D(-90, new double[] {4, 0});
         rotate2D(-90, new double[] {0, -4});
         */
-        executeExercise();
+        executeExercise5();
     }
 
     /**
@@ -242,12 +244,13 @@ public class Transformation {
     /**
      * Exercicio 4 aula
      * */
-    private static void executeExercise() {
+    private static void executeExercise4() {
         double point [] = {-1.5, 2, 4, 1};       // vetor com ua dimensao a mais
         // rotacionar x a 15 graus
         // transaladar [2,-2,4]
         // rotacionar y a 45 gruas
         /*
+        // so para testar
         double newMatrix [][] = fmm(fmm(getHomogeneousMatrixRotationX(15), getHomogenousTransla3DteMatrix(2,-2,4)), getHomogeneousMatrixRotationY(45));
         for(int i=0; i<newMatrix.length; i++) {
             for(int j=0; j<newMatrix[0].length; j++) {
@@ -257,11 +260,79 @@ public class Transformation {
         }
         double newPoint [] = fmvm(point, newMatrix);
         */
-        double newPoint [] = fmvm(point, fmm(fmm(getHomogeneousMatrixRotationX(15), getHomogenousTransla3DteMatrix(2,-2,4)), getHomogeneousMatrixRotationY(45)));
+        //double newPoint [] = fmvm(fmvm(point, getHomogeneousMatrixRotationX(15)), getHomogenousTransla3DteMatrix(2,-2,4));
+        double newPoint [] = fmvm(fmvm(fmvm(point, getHomogeneousMatrixRotationX(15)), getHomogenousTransla3DteMatrix(2,-2,4)),getHomogeneousMatrixRotationY(45));
+        //double newPoint [] = fmvm(point, fmm(fmm(getHomogeneousMatrixRotationX(15), getHomogenousTransla3DteMatrix(2,-2,4)), getHomogeneousMatrixRotationY(45)));
         System.out.println("\n");
         for (int i=0; i<newPoint.length; i++) {
             System.out.printf("%f ", newPoint[i]);
         }
+        /**
+         *
+         * [@link {@link AffineTransform}]
+         * */
         System.out.println("\n");
+    }
+
+    public static double [][] getHomogeneousMatrixOrtographicProjection(int axis) {
+        double [][] matrix = new double[4][4];
+        // x, y, z
+        if(axis > 3)
+            return null;
+        for (int i=0; i<4; i++) {
+            if(i+1 == axis)
+                continue;
+            matrix[i][i] = 1.0;
+        }
+        return matrix;
+    }
+
+    public static double [][] getHomogeneousMatrixOrtographicProjection(int axis, double T) {
+        double [][] matrix = new double[4][4];
+        // x, y, z
+        if(axis > 3)
+            return null;
+        matrix[3][axis-1] = T;
+        for (int i=0; i<4; i++) {
+            if(i+1 == axis)
+                continue;
+            matrix[i][i] = 1.0;
+        }
+        return matrix;
+    }
+
+    public static double [][] getMatrixObliqueProjection(int axis, double phi, double alpha) {
+        double c = Math.cos(Math.toRadians(phi));
+        double t = Math.tan(Math.toRadians(alpha));
+        double s = Math.sin(Math.toRadians(phi));
+
+        double [][] matrix = new double[4][4];
+        if(axis > 3)
+            return null;
+        matrix[0][axis-1] = c/t;
+        matrix[1][axis-1] = s/t;
+        for (int i=0; i<4; i++) {
+            if(i+1 == axis)
+                continue;
+            matrix[i][i] = 1.0;
+        }
+        return matrix;
+    }
+
+    /**
+     * Exercicio 5 aula 4
+     * */
+    private static void executeExercise5() {
+        double point [] = {-1.5, 2, 4, 1};
+        double newPoint [] = fmvm(point, getHomogeneousMatrixOrtographicProjection(3, 3.5));
+        for(int i=0; i<newPoint.length; i++) {
+            System.out.printf("%f ", newPoint[i]);
+        }
+        System.out.println("");
+        newPoint = fmvm(point, getMatrixObliqueProjection(3, 30, 60));
+        for(int i=0; i<newPoint.length; i++) {
+            System.out.printf("%f ", newPoint[i]);
+        }
+        System.out.println("");
     }
 }
