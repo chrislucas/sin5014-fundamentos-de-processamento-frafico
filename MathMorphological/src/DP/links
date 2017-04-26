@@ -9,6 +9,8 @@ Matrix Exponentiation Optimazed
 http://www.geeksforgeeks.org/program-for-nth-fibonacci-number/
 http://codeforces.com/blog/entry/14516
 http://www.geeksforgeeks.org/matrix-exponentiation/
+An amazing way to calculate 10^18-th fibonacci number using 25 lines of code.
+http://codeforces.com/blog/entry/14516
 
 Matrix Exponentiation
 https://www.hackerearth.com/practice/notes/matrix-exponentiation-1/
@@ -16,3 +18,21 @@ https://kukuruku.co/post/the-nth-fibonacci-number-in-olog-n/
 https://codeaccepted.wordpress.com/2014/06/01/algorithm-12-matrix-exponentiation/
 Problems
 http://zobayer.blogspot.com.br/2010/11/matrix-exponentiation.html
+
+
+DP Turorial
+https://www.topcoder.com/community/data-science/data-science-tutorials/dynamic-programming-from-novice-to-advanced/
+
+    dp[2000][2000]
+     for (int i = 0; i <=n; i++) {
+        for (int j = 0; j <=m; j++){
+          if(i==0){ dp[i][j]=1; continue;}
+          if(j==0){ dp[i][j]=1; continue;}
+          dp[i][j]= i*1.0/(i+j)+ (j*1.0/(i+j))*((j-1)*1.0/(i+j-1))*dp[i][j-2];
+        }
+     }
+
+
+     Bots
+     https://www.quora.com/What-is-the-process-of-creating-bots-for-Android-games
+     https://www.unknowncheats.me/forum/android/166396-bot-online-android-game.html
