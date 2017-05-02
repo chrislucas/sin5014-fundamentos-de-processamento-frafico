@@ -4,7 +4,7 @@ import java.math.BigInteger;
 
 /**
  * Created by r028367 on 25/04/2017.
- *
+ * https://www.hackerearth.com/practice/algorithms/dynamic-programming/introduction-to-dynamic-programming-1/practice-problems/algorithm/angry-neighbours/
  */
 public class WackyWorkouts {
 
@@ -50,8 +50,8 @@ public class WackyWorkouts {
         return f[0][1];
     }
 
-    public static BigInteger optimazed(BigInteger n) {
-        return null;
+    public static long optimazed(long n) {
+        return 0;
     }
 
 
