@@ -2,6 +2,9 @@ https://www.hackerearth.com/practice/algorithms/dynamic-programming/introduction
 
 https://www.hackerrank.com/challenges/stockmax
 https://www.hackerrank.com/challenges/xor-and-sum
+<<<<<<< HEAD
+https://www.hackerrank.com/challenges/string-reduction
+=======
 https://www.hackerrank.com/challenges/string-reduction
 
 
@@ -16,3 +19,4 @@ https://kukuruku.co/post/the-nth-fibonacci-number-in-olog-n/
 https://codeaccepted.wordpress.com/2014/06/01/algorithm-12-matrix-exponentiation/
 Problems
 http://zobayer.blogspot.com.br/2010/11/matrix-exponentiation.html
+>>>>>>> 6a76ed19a10a97f4c02284ee9b4b29a947d3e6a3

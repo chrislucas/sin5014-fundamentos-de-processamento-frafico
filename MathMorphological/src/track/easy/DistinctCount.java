@@ -9,6 +9,7 @@ import java.util.*;
 /**
  * Created by r028367 on 24/04/2017.
  * https://www.hackerearth.com/tracks/pledge-2015-easy/distinct-count/
+ * DONE
  */
 public class DistinctCount {
     public static void main(String[] args) {
@@ -24,7 +25,6 @@ public class DistinctCount {
                 int nums [] = new int[N];
                 int LIMIT = 0;
                 Set<Integer> set = new HashSet<>();
-
                 int C = tk.countTokens();
                 for(int i=0; i<C; i++) {
                     int V = Integer.parseInt(tk.nextToken());
