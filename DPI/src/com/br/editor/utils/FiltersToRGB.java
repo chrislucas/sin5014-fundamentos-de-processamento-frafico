@@ -87,6 +87,11 @@ public class FiltersToRGB {
         return buffer;
     }
 
+    /**
+     * Metodo responsavel por executar um processo antes de aplicar o filtro
+     * aplica o filtro, e executa um processo apos aplicacao do filtro
+     *
+     * */
     private final void apply(int mask [][], String filename, String format) {
         if(callbackApplyFilter != null)
             callbackApplyFilter.before(bufferedImage);
@@ -148,20 +153,84 @@ public class FiltersToRGB {
         return buffer;
     }
 
+    /**
+     * Action para deteccao de borda
+     * */
     public final ActionListener gradientBorderDetectorHorizontal = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
-            apply(MaskFilterDefault.MaskBorderDetector.horizontalGradient, "HorizontalBorderDetector", "jpg");
+            apply(MaskFilterDefault.MaskBorderDetector.horizontalGradient, "HorizontalGradientBorderDetector", "jpg");
         }
     };
-
     public final ActionListener gradientBorderDetectorVertical= new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
-            apply(MaskFilterDefault.MaskBorderDetector.verticalGradient, "VerticalBorderDetector", "jpg");
+            apply(MaskFilterDefault.MaskBorderDetector.verticalGradient, "VerticalGradientBorderDetector", "jpg");
+        }
+    };
+    public final ActionListener sobelHorizontalBorderDetection = new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            apply(MaskFilterDefault.MaskBorderDetector.sobelHorizontal, "SobelHorizontalBorderDetector", "jpg");
+        }
+    };
+    public final ActionListener sobelVerticakBorderDetection = new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            apply(MaskFilterDefault.MaskBorderDetector.sobelVertical, "SobelVerticalBorderDetector", "jpg");
+        }
+    };
+    public final ActionListener prewittHorizontalBorderDetection = new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            apply(MaskFilterDefault.MaskBorderDetector.prewittHorizontal, "PrewiTTHoriziontalBorderDetector", "jpg");
+        }
+    };
+    public final ActionListener prewittVerticalBorderDetection = new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            apply(MaskFilterDefault.MaskBorderDetector.prewittVertical, "PrewiTTVerticalBorderDetector", "jpg");
         }
     };
 
+    /**
+     * Fim das actions para deteccao de borta
+     * */
+
+
+    /**
+     * Actions para deteccao de linhas
+     * */
+
+    public final ActionListener horizontalLineDetection = new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            apply(MaskFilterDefault.MaskLineDetection.maskHorinzontal, "Deteccao Horizonal", "jpg");
+        }
+    };
+    public final ActionListener verticalLineDetection = new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            apply(MaskFilterDefault.MaskLineDetection.maskVertical, "Deteccao Vertical", "jpg");
+        }
+    };
+    public final ActionListener p45degreeLineDetection = new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            apply(MaskFilterDefault.MaskLineDetection.maskP45, "Deteccao De linhas p45grau", "jpg");
+        }
+    };
+    public final ActionListener m45degreeLineDetection = new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            apply(MaskFilterDefault.MaskLineDetection.maskM45, "Deteccao De linhas m45grau", "jpg");
+        }
+    };
+
+    /**
+     * Fim das actions de detecacao de linhas
+     * */
+    /**/
     public final ActionListener laplacianFilter = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -320,7 +389,6 @@ public class FiltersToRGB {
         }
     };
 
-
     public final class EqualizationInGrayScale implements ActionListener {
         private int quantityGrayScaleLevel = 10;
         private int[] histogram;
@@ -405,7 +473,6 @@ public class FiltersToRGB {
             // matrixGrayScalePixels = newMatrixPixels;
         }
     }
-
 
     public final class QuantizationInGrayScale implements  ActionListener {
 
