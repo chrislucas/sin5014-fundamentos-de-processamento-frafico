@@ -199,7 +199,10 @@ public class App implements CallbackApplyFilter {
         updateImageOnCanvas(bufferedImage);
     }
 
-    private void buildMenuAlgorithms() {
+    /**
+     * Esse metodo eh rezposanvel por
+     * */
+    private void addItemsToMenuAlgorithms() {
         filtersToGrayScale = new FiltersToGrayScale(this, bufferedImage, widthImage, heightImage);
         // principal
         menuFilters = new JMenu("Filtros");
@@ -272,6 +275,9 @@ public class App implements CallbackApplyFilter {
         menuRGB.add(itemMean16);
         menuRGB.add(itemMedian);
 
+        /**
+         * Menus de filtros de deteccao de borda
+         * */
         JMenu menuOpBorderDetector = new JMenu("Operadores detecção de borda");
         JMenuItem itemGradientBorderDectectorHorizontal = new JMenuItem("Gradiente Horizontal");
         itemGradientBorderDectectorHorizontal.addActionListener(filtersToRGB.gradientBorderDetectorHorizontal);
@@ -279,10 +285,47 @@ public class App implements CallbackApplyFilter {
         JMenuItem itemGradientBorderDectectorVertical= new JMenuItem("Gradiente Vertical");
         itemGradientBorderDectectorVertical.addActionListener(filtersToRGB.gradientBorderDetectorVertical);
 
+        JMenuItem itemSobelHorizontalBorderDetector = new JMenuItem("DHB Sobel");
+        itemSobelHorizontalBorderDetector.addActionListener(filtersToRGB.sobelHorizontalBorderDetection);
+
+        JMenuItem itemSobelVerticalBorderDetector = new JMenuItem("DVB Sobel");
+        itemSobelVerticalBorderDetector.addActionListener(filtersToRGB.sobelVerticakBorderDetection);
+
         menuOpBorderDetector.add(itemGradientBorderDectectorHorizontal);
         menuOpBorderDetector.add(itemGradientBorderDectectorVertical);
-
+        menuOpBorderDetector.add(itemSobelVerticalBorderDetector);
+        menuOpBorderDetector.add(itemSobelHorizontalBorderDetector);
         menuRGB.add(menuOpBorderDetector);
+        /**
+         * Fim da configuracao de deteccao de linhas
+         **/
+
+        /**
+         * Menus de filtros de deteccao de linha
+         * */
+        JMenu menuLineDetection = new JMenu("Deteccao de Linhas");
+        JMenuItem itemHorizontalLineDetection = new JMenuItem("Deteccao de linha horizontal");
+        itemHorizontalLineDetection.addActionListener(filtersToRGB.horizontalLineDetection);
+
+        JMenuItem itemVerticalLineDetection = new JMenuItem("Deteccao de linha Vertical");
+        itemVerticalLineDetection.addActionListener(filtersToRGB.verticalLineDetection);
+
+        JMenuItem itemLineDetectionP45 = new JMenuItem("Deteccao de linha Vertical 45°");
+        itemLineDetectionP45.addActionListener(filtersToRGB.p45degreeLineDetection);
+
+        JMenuItem itemLineDetectionM45 = new JMenuItem("Deteccao de linha Vertical -45°");
+        itemLineDetectionM45.addActionListener(filtersToRGB.m45degreeLineDetection);
+
+        menuLineDetection.add(itemHorizontalLineDetection);
+        menuLineDetection.add(itemVerticalLineDetection);
+        menuLineDetection.add(itemLineDetectionP45);
+        menuLineDetection.add(itemLineDetectionM45);
+        menuRGB.add(menuLineDetection);
+        /**
+         *
+         * */
+
+        /**/
 
         menuFilters.add(menuGrayScale);
         menuFilters.add(menuRGB);
@@ -293,8 +336,10 @@ public class App implements CallbackApplyFilter {
         menuAlgorithms.add(menuBrightness);
     }
 
+    /**
+     * */
     private JMenu addMenuAlgorithms() {
-        menuAlgorithms = new JMenu("Algoritmos");
+        menuAlgorithms = new JMenu("Algoritmos e Filtros");
         JMenuItem itemHistogramGrayScale = new JMenuItem("Histograma");
         itemHistogramGrayScale.addActionListener(new ActionListener() {
             @Override
@@ -317,6 +362,52 @@ public class App implements CallbackApplyFilter {
         });
         menuAlgorithms.add(itemHistogramGrayScale);
         return menuAlgorithms;
+    }
+
+    private JMenu addMenuFile() {
+        menuFile = new JMenu("Arquivo");
+        JMenuItem uploadFileMenu = new JMenuItem("Abrir imagem");
+        uploadFileMenu.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int re = jFileChooserImage.showOpenDialog(null);
+                if(re == JFileChooser.APPROVE_OPTION) {
+                    File file = jFileChooserImage.getSelectedFile();
+                    try {
+                        bufferedImage       = ImageIO.read(file);
+                        widthImage          = bufferedImage.getWidth();
+                        heightImage         = bufferedImage.getHeight();
+                        //int [] pixelsImage  = bufferedImage.getRGB(0, 0, widthImage, heightImage, null, 0, widthImage);
+                        if(buildOnceMenuFilter) {
+                            addItemsToMenuAlgorithms();
+                            buildOnceMenuFilter = false;
+                            addImageOnCanvas(bufferedImage);
+                        }
+
+                        else {
+                            updateImageOnCanvas(bufferedImage);
+                            /**
+                             *
+                             * Se o usuario carregar outra image
+                             * redefinir a image dos filtros em tom de cinza
+                             * dos filtros em RGB
+                             * e da matriz de pixels no algoritmo de equalizacao implementado
+                             * na classe de filtros em RGB
+                             * */
+                            filtersToGrayScale.redefineBufferImage(bufferedImage, widthImage, heightImage);
+                            filtersToRGB.redefineBufferedImage(bufferedImage);
+                            equalizationInGrayScale.redefine(filtersToRGB.getMatrixPixels());
+
+                        }
+                    }
+                    catch (Exception ex) {
+                        System.out.println(ex.getMessage());
+                    }
+                }
+            }
+        });
+        menuFile.add(uploadFileMenu);
+        return menuFile;
     }
 
     private JFileChooser jFileChooserImage;
@@ -352,57 +443,6 @@ public class App implements CallbackApplyFilter {
     }
 
     public static boolean buildOnceMenuFilter = true;
-
-    private void testRGB(BufferedImage bufferedImage) {
-        FiltersToRGB filtersToRGB = new FiltersToRGB(bufferedImage);
-        filtersToRGB.applyMask(MaskFilterDefault.MaskToRGB.laplacian, "filtro_laplacian", "jpg");
-    }
-
-    private JMenu addMenuFile() {
-        menuFile = new JMenu("Arquivo");
-        JMenuItem uploadFileMenu = new JMenuItem("Abrir imagem");
-        uploadFileMenu.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                int re = jFileChooserImage.showOpenDialog(null);
-                if(re == JFileChooser.APPROVE_OPTION) {
-                    File file = jFileChooserImage.getSelectedFile();
-                    try {
-                        bufferedImage       = ImageIO.read(file);
-                        widthImage          = bufferedImage.getWidth();
-                        heightImage         = bufferedImage.getHeight();
-                        //int [] pixelsImage  = bufferedImage.getRGB(0, 0, widthImage, heightImage, null, 0, widthImage);
-                        if(buildOnceMenuFilter) {
-                            buildMenuAlgorithms();
-                            buildOnceMenuFilter = false;
-                            addImageOnCanvas(bufferedImage);
-                        }
-
-                        else {
-                            updateImageOnCanvas(bufferedImage);
-                            /**
-                             *
-                             * Se o usuario carregar outra image
-                             * redefinir a image dos filtros em tom de cinza
-                             * dos filtros em RGB
-                             * e da matriz de pixels no algoritmo de equalizacao implementado
-                             * na classe de filtros em RGB
-                             * */
-                            filtersToGrayScale.redefineBufferImage(bufferedImage, widthImage, heightImage);
-                            filtersToRGB.redefineBufferedImage(bufferedImage);
-                            equalizationInGrayScale.redefine(filtersToRGB.getMatrixPixels());
-
-                        }
-                    }
-                    catch (Exception ex) {
-                        System.out.println(ex.getMessage());
-                    }
-                }
-            }
-        });
-        menuFile.add(uploadFileMenu);
-        return menuFile;
-    }
 
     public class ImageCanvas extends JPanel {
         private int widthCanvas, heightCanvas;
@@ -498,13 +538,16 @@ public class App implements CallbackApplyFilter {
         });
     }
 
-
     private static void drawMockHistogram() {
         Map<Integer, Integer> histogram = mockHistogramGrayScale();
         HistogramImageGrayScale hgs = new HistogramImageGrayScale();
         hgs.draw(histogram);
     }
 
+    private void testRGB(BufferedImage bufferedImage) {
+        FiltersToRGB filtersToRGB = new FiltersToRGB(bufferedImage);
+        filtersToRGB.applyMask(MaskFilterDefault.MaskToRGB.laplacian, "filtro_laplacian", "jpg");
+    }
 
     private static Map<Integer, Integer> mockHistogram() {
         Random r = new Random();

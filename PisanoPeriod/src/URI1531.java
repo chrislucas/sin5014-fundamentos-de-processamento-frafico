@@ -4,6 +4,7 @@ import java.util.StringTokenizer;
 
 /**
  * Created by r028367 on 02/05/2017.
+ * DONE
  */
 public class URI1531 {
 
@@ -29,6 +30,35 @@ public class URI1531 {
         return f[0][1];
     }
 
+    private static long modularExpMatrix(long e, long f[][], long g[][], long mod ) {
+        Stack<Long> stack = new Stack<>();
+        for(long i=e; i>1; i/=2) {
+            stack.add(i);
+        }
+        while(!stack.empty()) {
+            long i = stack.pop();
+            f = multMatrixFibonacci(f, f, mod);
+            if((i&1)==1) {
+                f = multMatrixFibonacci(f, g, mod);
+            }
+        }
+        return f[0][1];
+    }
+
+    private static long[][] multMatrixFibonacci (long f[][], long g[][], long mod) {
+        long h[][] = new long[f.length][g[0].length];
+        int c = f[0].length, l = g.length;
+        for(int i=0; i<c; i++) {
+            for(int j=0; j<l; j++) {
+                for(int k=0; k<c; k++) {
+                    long m = (f[i][k]%mod * g[k][j]%mod)%mod;
+                    h[i][j] = (h[i][j]%mod+m%mod)%mod;
+                }
+            }
+        }
+        return h;
+    }
+
     private static long nthRecFibonacciLogn(long matA [][], long p, long m) {
         if(p == 0 || p == 1)
             return matA[0][1];
@@ -37,7 +67,7 @@ public class URI1531 {
         if((p&1)==1) {
             multiplyMatrixFibonacci(matA, new long[][]{{1,1},{1,0}}, m);
         }
-        return matA[0][1];
+        return matA[1][0];
     }
 
     //  Fib(K)%M  =  Fib(K%C)%M
@@ -50,6 +80,22 @@ public class URI1531 {
                 table[0] = ((table[1] % m) - (table[0] % m)) % m;
                 table[1] = ((table[1] % m) + (table[0] % m)) % m;
                 if(table[0] == 0 && table[1] == 1)
+                    break;
+                period++;
+            }
+        }
+        return period;
+    }
+
+    public static long getPisanoPeriod2(long m) {
+        long period = 1;
+        long a = 0; long b = 1;
+        if(m > 1) {
+            for(long i=0; ; i++) {
+                long T = (a % m + b % m/*a + b*/) % m;
+                a = b;
+                b = T;
+                if(a == 0 && b == 1)
                     break;
                 period++;
             }
@@ -82,18 +128,23 @@ public class URI1531 {
          * Fib(n)%m = Fib(n%c)%m
          * */
         long matA[][] = new long[][]{{1,1},{1,0}};
-        long cycle    = getPisanoPeriod(mod);
-        //long i        = /*nthRecFibonacciLogn*/nthItFibonacciLogn(matA, n%cycle, mod);
-        long i        = nth2(n, cycle);
+        long cycle    = getPisanoPeriod2(mod);
+        long i        = modularExpMatrix(n, matA, new long[][]{{1,1},{1,0}}, cycle);
+        // Nao funciona essa multiplicacao de matriz
+        //long i        = nthRecFibonacciLogn(matA, n, cycle);
+        // essa abordagem funciona
+        //long i        = modularItFastDoublingFibonacci(n, cycle);
         matA          = new long[][]{{1,1},{1,0}};
-        //long j        = /*nthRecFibonacciLogn*/nthItFibonacciLogn(matA, i%cycle, mod);
-        long j        = nth2(i, cycle);
+        long j        = modularExpMatrix(i, matA, new long[][]{{1,1},{1,0}}, mod);
+        // NEM Essa
+        //long j        = nthRecFibonacciLogn(matA, i, mod);
+        // Essa tabe,
+        //long j        = modularItFastDoublingFibonacci(i, mod);
         return j;
     }
 
-
-
     public static void run() {
+        //testPisanoMethod();
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         try {
             String in = "";
@@ -107,6 +158,27 @@ public class URI1531 {
         } catch (IOException ioex) {}
     }
 
+    public static void testPisanoMethod() {
+        /*
+        for(long i=1000000; i<1010000; i++) {
+            if(getPisanoPeriod(i) < 0) {
+                System.out.printf("Primeira versão %d", i);
+            }
+            if(getPisanoPeriod2(i) < 0) {
+                System.out.printf("Segunda versão %d", i);
+            }
+            //System.out.printf("%d %d %d\n", i, getPisanoPeriod(i), getPisanoPeriod2(i));
+        }
+        */
+        long constant[][] = {{1,1}, {1,0}};
+        for(int i=0; i<100; i++) {
+            System.out.printf("%d %d %d\n", i
+                    ,modularExpMatrix(i, new long[][]{{1,1}, {1,0}}, constant, 3000000L)
+                    ,nthRecFibonacciLogn(new long[][]{{1,1}, {1,0}}, i, 3000000L));
+        }
+        System.out.println("FIM");
+    }
+
     public static void test() {
         for(long i=1; i<100; i++) {
             long matA[][] = new long[][]{{1,1},{1,0}};
@@ -118,38 +190,35 @@ public class URI1531 {
         run();
     }
 
-    /**
-     * https://math.stackexchange.com/questions/975741/applying-fibonacci-fast-doubling-identities
-     * https://www.hackerearth.com/practice/notes/fast-doubling-method-to-find-nth-fibonacci-number/
-     * https://www.nayuki.io/res/fast-fibonacci-algorithms/fastfibonacci.py
-     * https://math.stackexchange.com/questions/975741/applying-fibonacci-fast-doubling-identities
-     *
-     * exp algorithm
-     * http://eli.thegreenplace.net/2009/03/21/efficient-integer-exponentiation-algorithms
-     *
-     * http://stackoverflow.com/questions/671815/what-is-the-fastest-most-efficient-way-to-find-the-highest-set-bit-msb-in-an-i
-     * */
 
-    public static long fastDoublingFibonacci(long n, long mod) {
-        return 0;
-    }
-
-    /**
-     * https://github.com/gustavosm/uri/blob/master/1531.cpp
-     * */
-    public static long nth2(long n, long mod) {
-        if(n < 3) {
-            return 1L;
+    public static long modularItFastDoublingFibonacci(long m, long mod) {
+        long a = 0, b = 1;
+        int pos = 63;
+        long bit = (1L << pos-1);
+        while ( (bit & m) == 0 && pos > 0) {
+            bit = (1L << --pos);
         }
-        else {
-            long msb = 63;
-            while (((1 << (msb-1) & n)) == 0 && msb >= 0)
-                msb--;
-            long table [] = {0, 1};
-            for(long i=msb; i>=0; i--) {
-
+        //for(long i=pos; i>=0; i--) {}
+        for(long i=pos; i>=0; i--) {
+            /*
+            // F(2N)
+            long c = ((a%mod)*((((2%mod*b%mod)%mod)%mod-a%mod)%mod)%mod)%mod;
+            // F(2N+1)
+            long d = ((a%mod*a%mod)%mod)+((b%mod*b%mod)%mod);
+            a = c;
+            b = d;
+            */
+            long c = (a%mod) * ( ((b%mod)*2) - (a%mod) + mod);
+            long d = ((a%mod*a%mod)%mod)+((b%mod*b%mod)%mod);
+            a = c % mod;
+            b = d % mod;
+            bit = m >> i;
+            if ( (bit & 1) != 0 ) {
+                long e = ((a % mod) + (b % mod)) % mod;
+                a = b;
+                b = e;
             }
-            return table[0];
         }
+        return  a;
     }
 }

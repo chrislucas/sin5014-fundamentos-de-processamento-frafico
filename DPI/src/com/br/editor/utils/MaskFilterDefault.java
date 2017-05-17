@@ -12,7 +12,9 @@ public class MaskFilterDefault {
     };
 
     public static class MaskToRGB {
-
+        /**
+         * Remove ruidos
+         * */
         public final static int [][] passaAlta = {
              {-1,-1,-1}
             ,{-1,8,-1}
@@ -60,7 +62,7 @@ public class MaskFilterDefault {
         };
 
         public static int [][] verticalGradient = {
-                {-1,1}
+                 {-1,1}
                 ,{-1,1}
         };
         public static int [][] sobelHorizontal = {
@@ -119,6 +121,35 @@ public class MaskFilterDefault {
         ,{2,4,2}
         ,{1,2,1}
     };
+
+    public static class MaskLineDetection{
+        public static int [][] maskHorinzontal = {
+                {-1,-1,-1}
+                ,{2,2,2}
+                ,{-1,-1,-1}
+        };
+
+        public static int [][] maskVertical = {
+                {-1,2,-1}
+                ,{-1,2,-1}
+                ,{-1,2,-1}
+        };
+
+
+        public static int [][] maskP45 = {
+                {-1,-1,2}
+                ,{-1,2,-1}
+                ,{2,-1,-1}
+        };
+
+        public static int [][] maskM45 = {
+                {2,-1,-1}
+                ,{-1,2,-1}
+                ,{-1,-1,2}
+        };
+    }
+
+
 
 
     public static int mean(int [][] mat) {
