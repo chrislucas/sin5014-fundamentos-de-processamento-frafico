@@ -2,43 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7531cede-7118-422d-abad-0e7f3454c4af" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/br/editor/utils/BlackWhiteLineImageDetector.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/br/editor/views/menus/BuilderMenu.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/br/editor/views/menus/FileMenu.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/br/editor/views/menus/FilterMenu.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/links/floodfill" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/links/linedetection" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/new_image_gray.jpg" afterPath="$PROJECT_DIR$/images/new_image_gray.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/DPI.jar" afterPath="$PROJECT_DIR$/out/DPI.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/App$1.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/App$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/App$2.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/App$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/App$3.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/App$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/App$4.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/App$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/App$5.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/App$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/App$6.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/App$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/App$ImageCanvas.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/App$ImageCanvas.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/App.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/App.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB$1.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB$2.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB$3.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB$4.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB$5.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB$6.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB$7.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB$8.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB$EqualizationInGrayScale.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB$EqualizationInGrayScale.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB$QuantizationInGrayScale.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB$QuantizationInGrayScale.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB$Splitting.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB$Splitting.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/FiltersToRGB.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/MaskFilterDefault$MaskBorderDetector.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/MaskFilterDefault$MaskBorderDetector.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/MaskFilterDefault$MaskToRGB.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/MaskFilterDefault$MaskToRGB.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/MaskFilterDefault.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/MaskFilterDefault.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/BlackWhiteLineImageDetector.class" afterPath="$PROJECT_DIR$/out/production/DPI/com/br/editor/utils/BlackWhiteLineImageDetector.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/br/editor/App.java" afterPath="$PROJECT_DIR$/src/com/br/editor/App.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java" afterPath="$PROJECT_DIR$/src/com/br/editor/utils/FiltersToRGB.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/br/editor/utils/MaskFilterDefault.java" afterPath="$PROJECT_DIR$/src/com/br/editor/utils/MaskFilterDefault.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/links/transformacoes-R" afterPath="$PROJECT_DIR$/src/links/transformacoes-R" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../exploreopencv/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../exploreopencv/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/br/editor/utils/BlackWhiteLineImageDetector.java" afterPath="$PROJECT_DIR$/src/com/br/editor/utils/BlackWhiteLineImageDetector.java" />
     </list>
     <ignored path="DPI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,7 +33,7 @@
       <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/br/editor/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1067">
+            <state relative-caret-position="5882">
               <caret line="445" column="0" selection-start-line="445" selection-start-column="0" selection-end-line="445" selection-end-column="0" />
               <folding>
                 <element signature="method#saveFile#0;class#App#0" expanded="false" />
@@ -87,14 +54,10 @@
       <file leaf-file-name="BlackWhiteLineImageDetector.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/br/editor/utils/BlackWhiteLineImageDetector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1908">
-              <caret line="78" column="13" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
+            <state relative-caret-position="259">
+              <caret line="184" column="59" selection-start-line="184" selection-start-column="59" selection-end-line="184" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#439#440#0" expanded="true" />
-                <element signature="e#481#482#0" expanded="true" />
-                <element signature="e#516#517#0" expanded="true" />
-                <element signature="e#552#553#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -220,6 +183,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -268,7 +233,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -329,13 +293,12 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FundamentosComputacaoGrafica" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/QuadTree" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -678,36 +641,36 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="102" y="53" width="1327" height="753" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914925" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32217574" sideWeight="0.4974093" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39748955" sideWeight="0.50771207" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295362" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="REPL" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32323232" sideWeight="0.4922879" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32635984" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23362273" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23362273" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34588563" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41582492" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32217574" sideWeight="0.4974093" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32323232" sideWeight="0.4922879" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872728" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32775453" sideWeight="0.49485862" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -877,29 +840,16 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/br/editor/utils/BlackWhiteLineImageDetector.java</url>
-          <line>155</line>
+          <line>175</line>
           <properties />
-          <option name="timeStamp" value="156" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/br/editor/utils/BlackWhiteLineImageDetector.java</url>
-          <line>166</line>
-          <properties />
-          <option name="timeStamp" value="157" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/br/editor/utils/BlackWhiteLineImageDetector.java</url>
-          <line>94</line>
-          <properties />
-          <option name="timeStamp" value="176" />
+          <option name="timeStamp" value="177" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="177" />
+      <option name="time" value="178" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="newX" language="JAVA" />
-        <watch expression="newY" language="JAVA" />
+        <watch expression="pixels.get(2000)" language="JAVA" custom="" />
       </configuration>
     </watches-manager>
   </component>
@@ -1128,7 +1078,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1144,9 +1093,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-          <folding>
-            <element signature="e#211#212#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1154,9 +1100,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-          <folding>
-            <element signature="e#207#208#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1164,10 +1107,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-          <folding>
-            <element signature="e#344#345#0" expanded="false" />
-            <element signature="e#376#377#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1175,7 +1114,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1207,7 +1145,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1252,7 +1189,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/br/editor/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1067">
+        <state relative-caret-position="5882">
           <caret line="445" column="0" selection-start-line="445" selection-start-column="0" selection-end-line="445" selection-end-column="0" />
           <folding>
             <element signature="method#saveFile#0;class#App#0" expanded="false" />
@@ -1287,14 +1224,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/br/editor/utils/BlackWhiteLineImageDetector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1908">
-          <caret line="78" column="13" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
+        <state relative-caret-position="259">
+          <caret line="184" column="59" selection-start-line="184" selection-start-column="59" selection-end-line="184" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#439#440#0" expanded="true" />
-            <element signature="e#481#482#0" expanded="true" />
-            <element signature="e#516#517#0" expanded="true" />
-            <element signature="e#552#553#0" expanded="true" />
           </folding>
         </state>
       </provider>

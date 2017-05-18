@@ -108,7 +108,7 @@ public class BlackWhiteLineImageDetector {
                     // find 8 neighbors
                     List<Pixel> nbs = neighbors(current, parent, pixelColorLine);
                     for(Pixel pixel : nbs) {
-                        buildTree(0/*pixel.h*/, 0/*pixel.w*/, parent);
+                        buildTree(pixel.h, pixel.w, parent);
                     }
                 }
             }
@@ -150,6 +150,15 @@ public class BlackWhiteLineImageDetector {
         return bufferedImage;
     }
 
+    /**
+     * Dadps os pontos inicial e final do segmento de reta
+     * calcular o coeficiente angular. Se for zero a reta
+     * é vertical ou horizontal, para descidir se ela é
+     * vertical basta verificar se entre o ponto inicial e final
+     * o valor de X não muda, para saber se ela é horizontal
+     * basta verificar se o valor de Y não muda.
+     * Se o coeficiente angular for diferente de nulo o segmento está enclinado
+     * */
     private double slope(Pixel a, Pixel b) {
         double diffX = (b.w - a.w);
         double diffY = (b.h - a.h);
@@ -158,7 +167,12 @@ public class BlackWhiteLineImageDetector {
         return  diffY/diffX;
     }
 
-    public void printLines() {
+    /**
+     * Iterar por todas as linhas encontradas na imagem, pegar o primeiro
+     * e ultimo pixel de cada linha e verificar se ela está na horizontal,
+     * vertical ou diagonal
+     * */
+    public void verifyAllLines() {
         for(Map.Entry<Pixel, List<Pixel>> pair : graph.entrySet()) {
             Pixel parent =  pair.getKey();
             System.out.printf("Ponto (%d, %d)\n", parent.h, parent.w);
@@ -197,12 +211,12 @@ public class BlackWhiteLineImageDetector {
                 ,"images/exercise8/meusexemplos/"
             };
             String ext [] = {"bmp", "png"};
-            BufferedImage bufferedImage = ImageIO.read(new File(String.format("%s%s%s", path[1], "inclinada.", ext[1])));
+            BufferedImage bufferedImage = ImageIO.read(new File(String.format("%s%s%s", path[1], "misto.", ext[1])));
             BlackWhiteLineImageDetector bw = new BlackWhiteLineImageDetector(bufferedImage, PixelColorLine.BLACK);
             //bw.navigationInImage();
             System.out.println("Executando");
             bw.buildTree(0, 0, null);
-            bw.printLines();
+            bw.verifyAllLines();
             System.out.println("Fim");
             //bw.navigationInImage(bw.applyHorizontalLineDetection());
             //bw.navigationInImage(bw.applyVerticalLineDetection());
