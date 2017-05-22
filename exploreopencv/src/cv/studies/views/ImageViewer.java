@@ -13,13 +13,13 @@ public class ImageViewer {
 
     private JLabel imageView;
 
-    public void show(Mat image, String title) {
+    public void show(Mat matrixImage, String title) {
         setSystenLookAndFeel();
         JFrame frame = build(title);
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                Image img = BufferedImageUtils.toBufferedImage(image);
+                Image img = BufferedImageUtils.toBufferedImage(matrixImage);
                 imageView.setIcon(new ImageIcon(img));
                 frame.pack();
                 frame.setLocationRelativeTo(null);
@@ -53,7 +53,7 @@ public class ImageViewer {
     }
 
     private void printExcpMessage(Exception e) {
-        String message =String.format("%s\n%s\n%s", e.getCause()
+        String message = String.format("Error: %s\n%s\n%s", e.getCause()
                 , e.getMessage(), e.getLocalizedMessage());
         System.out.println(message);
     }

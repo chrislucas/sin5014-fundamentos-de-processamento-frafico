@@ -1,13 +1,14 @@
 package cv.studies;
 
 import cv.studies.views.ImageViewer;
-import org.opencv.core.Mat;
-import org.opencv.core.Range;
-import org.opencv.core.Size;
+import org.opencv.core.*;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 
 import javax.swing.text.html.ImageView;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * Created by C.Lucas on 21/05/2017.
@@ -69,14 +70,47 @@ public class LoadImageOCV extends LoadOpenCvLib {
         {
             Mat image = openFile("images/img2.png");
             Mat imageGrayScale = toGrayScale(image);
-            loadImageViewer(imageGrayScale);
+            //loadImageViewer(cannyEdge(imageGrayScale));
+            //loadImageViewer(threshold(imageGrayScale));
+            loadImageViewer(findContours(imageGrayScale));
             //write("images/img2gray.png", imageGrayScale);
             //System.out.println(image.dump());
             detectionRectangle(image);
         } catch (Exception e) {
             System.out.println(e.getCause());
         }
-
     }
+
+    public static Mat cannyEdge(Mat imageGrayScale) {
+        double threshold1 = 50, threshold2 = 50;
+        Mat dest = new Mat(imageGrayScale.rows(), imageGrayScale.cols(), CvType.CV_8UC3);
+        Imgproc.Canny(imageGrayScale, dest, threshold1, threshold2);
+        return dest;
+    }
+
+    public static Mat threshold(Mat imageGrayScale) {
+        double threshold = 0;
+        Mat dest = new Mat(imageGrayScale.rows(), imageGrayScale.cols(), CvType.CV_8UC3);
+        Imgproc.threshold(imageGrayScale, dest, threshold, 255, Imgproc.THRESH_TOZERO);
+        return dest;
+    }
+
+    public static Mat findContours(Mat image) {
+        Mat imageAfterCannyProcess = cannyEdge(image);
+        List<MatOfPoint> countors = new ArrayList<>();
+        Mat h = new Mat();
+        Imgproc.findContours(imageAfterCannyProcess, countors, h, Imgproc.RETR_EXTERNAL, Imgproc.CHAIN_APPROX_SIMPLE);
+
+        Iterator<MatOfPoint> it = countors.iterator();
+        while (it.hasNext()) {
+            MatOfPoint matOfPoint = it.next();
+            double area = Imgproc.contourArea(matOfPoint);
+        }
+
+        System.out.println(h.dump());
+        return imageAfterCannyProcess;
+    }
+
+
 
 }

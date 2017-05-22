@@ -13,3 +13,20 @@ http://docs.opencv.org/3.2.0/d9/df8/tutorial_root.html
 
 Mask operations on matrices
 http://docs.opencv.org/3.2.0/d7/d37/tutorial_mat_mask_operations.html
+
+Swing JScrollPane
+http://stackoverflow.com/questions/1689850/add-jscrollpane-to-a-panel-that-shows-an-image
+http://stackoverflow.com/questions/11919941/add-scrollpane-to-jpanel-when-the-panel-is-full-java
+
+JPanel
+http://stackoverflow.com/questions/22284823/opencv-output-using-mat-object-in-jpanel
+
+Transformadas de Laplace
+https://pt.wikipedia.org/wiki/Transformada_integral
+http://pessoal.sercomtel.com.br/matematica/superior/edo/laplace.htm
+https://pt.wikipedia.org/wiki/Transformada_de_Laplace
+
+
+Hough Transform
+http://www.lps.usp.br/hae/apostila/hough.pdf
+http://docs.opencv.org/2.4.10/doc/tutorials/imgproc/imgtrans/hough_lines/hough_lines.html
