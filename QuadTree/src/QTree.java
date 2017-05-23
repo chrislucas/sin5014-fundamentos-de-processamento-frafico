@@ -1,3 +1,5 @@
+import java.util.Random;
+
 /**
  * Created by r028367 on 15/05/2017.
  */
@@ -97,7 +99,18 @@ public class QTree {
 
 
     public static void main(String[] args) {
+        QTree st = new QTree();
+        Random random = new Random();
+        for(int i=0; i<100; i++) {
+            int x = (int) (100 * random.nextInt());
+            int y = (int) (100 * random.nextInt());
+            st.insert(x, y, i);
+        }
 
+        for (int i = 0; i <200 ; i++) {
+            int xmin = (int) (100 * random.nextInt());
+            int ymin = (int) (100 * random.nextInt());
+        }
     }
 
 
