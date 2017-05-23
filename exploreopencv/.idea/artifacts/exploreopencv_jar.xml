@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="exploreopencv:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/exploreopencvjar</output-path>
+    <root id="archive" name="exploreopencv.jar">
+      <element id="module-output" name="exploreopencv" />
+      <element id="extracted-dir" path="C:/opencv/build/java/opencv-320.jar" path-in-jar="/" />
+      <element id="artifact" artifact-name="opencv-320_jar_" />
+      <element id="library" level="project" name="opencv-320" />
+    </root>
+  </artifact>
+</component>
