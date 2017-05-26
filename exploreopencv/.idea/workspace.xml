@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="45fe66da-f021-4944-a506-1d5ec5979064" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/exploreopencv_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/opencv_320_jar_.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/files/OCR" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/files/Tecnicas de PI" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/files/contours" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exploreopencv/cv/studies/LoadImageOCV.class" afterPath="$PROJECT_DIR$/out/production/exploreopencv/cv/studies/LoadImageOCV.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exploreopencv/cv/studies/views/ImageViewer$1.class" afterPath="$PROJECT_DIR$/out/production/exploreopencv/cv/studies/views/ImageViewer$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exploreopencv/cv/studies/views/ImageViewer.class" afterPath="$PROJECT_DIR$/out/production/exploreopencv/cv/studies/views/ImageViewer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exploreopencv/files/edge-detecting" afterPath="$PROJECT_DIR$/out/production/exploreopencv/files/edge-detecting" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exploreopencv/files/links" afterPath="$PROJECT_DIR$/out/production/exploreopencv/files/links" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cv/studies/LoadImageOCV.java" afterPath="$PROJECT_DIR$/src/cv/studies/LoadImageOCV.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cv/studies/views/ImageViewer.java" afterPath="$PROJECT_DIR$/src/cv/studies/views/ImageViewer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/files/edge-detecting" afterPath="$PROJECT_DIR$/src/files/edge-detecting" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/files/links" afterPath="$PROJECT_DIR$/src/files/links" />
-    </list>
+    <list default="true" id="45fe66da-f021-4944-a506-1d5ec5979064" name="Default" comment="" />
     <ignored path="exploreopencv.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -176,7 +159,7 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="settings.editor.selected.configurable" value="Scala Compiler" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="C:/opencv/build/java/x64/opencv_java320.dll" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/aula-teste/aula-teste/AulaTesteDAO" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.20666666" />
@@ -523,7 +506,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36614853" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35812134" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35812134" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
