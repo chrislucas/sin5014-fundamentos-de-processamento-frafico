@@ -1,7 +1,288 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="exploreopencv:jar" />
+      <artifact name="opencv-320_jar_" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="45fe66da-f021-4944-a506-1d5ec5979064" name="Default" comment="" />
+=======
+    <list default="true" id="45fe66da-f021-4944-a506-1d5ec5979064" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/img1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/img1gray.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/img2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/img2gray.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/img3.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/exploreopencvjar/exploreopencv.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/calib3d/Calib3d.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/calib3d/StereoBM.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/calib3d/StereoMatcher.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/calib3d/StereoSGBM.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/Algorithm.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/Core$MinMaxLocResult.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/Core.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/CvException.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/CvType.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/DMatch.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/KeyPoint.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/Mat.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfByte.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfDMatch.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfDouble.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfFloat.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfFloat4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfFloat6.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfInt.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfInt4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfKeyPoint.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfPoint.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfPoint2f.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfPoint3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfPoint3f.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfRect.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/Point.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/Point3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/Range.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/Rect.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/RotatedRect.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/Scalar.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/Size.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/TermCriteria.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/TickMeter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/AKAZE.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/AgastFeatureDetector.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/BFMatcher.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/BOWImgDescriptorExtractor.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/BOWKMeansTrainer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/BOWTrainer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/BRISK.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/DescriptorExtractor.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/DescriptorMatcher.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/FastFeatureDetector.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/Feature2D.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/FeatureDetector.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/Features2d.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/FlannBasedMatcher.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/GFTTDetector.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/KAZE.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/MSER.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/ORB.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/Params.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/imgcodecs/Imgcodecs.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/imgproc/CLAHE.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/imgproc/Imgproc.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/imgproc/LineSegmentDetector.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/imgproc/Moments.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/imgproc/Subdiv2D.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/ml/ANN_MLP.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/ml/Boost.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/ml/DTrees.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/ml/EM.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/ml/KNearest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/ml/LogisticRegression.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/ml/Ml.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/ml/NormalBayesClassifier.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/ml/RTrees.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/ml/SVM.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/ml/SVMSGD.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/ml/StatModel.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/ml/TrainData.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/objdetect/BaseCascadeClassifier.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/objdetect/CascadeClassifier.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/objdetect/HOGDescriptor.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/objdetect/Objdetect.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/photo/AlignExposures.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/photo/AlignMTB.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/photo/CalibrateCRF.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/photo/CalibrateDebevec.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/photo/CalibrateRobertson.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/photo/MergeDebevec.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/photo/MergeExposures.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/photo/MergeMertens.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/photo/MergeRobertson.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/photo/Photo.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/photo/Tonemap.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/photo/TonemapDrago.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/photo/TonemapDurand.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/photo/TonemapMantiuk.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/photo/TonemapReinhard.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/utils/Converters.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/video/BackgroundSubtractor.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/video/BackgroundSubtractorKNN.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/video/BackgroundSubtractorMOG2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/video/DenseOpticalFlow.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/video/DualTVL1OpticalFlow.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/video/FarnebackOpticalFlow.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/video/KalmanFilter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/video/SparseOpticalFlow.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/video/SparsePyrLKOpticalFlow.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/video/Video.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/videoio/VideoCapture.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/videoio/VideoWriter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/videoio/Videoio.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/exploreopencv/cv/studies/BufferedImageUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/exploreopencv/cv/studies/LoadImageOCV.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/exploreopencv/cv/studies/LoadOpenCvLib.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/exploreopencv/cv/studies/PixelManipulation.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/exploreopencv/cv/studies/Sample0.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/exploreopencv/cv/studies/Sample1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/exploreopencv/cv/studies/views/AppCaptureVideo.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/exploreopencv/cv/studies/views/ImageViewer$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/exploreopencv/cv/studies/views/ImageViewer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/exploreopencv/views/AppMain$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/exploreopencv/views/AppMain$CanvasImage.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/exploreopencv/views/AppMain.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../QuadTree/.idea/copyright/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../QuadTree/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/exploreopencv_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/opencv_320_jar_.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/META-INF/MANIFEST.MF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/calib3d/Calib3d.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/calib3d/StereoBM.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/calib3d/StereoMatcher.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/calib3d/StereoSGBM.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/Algorithm.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/Core.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/CvException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/CvType.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/DMatch.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/KeyPoint.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/Mat.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfByte.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfDMatch.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfDouble.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfFloat.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfFloat4.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfFloat6.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfInt.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfInt4.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfKeyPoint.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfPoint.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfPoint2f.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfPoint3.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfPoint3f.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfRect.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/Point.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/Point3.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/Range.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/Rect.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/RotatedRect.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/Scalar.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/Size.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/TermCriteria.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/core/TickMeter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/AKAZE.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/AgastFeatureDetector.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/BFMatcher.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/BOWImgDescriptorExtractor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/BOWKMeansTrainer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/BOWTrainer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/BRISK.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/DescriptorExtractor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/DescriptorMatcher.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/FastFeatureDetector.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/Feature2D.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/FeatureDetector.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/Features2d.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/FlannBasedMatcher.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/GFTTDetector.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/KAZE.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/MSER.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/ORB.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/features2d/Params.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/imgcodecs/Imgcodecs.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/imgproc/CLAHE.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/imgproc/Imgproc.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/imgproc/LineSegmentDetector.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/imgproc/Moments.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/imgproc/Subdiv2D.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/ml/ANN_MLP.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/ml/Boost.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/ml/DTrees.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/ml/EM.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/ml/KNearest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/ml/LogisticRegression.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/ml/Ml.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/ml/NormalBayesClassifier.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/ml/RTrees.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/ml/SVM.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/ml/SVMSGD.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/ml/StatModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/ml/TrainData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/objdetect/BaseCascadeClassifier.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/objdetect/CascadeClassifier.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/objdetect/HOGDescriptor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/objdetect/Objdetect.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/photo/AlignExposures.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/photo/AlignMTB.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/photo/CalibrateCRF.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/photo/CalibrateDebevec.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/photo/CalibrateRobertson.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/photo/MergeDebevec.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/photo/MergeExposures.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/photo/MergeMertens.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/photo/MergeRobertson.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/photo/Photo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/photo/Tonemap.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/photo/TonemapDrago.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/photo/TonemapDurand.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/photo/TonemapMantiuk.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/photo/TonemapReinhard.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/utils/Converters.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/video/BackgroundSubtractor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/video/BackgroundSubtractorKNN.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/video/BackgroundSubtractorMOG2.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/video/DenseOpticalFlow.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/video/DualTVL1OpticalFlow.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/video/FarnebackOpticalFlow.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/video/KalmanFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/video/SparseOpticalFlow.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/video/SparsePyrLKOpticalFlow.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/video/Video.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/videoio/VideoCapture.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/videoio/VideoWriter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/opencv_320_jar_/org/opencv/videoio/Videoio.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/exploreopencv/META-INF/MANIFEST.MF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/exploreopencv/files/OCR" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/exploreopencv/files/Tecnicas de PI" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/exploreopencv/files/configurar-opencv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/exploreopencv/files/contours" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/exploreopencv/files/links" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cv/studies/BufferedImageUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cv/studies/LoadImageOCV.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cv/studies/LoadOpenCvLib.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cv/studies/PixelManipulation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cv/studies/Sample0.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cv/studies/Sample1.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cv/studies/views/AppCaptureVideo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cv/studies/views/ImageViewer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/files/OCR" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/files/Tecnicas de PI" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/files/configurar-opencv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/files/contours" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/files/edge-detecting" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/files/links" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/AppMain.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exploreopencv/Sample0.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Sample0.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/links" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/edge-detecting" afterPath="$PROJECT_DIR$/out/production/exploreopencv/files/edge-detecting" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../DPI/out/DPI.jar" afterPath="$PROJECT_DIR$/../DPI/out/DPI.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../DPI/out/production/DPI/com/br/editor/utils/BlackWhiteLineImageDetector.class" afterPath="$PROJECT_DIR$/../DPI/out/production/DPI/com/br/editor/utils/BlackWhiteLineImageDetector.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../DPI/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../DPI/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../DPI/src/com/br/editor/utils/BlackWhiteLineImageDetector.java" afterPath="$PROJECT_DIR$/../DPI/src/com/br/editor/utils/BlackWhiteLineImageDetector.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuadTree/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../QuadTree/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/opencv_320.xml" afterPath="$PROJECT_DIR$/.idea/libraries/opencv_320.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exploreopencv.iml" afterPath="$PROJECT_DIR$/exploreopencv.iml" />
+    </list>
+>>>>>>> a7a579fbc34d1c2cd7b9073767a8bddaa5065a76
     <ignored path="exploreopencv.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -12,7 +293,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -25,8 +305,8 @@
       <file leaf-file-name="LoadImageOCV.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cv/studies/LoadImageOCV.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+            <state relative-caret-position="-663">
+              <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -34,11 +314,18 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="img2.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/images/img2.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ImageViewer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cv/studies/views/ImageViewer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="58" column="2" selection-start-line="58" selection-start-column="2" selection-end-line="58" selection-end-column="2" />
+            <state relative-caret-position="918">
+              <caret line="58" column="2" lean-forward="false" selection-start-line="58" selection-start-column="2" selection-end-line="58" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -91,20 +378,13 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="163" />
-    <option name="y" value="65" />
-    <option name="width" value="1239" />
-    <option name="height" value="670" />
+    <option name="x" value="-4" />
+    <option name="y" value="-4" />
+    <option name="width" value="1928" />
+    <option name="height" value="1044" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
     <ConfirmationsSetting value="2" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -121,8 +401,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -145,8 +423,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exploreopencv" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exploreopencv" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -159,7 +453,11 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="settings.editor.selected.configurable" value="Scala Compiler" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/aula-teste/aula-teste/AulaTesteDAO" />
+=======
+    <property name="last_opened_file_path" value="C:/opencv/build/java/x64" />
+>>>>>>> a7a579fbc34d1c2cd7b9073767a8bddaa5065a76
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.20666666" />
@@ -189,25 +487,7 @@
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="PM_INSTALL_OPTIONS" value="" />
-      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="" />
+      <predefined_log_file id="idea.log" enabled="true" />
       <method />
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
@@ -224,8 +504,17 @@
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
       <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -279,27 +568,6 @@
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -375,6 +643,8 @@
       <setting name="testName" value="" />
       <setting name="testKind" value="Class" />
       <setting name="showProgressMessages" value="true" />
+      <classRegexps />
+      <testRegexps />
       <envs />
       <method />
     </configuration>
@@ -390,6 +660,8 @@
       <setting name="testName" value="" />
       <setting name="testKind" value="Class" />
       <setting name="showProgressMessages" value="true" />
+      <classRegexps />
+      <testRegexps />
       <envs />
       <method />
     </configuration>
@@ -421,34 +693,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
     <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -461,6 +705,8 @@
       <setting name="testName" value="" />
       <setting name="testKind" value="Class" />
       <setting name="showProgressMessages" value="true" />
+      <classRegexps />
+      <testRegexps />
       <envs />
       <method />
     </configuration>
@@ -472,6 +718,25 @@
         <item index="0" class="java.lang.String" itemvalue="Application.LoadImageOCV" />
       </list>
     </recent_temporary>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
   </component>
   <component name="SbtLocalSettings">
     <option name="externalProjectsViewState">
@@ -495,25 +760,33 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="163" y="65" width="1239" height="670" extended-state="0" />
-    <editor active="true" />
+    <frame x="-4" y="-4" width="1928" height="1044" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286219" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36614853" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35812134" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3570634" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+>>>>>>> a7a579fbc34d1c2cd7b9073767a8bddaa5065a76
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23324852" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13844515" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39929947" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -542,13 +815,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/cv/studies/LoadImageOCV.java</url>
-          <line>28</line>
+          <line>29</line>
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/cv/studies/LoadImageOCV.java</url>
-          <line>43</line>
+          <line>44</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
@@ -565,7 +838,47 @@
     <entry file="file://$PROJECT_DIR$/src/cv/studies/LoadImageOCV.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cv/studies/views/ImageViewer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="58" column="2" lean-forward="false" selection-start-line="58" selection-start-column="2" selection-end-line="58" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cv/studies/LoadImageOCV.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cv/studies/views/ImageViewer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="58" column="2" lean-forward="false" selection-start-line="58" selection-start-column="2" selection-end-line="58" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cv/studies/LoadImageOCV.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -575,15 +888,14 @@
     <entry file="file://$PROJECT_DIR$/src/files/Tecnicas de PI">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" column="103" selection-start-line="2" selection-start-column="103" selection-end-line="2" selection-end-column="103" />
-          <folding />
+          <caret line="2" column="103" lean-forward="false" selection-start-line="2" selection-start-column="103" selection-end-line="2" selection-end-column="103" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cv/studies/views/ImageViewer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="918">
-          <caret line="58" column="2" selection-start-line="58" selection-start-column="2" selection-end-line="58" selection-end-column="2" />
+          <caret line="58" column="2" lean-forward="false" selection-start-line="58" selection-start-column="2" selection-end-line="58" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -593,14 +905,14 @@
     <entry file="file://$PROJECT_DIR$/src/views/AppMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
-          <caret line="67" column="80" selection-start-line="67" selection-start-column="80" selection-end-line="67" selection-end-column="80" />
+          <caret line="67" column="80" lean-forward="false" selection-start-line="67" selection-start-column="80" selection-end-line="67" selection-end-column="80" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cv/studies/LoadImageOCV.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -610,7 +922,7 @@
     <entry file="file://$PROJECT_DIR$/src/cv/studies/BufferedImageUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1292">
-          <caret line="84" column="83" selection-start-line="84" selection-start-column="83" selection-end-line="84" selection-end-column="83" />
+          <caret line="84" column="83" lean-forward="false" selection-start-line="84" selection-start-column="83" selection-end-line="84" selection-end-column="83" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -620,21 +932,21 @@
     <entry file="file://$PROJECT_DIR$/src/cv/studies/Sample0.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
+          <caret line="8" column="51" lean-forward="false" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/files/links">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="64" selection-start-line="1" selection-start-column="64" selection-end-line="1" selection-end-column="64" />
+          <caret line="1" column="64" lean-forward="false" selection-start-line="1" selection-start-column="64" selection-end-line="1" selection-end-column="64" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/files/edge-detecting">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -642,88 +954,54 @@
     <entry file="file://$PROJECT_DIR$/src/files/configurar-opencv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="80" selection-start-line="0" selection-start-column="80" selection-end-line="0" selection-end-column="80" />
+          <caret line="0" column="80" lean-forward="false" selection-start-line="0" selection-start-column="80" selection-end-line="0" selection-end-column="80" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/opencv/build/java/opencv-320.jar!/org/opencv/core/Size.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/opencv/build/java/opencv-320.jar!/org/opencv/core/Size.java" />
     <entry file="file://$PROJECT_DIR$/src/cv/studies/Sample0.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/opencv/build/java/opencv-320.jar!/org/opencv/core/CvType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/opencv/build/java/opencv-320.jar!/org/opencv/imgcodecs/Imgcodecs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="114" column="22" selection-start-line="114" selection-start-column="22" selection-end-line="114" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/opencv/build/java/opencv-320.jar!/org/opencv/core/CvType.java" />
+    <entry file="jar://C:/opencv/build/java/opencv-320.jar!/org/opencv/imgcodecs/Imgcodecs.java" />
     <entry file="file://$PROJECT_DIR$/src/views/AppMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="66" column="80" selection-start-line="66" selection-start-column="80" selection-end-line="66" selection-end-column="80" />
+          <caret line="66" column="80" lean-forward="false" selection-start-line="66" selection-start-column="80" selection-end-line="66" selection-end-column="80" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/opencv/build/java/opencv-320.jar!/org/opencv/core/Range.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/opencv/build/java/opencv-320.jar!/org/opencv/core/Mat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="85" column="11" selection-start-line="85" selection-start-column="11" selection-end-line="85" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/opencv/build/java/opencv-320.jar!/org/opencv/core/Range.java" />
+    <entry file="jar://C:/opencv/build/java/opencv-320.jar!/org/opencv/core/Mat.java" />
     <entry file="file://$PROJECT_DIR$/src/cv/studies/Sample1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-160">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cv/studies/PixelManipulation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-83">
-          <caret line="40" column="63" selection-start-line="40" selection-start-column="63" selection-end-line="40" selection-end-column="63" />
+          <caret line="40" column="63" lean-forward="false" selection-start-line="40" selection-start-column="63" selection-end-line="40" selection-end-column="63" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cv/studies/LoadOpenCvLib.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cv/studies/BufferedImageUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
-          <caret line="84" column="83" selection-start-line="84" selection-start-column="83" selection-end-line="84" selection-end-column="83" />
+          <caret line="84" column="83" lean-forward="false" selection-start-line="84" selection-start-column="83" selection-end-line="84" selection-end-column="83" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -733,68 +1011,65 @@
     <entry file="file://$PROJECT_DIR$/src/cv/studies/views/AppCaptureVideo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="91">
-          <caret line="39" column="56" selection-start-line="39" selection-start-column="56" selection-end-line="39" selection-end-column="56" />
+          <caret line="39" column="56" lean-forward="false" selection-start-line="39" selection-start-column="56" selection-end-line="39" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/files/OCR">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+          <caret line="8" column="43" lean-forward="false" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/opencv/build/java/opencv-320.jar!/org/opencv/imgproc/Imgproc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="153" column="25" selection-start-line="153" selection-start-column="12" selection-end-line="153" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/opencv/build/java/opencv-320.jar!/org/opencv/imgproc/Imgproc.java" />
     <entry file="file://$PROJECT_DIR$/src/files/links">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/files/edge-detecting">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+          <caret line="21" column="19" lean-forward="false" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/files/contours">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="177" selection-start-line="1" selection-start-column="177" selection-end-line="1" selection-end-column="177" />
+          <caret line="1" column="177" lean-forward="false" selection-start-line="1" selection-start-column="177" selection-end-line="1" selection-end-column="177" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/files/Tecnicas de PI">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" column="103" selection-start-line="2" selection-start-column="103" selection-end-line="2" selection-end-column="103" />
-          <folding />
+          <caret line="2" column="103" lean-forward="false" selection-start-line="2" selection-start-column="103" selection-end-line="2" selection-end-column="103" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cv/studies/views/ImageViewer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="58" column="2" selection-start-line="58" selection-start-column="2" selection-end-line="58" selection-end-column="2" />
+        <state relative-caret-position="918">
+          <caret line="58" column="2" lean-forward="false" selection-start-line="58" selection-start-column="2" selection-end-line="58" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/images/img2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/cv/studies/LoadImageOCV.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+        <state relative-caret-position="-663">
+          <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -812,7 +1087,6 @@
             <option name="proportions">
               <list>
                 <option value="0.20666666" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -824,7 +1098,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.20666666" />
               </list>
             </option>
           </splitter-proportions>
@@ -832,7 +1106,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Python 3.4.3 (J:\WinPython-32bit-3.4.3.3\python-3.4.3\python.exe) interpreter library</last-edited>
+          <last-edited>scala-sdk-2.12.1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
