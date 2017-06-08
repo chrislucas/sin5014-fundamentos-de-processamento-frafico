@@ -29,8 +29,6 @@ public class BufferedImageUtils {
         BufferedImage image = null;
         try {
             image = ImageIO.read(path);
-
-
         } catch (IOException ioex) {
             System.out.println(ioex.getMessage());
         }
@@ -52,15 +50,15 @@ public class BufferedImageUtils {
         if(image.channels() > 1) {
             type = BufferedImage.TYPE_3BYTE_BGR;
         }
-
+        // dimensao da imagem
         int h = image.rows(), w = image.cols();
+        // numero de canais da imagem * (dimensao) = Total de bytes ocupados
         int totalBytes = image.channels() * h * w;
         //(int) (image.total() * image.elemSize());
         byte [] buffer = new byte[totalBytes];
         int g = image.get(0, 0, buffer);
         System.out.println(g);
         BufferedImage bufferedImage = new BufferedImage(w, h, type);
-
         DataBufferByte dataBufferByte = (DataBufferByte) bufferedImage.getRaster().getDataBuffer();
         byte [] pixels = dataBufferByte.getData();
         System.arraycopy(buffer, 0, pixels, 0, buffer.length);

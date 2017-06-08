@@ -28,7 +28,6 @@ public class LoadImageOCV extends LoadOpenCvLib {
         Range rangeRows = new Range(0, sourceImage.rows());
         Range rangeCols = new Range(0, sourceImage.cols());
         Mat finalImage  = new Mat(sourceImage, rangeRows, rangeCols);
-
         return finalImage;
     }
 
@@ -72,8 +71,8 @@ public class LoadImageOCV extends LoadOpenCvLib {
             Mat image = openFile("images/img2.png");
             Mat imageGrayScale = toGrayScale(image);
             //loadImageViewer(cannyEdge(imageGrayScale));
-            //loadImageViewer(threshold(imageGrayScale));
-            loadImageViewer(findContours(imageGrayScale));
+            loadImageViewer(threshold(imageGrayScale));
+            //loadImageViewer(findContours(imageGrayScale));
             //write("images/img2gray.png", imageGrayScale);
             //System.out.println(image.dump());
             detectionRectangle(image);
@@ -100,7 +99,8 @@ public class LoadImageOCV extends LoadOpenCvLib {
         Mat imageAfterCannyProcess = cannyEdge(image);
         List<MatOfPoint> countors = new ArrayList<>();
         Mat h = new Mat();
-        Imgproc.findContours(imageAfterCannyProcess, countors, h, Imgproc.RETR_EXTERNAL, Imgproc.CHAIN_APPROX_SIMPLE);
+        Imgproc.findContours(imageAfterCannyProcess, countors, h
+                ,Imgproc.RETR_EXTERNAL, Imgproc.CHAIN_APPROX_SIMPLE);
 
         Iterator<MatOfPoint> it = countors.iterator();
         while (it.hasNext()) {
@@ -108,7 +108,7 @@ public class LoadImageOCV extends LoadOpenCvLib {
             double area = Imgproc.contourArea(matOfPoint);
         }
 
-        System.out.println(h.dump());
+        //System.out.println(h.dump());
         return imageAfterCannyProcess;
     }
 
