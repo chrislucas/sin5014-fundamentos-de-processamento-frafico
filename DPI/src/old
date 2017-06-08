@@ -12,11 +12,11 @@ com.br.editor.utils.FiltersToGrayScale.java
                     //int oolor = bufferedImage.getRGB(i, j);
                     //int color = pixelsImage[i*widthImage+j];
                     int acc = 0;
-                    for (int x=0; x<limitI; x++) {
-                        for (int y=0; y<limitJ; y++) {
-                            int newX = i+x, newY = j+y;
+                    for (int h=0; h<limitI; h++) {
+                        for (int w=0; w<limitJ; w++) {
+                            int newX = i+h, newY = j+w;
                             int colorInBorder = bufferedImage.getRGB(newX, newY);
-                            acc += colorInBorder * filter[x][y];
+                            acc += colorInBorder * filter[h][w];
                         }
                     }
                     buffer.setRGB(i, j, new Color(acc, acc, acc).getRGB());

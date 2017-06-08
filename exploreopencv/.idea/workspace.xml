@@ -7,6 +7,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="45fe66da-f021-4944-a506-1d5ec5979064" name="Default" comment="" />
+=======
     <list default="true" id="45fe66da-f021-4944-a506-1d5ec5979064" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/exploreopencvjar/exploreopencv.jar" afterPath="$PROJECT_DIR$/out/artifacts/exploreopencvjar/exploreopencv.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exploreopencv/cv/studies/BufferedImageUtils.class" afterPath="$PROJECT_DIR$/out/production/exploreopencv/cv/studies/BufferedImageUtils.class" />
@@ -19,6 +22,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cv/studies/LoadImageOCV.java" afterPath="$PROJECT_DIR$/src/cv/studies/LoadImageOCV.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cv/studies/views/ImageViewer.java" afterPath="$PROJECT_DIR$/src/cv/studies/views/ImageViewer.java" />
     </list>
+>>>>>>> a7a579fbc34d1c2cd7b9073767a8bddaa5065a76
     <ignored path="exploreopencv.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -235,7 +239,11 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="settings.editor.selected.configurable" value="Scala Compiler" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
+<<<<<<< HEAD
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/aula-teste/aula-teste/AulaTesteDAO" />
+=======
     <property name="last_opened_file_path" value="C:/opencv/build/java/x64" />
+>>>>>>> a7a579fbc34d1c2cd7b9073767a8bddaa5065a76
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.20666666" />
@@ -578,8 +586,16 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36614853" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23174603" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+=======
+<<<<<<< HEAD
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35812134" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3570634" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+>>>>>>> af6fefaca58a5498d8086f0d1ca3532f9aec6d8d
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+>>>>>>> a7a579fbc34d1c2cd7b9073767a8bddaa5065a76
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />

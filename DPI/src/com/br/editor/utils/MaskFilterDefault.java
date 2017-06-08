@@ -1,5 +1,7 @@
 package com.br.editor.utils;
 
+import java.util.ArrayList;
+
 /**
  * Created by r028367 on 27/03/2017.
  */
@@ -122,7 +124,8 @@ public class MaskFilterDefault {
         ,{1,2,1}
     };
 
-    public static class MaskLineDetection{
+    public static class MaskLineDetection {
+
         public static int [][] maskHorinzontal = {
                 {-1,-1,-1}
                 ,{2,2,2}
@@ -143,10 +146,19 @@ public class MaskFilterDefault {
         };
 
         public static int [][] maskM45 = {
-                {2,-1,-1}
+                 {2,-1,-1}
                 ,{-1,2,-1}
                 ,{-1,-1,2}
         };
+
+        public static ArrayList<int[][]> masks = new ArrayList<>();
+        static {
+            masks.add(maskHorinzontal);
+            masks.add(maskVertical);
+            masks.add(maskM45);
+            masks.add(maskP45);
+        }
+
     }
 
 

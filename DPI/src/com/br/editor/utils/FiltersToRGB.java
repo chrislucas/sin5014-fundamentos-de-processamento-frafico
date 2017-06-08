@@ -1,10 +1,12 @@
 package com.br.editor.utils;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -51,6 +53,22 @@ public class FiltersToRGB {
         this.callbackApplyFilter = callbackApplyFilter;
     }
 
+    public static BufferedImage copy(BufferedImage bufferedImage) {
+        int w = bufferedImage.getWidth(), h = bufferedImage.getHeight();
+        int [] pixels = bufferedImage.getRGB(0, 0, w, h, null, 0, w);
+        BufferedImage cpBuffer = new BufferedImage(w, h, BufferedImage.TYPE_3BYTE_BGR);
+        /**
+         * TODO percorrer um vetor e inserir os dados numa matriz
+         * */
+        for(int i=0; i<w*h; i++) {
+            int w1 = i%w, h1 = (i/w);
+            cpBuffer.setRGB(w1, h1, pixels[i]);
+        }
+        return cpBuffer;
+    }
+
+
+
     public BufferedImage applyMask(int [][] mask, String filename, String format) {
         BufferedImage buffer = bufferedImage;
         int limitI = mask.length, limitJ = mask[0].length;
@@ -83,7 +101,7 @@ public class FiltersToRGB {
             }
         }
         //FiltersToGrayScale.createImage(buffer, String.format("images/after_%s.%s", filename,  format));
-        System.out.println("Imagem criada apos o filtro");
+        //System.out.println("Imagem criada apos o filtro");
         return buffer;
     }
 
@@ -512,6 +530,19 @@ public class FiltersToRGB {
         @Override
         public void actionPerformed(ActionEvent e) {
 
+        }
+    }
+
+    public static final void createImage(BufferedImage buffer, String pathfile, String format) {
+        File outputFile = new File(pathfile);
+        if( ! outputFile.exists() ) {
+            String path = outputFile.getParent();
+            new File(path).mkdirs();
+        }
+        try {
+            ImageIO.write(buffer, format, outputFile);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
     }
 }

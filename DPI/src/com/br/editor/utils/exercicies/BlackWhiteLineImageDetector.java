@@ -1,4 +1,7 @@
-package com.br.editor.utils;
+package com.br.editor.utils.exercicies;
+
+import com.br.editor.utils.FiltersToRGB;
+import com.br.editor.utils.MaskFilterDefault;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -21,7 +24,6 @@ public class BlackWhiteLineImageDetector {
         PixelColorLine(Color color) {
             this.color = color;
         }
-
         public Color getColor() {
             return color;
         }
