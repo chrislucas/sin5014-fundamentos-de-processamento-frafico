@@ -1,11 +1,249 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aeedbc54-a83c-4f8a-bf32-b7f8757ed107" name="Default" comment="">
+    <list default="true" id="4b362ae3-8d36-437c-b3d3-4166a62f9149" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/externalDependencies.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/.idea/artifacts/exploreopencv_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/.idea/artifacts/opencv_320_jar_.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/.idea/compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/.idea/copyright/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/.idea/externalDependencies.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/.idea/libraries/opencv_320.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/.idea/uiDesigner.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/exploreopencvjar/exploreopencv.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/calib3d/Calib3d.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/calib3d/Calib3d.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/calib3d/StereoBM.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/calib3d/StereoBM.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/calib3d/StereoMatcher.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/calib3d/StereoMatcher.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/calib3d/StereoSGBM.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/calib3d/StereoSGBM.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/Algorithm.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/Algorithm.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/Core$MinMaxLocResult.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/Core.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/Core.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/CvException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/CvException.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/CvType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/CvType.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/DMatch.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/DMatch.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/KeyPoint.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/KeyPoint.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/Mat.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/Mat.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfByte.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfByte.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfDMatch.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfDMatch.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfDouble.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfDouble.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfFloat.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfFloat.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfFloat4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfFloat4.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfFloat6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfFloat6.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfInt.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfInt.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfInt4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfInt4.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfKeyPoint.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfKeyPoint.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfPoint.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfPoint.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfPoint2f.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfPoint2f.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfPoint3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfPoint3.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfPoint3f.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfPoint3f.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfRect.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/MatOfRect.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/Point.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/Point.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/Point3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/Point3.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/Range.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/Range.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/Rect.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/Rect.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/RotatedRect.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/RotatedRect.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/Scalar.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/Scalar.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/Size.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/Size.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/TermCriteria.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/TermCriteria.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/TickMeter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/core/TickMeter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/AKAZE.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/AKAZE.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/AgastFeatureDetector.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/AgastFeatureDetector.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/BFMatcher.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/BFMatcher.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/BOWImgDescriptorExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/BOWImgDescriptorExtractor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/BOWKMeansTrainer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/BOWKMeansTrainer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/BOWTrainer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/BOWTrainer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/BRISK.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/BRISK.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/DescriptorExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/DescriptorExtractor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/DescriptorMatcher.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/DescriptorMatcher.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/FastFeatureDetector.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/FastFeatureDetector.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/Feature2D.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/Feature2D.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/FeatureDetector.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/FeatureDetector.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/Features2d.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/Features2d.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/FlannBasedMatcher.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/FlannBasedMatcher.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/GFTTDetector.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/GFTTDetector.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/KAZE.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/KAZE.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/MSER.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/MSER.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/ORB.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/ORB.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/Params.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/features2d/Params.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/imgcodecs/Imgcodecs.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/imgcodecs/Imgcodecs.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/imgproc/CLAHE.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/imgproc/CLAHE.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/imgproc/Imgproc.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/imgproc/Imgproc.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/imgproc/LineSegmentDetector.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/imgproc/LineSegmentDetector.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/imgproc/Moments.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/imgproc/Moments.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/imgproc/Subdiv2D.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/imgproc/Subdiv2D.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/ml/ANN_MLP.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/ml/ANN_MLP.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/ml/Boost.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/ml/Boost.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/ml/DTrees.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/ml/DTrees.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/ml/EM.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/ml/EM.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/ml/KNearest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/ml/KNearest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/ml/LogisticRegression.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/ml/LogisticRegression.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/ml/Ml.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/ml/Ml.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/ml/NormalBayesClassifier.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/ml/NormalBayesClassifier.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/ml/RTrees.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/ml/RTrees.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/ml/SVM.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/ml/SVM.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/ml/SVMSGD.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/ml/SVMSGD.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/ml/StatModel.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/ml/StatModel.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/ml/TrainData.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/ml/TrainData.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/objdetect/BaseCascadeClassifier.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/objdetect/BaseCascadeClassifier.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/objdetect/CascadeClassifier.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/objdetect/CascadeClassifier.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/objdetect/HOGDescriptor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/objdetect/HOGDescriptor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/objdetect/Objdetect.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/objdetect/Objdetect.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/photo/AlignExposures.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/photo/AlignExposures.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/photo/AlignMTB.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/photo/AlignMTB.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/photo/CalibrateCRF.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/photo/CalibrateCRF.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/photo/CalibrateDebevec.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/photo/CalibrateDebevec.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/photo/CalibrateRobertson.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/photo/CalibrateRobertson.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/photo/MergeDebevec.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/photo/MergeDebevec.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/photo/MergeExposures.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/photo/MergeExposures.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/photo/MergeMertens.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/photo/MergeMertens.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/photo/MergeRobertson.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/photo/MergeRobertson.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/photo/Photo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/photo/Photo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/photo/Tonemap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/photo/Tonemap.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/photo/TonemapDrago.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/photo/TonemapDrago.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/photo/TonemapDurand.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/photo/TonemapDurand.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/photo/TonemapMantiuk.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/photo/TonemapMantiuk.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/photo/TonemapReinhard.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/photo/TonemapReinhard.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/utils/Converters.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/utils/Converters.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/video/BackgroundSubtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/video/BackgroundSubtractor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/video/BackgroundSubtractorKNN.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/video/BackgroundSubtractorKNN.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/video/BackgroundSubtractorMOG2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/video/BackgroundSubtractorMOG2.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/video/DenseOpticalFlow.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/video/DenseOpticalFlow.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/video/DualTVL1OpticalFlow.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/video/DualTVL1OpticalFlow.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/video/FarnebackOpticalFlow.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/video/FarnebackOpticalFlow.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/video/KalmanFilter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/video/KalmanFilter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/video/SparseOpticalFlow.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/video/SparseOpticalFlow.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/video/SparsePyrLKOpticalFlow.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/video/SparsePyrLKOpticalFlow.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/video/Video.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/video/Video.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/videoio/VideoCapture.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/videoio/VideoCapture.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/videoio/VideoWriter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/videoio/VideoWriter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/videoio/Videoio.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/artifacts/opencv_320_jar_/org/opencv/videoio/Videoio.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/out/production/exploreopencv/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exploreopencv/src/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/output.bmp" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exploreopencv/out/production/exploreopencv/cv/studies/LoadImageOCV.class" afterPath="$PROJECT_DIR$/exploreopencv/out/production/exploreopencv/cv/studies/LoadImageOCV.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sin5014-fundamentos-de-processamento-grafico.iml" afterPath="$PROJECT_DIR$/.idea/sin5014-fundamentos-de-processamento-grafico.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DescritorDeImagem/.idea/workspace.xml" afterPath="$PROJECT_DIR$/DescritorDeImagem/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exploreopencv/.idea/misc.xml" afterPath="$PROJECT_DIR$/exploreopencv/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exploreopencv/.idea/modules.xml" afterPath="$PROJECT_DIR$/exploreopencv/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exploreopencv/.idea/workspace.xml" afterPath="$PROJECT_DIR$/exploreopencv/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exploreopencv/exploreopencv.iml" afterPath="$PROJECT_DIR$/exploreopencv/exploreopencv.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exploreopencv/src/cv/studies/LoadImageOCV.java" afterPath="$PROJECT_DIR$/exploreopencv/src/cv/studies/LoadImageOCV.java" />
     </list>
-    <ignored path="sin5014-fundamentos-de-processamento-grafico.iws" />
-    <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,14 +251,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
-  <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
-  <component name="FavoritesManager">
-    <favorites_list name="sin5014-fundamentos-de-processamento-grafico" />
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -32,18 +263,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1616" />
+    <option name="width" value="1604" />
     <option name="height" value="876" />
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -61,14 +282,9 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sin5014-fundamentos-de-processamento-grafico" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="sin5014-fundamentos-de-processamento-grafico" />
@@ -82,24 +298,88 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="GoToClass.includeLibraries" value="false" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="settings.editor.selected.configurable" value="Scala Compiler" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15625" />
+    <property name="project.structure.side.proportion" value="0.20666666" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -125,6 +405,22 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -146,12 +442,96 @@
       <patterns />
       <method />
     </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="sin5014-fundamentos-de-processamento-grafico" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <classRegexps />
+      <testRegexps />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <classRegexps />
+      <testRegexps />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -182,6 +562,25 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <classRegexps />
+      <testRegexps />
+      <envs />
+      <method />
+    </configuration>
   </component>
   <component name="SbtLocalSettings">
     <option name="externalProjectsViewState">
@@ -193,43 +592,44 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="aeedbc54-a83c-4f8a-bf32-b7f8757ed107" name="Default" comment="" />
-      <created>1494701101787</created>
+      <changelist id="4b362ae3-8d36-437c-b3d3-4166a62f9149" name="Default" comment="" />
+      <created>1496813970318</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1494701101787</updated>
+      <updated>1496813970318</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1604" height="876" extended-state="0" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="REPL" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25647667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
