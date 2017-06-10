@@ -33,10 +33,43 @@ public class ProjectEuler48 {
         return p;
     }
 
+    // avoid overflow
+    public static long expmod2(long base, long exp, long mod) {
+        base %= mod;
+        long p = 0;
+        while(exp>0) {
+            if((exp & 1) == 1) {
+               //p = summod(p, base, mod);
+               p = (p+base)%mod;
+            }
+            //base = multmod(base, 2, mod);
+            base = (base * 2) % mod;
+            exp >>= 1;
+        }
+        return p % mod;
+    }
+
+
+    public static long expmod3(long base, long exp, long m) {
+        base %= m;
+        exp %= m;
+        long p = 0;
+        while(exp>0) {
+            if((exp & 1) == 0) {
+                p = ((m-p) > base) ? p+base : p+base-m;
+            }
+            exp >>= 1;
+            if(exp == 0) {
+                base =  ((m-base) > base) ? base*2 : base*2-m;
+            }
+        }
+        return p;
+    }
+
     public static final void test() {
         long acc = 0;
         for (int i=1; i<200000; i++) {
-            acc = summod(acc, expmod(i, i, M), M);
+            acc = summod(acc, expmod3(i, i, M), M);
         }
         System.out.println(acc);
     }
@@ -55,6 +88,16 @@ public class ProjectEuler48 {
     }
 
     public static void main(String[] args) {
-        solver();
+        //solver();
+        //test();
+        /*
+        System.out.println(expmod(9223372036854775807l, 9223372036854775807l, 100000000000l));
+        System.out.println(expmod2(9223372036854775807l, 9223372036854775807l, 100000000000l));
+        */
+        System.out.println(expmod(10, 12, 100000000000l));
+        System.out.println(expmod(10, 12, 150));
+        System.out.println(expmod2(10, 12, 100000000000l));
+        System.out.println(expmod2(10, 12, 150));
+        System.out.println(expmod3(10, 12, 150));
     }
 }
