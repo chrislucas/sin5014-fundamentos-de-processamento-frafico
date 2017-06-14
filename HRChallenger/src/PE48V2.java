@@ -49,6 +49,11 @@ public class PE48V2 {
 
 
     public static void test() {
+        /**
+         *
+         * 2000000
+         * 7461762500
+         * */
         BigInteger a = new BigInteger("9223372036854775807");
         BigInteger b = new BigInteger("9223372036854775807");
         BigInteger m = new BigInteger("100000000000");

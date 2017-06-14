@@ -133,10 +133,10 @@ public class RPE {
      /*casos de testes
      *
      *
-3
-2 0 9 1000
-0 1 5 10
-8 2 10 1000000000
+        3
+        2 0 9 1000
+        0 1 5 10
+        8 2 10 1000000000
      *
      * */
     public static void solver() {
