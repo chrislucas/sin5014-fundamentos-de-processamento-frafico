@@ -36,29 +36,19 @@ public class PointOnRect {
                     int x, y;
                     x = Integer.parseInt(tokenizer.nextToken());
                     y = Integer.parseInt(tokenizer.nextToken());
-
-                    if(i==0) {
-                        maxX = x;
-                        maxY = y;
-                        minX = x;
-                        minY = y;
-                    }
-
-                    else {
-                        maxX = Math.max(x, maxX);
-                        maxY = Math.max(y, maxY);
-                        minX = Math.min(x, minX);
-                        minY = Math.min(y, minY);
-                    }
+                    maxX = Math.max(x, maxX);
+                    maxY = Math.max(y, maxY);
+                    minX = Math.min(x, minX);
+                    minY = Math.min(y, minY);
                     points.add(new Point2D(x, y));
                 }
-                Point2D maxP = new Point2D(maxX, maxY);
-                Point2D minP = new Point2D(minX, minY);
-                for(Point2D point : points) {
-                    if(!point.equals(maxP) && !point.equals(minP))
-                        isOnTheEdgeRect = false;
-                }
 
+                for(Point2D point : points) {
+                    if(point.x != maxX && point.x != minX && point.y != maxY && point.y != minY) {
+                        isOnTheEdgeRect = false;
+                        break;
+                    }
+                }
                 System.out.println(isOnTheEdgeRect ? "YES" : "NO");
                 cases--;
             }
