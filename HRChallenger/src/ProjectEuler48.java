@@ -9,14 +9,17 @@ import java.io.InputStreamReader;
  * https://www.hackerrank.com/challenges/power-of-large-numbers
  * https://www.hackerrank.com/challenges/restaurant
  *
+ * https://benpyeh.com/2013/03/15/project-euler-48-self-powers/
+ *
  */
 public class ProjectEuler48 {
 
-    public static final long M = 10000000000l;
+    public static final long M = 10000000000L;
 
     public static long multmod(long a, long b, long m) {
         return ((a % m) * (b % m)) % m;
     }
+
     public static long summod(long a, long b, long m) {
         return ((a % m) + (b % m)) % m;
     }
@@ -30,48 +33,21 @@ public class ProjectEuler48 {
             base = multmod(base, base, mod);
             exp >>= 1;
         }
-        return p;
+        //return p;
+        return p%mod;
     }
 
-    // avoid overflow
-    public static long expmod2(long base, long exp, long mod) {
-        base %= mod;
-        long p = 0;
-        while(exp>0) {
-            if((exp & 1) == 1) {
-               //p = summod(p, base, mod);
-               p = (p+base)%mod;
-            }
-            //base = multmod(base, 2, mod);
-            base = (base * 2) % mod;
-            exp >>= 1;
-        }
-        return p % mod;
-    }
-
-
-    public static long expmod3(long base, long exp, long m) {
-        base %= m;
-        exp %= m;
-        long p = 0;
-        while(exp>0) {
-            if((exp & 1) == 0) {
-                p = ((m-p) > base) ? p+base : p+base-m;
-            }
-            exp >>= 1;
-            if(exp == 0) {
-                base =  ((m-base) > base) ? base*2 : base*2-m;
-            }
-        }
-        return p;
-    }
-
-    public static final void test() {
+    public static void test() {
         long acc = 0;
         for (int i=1; i<200000; i++) {
-            acc = summod(acc, expmod3(i, i, M), M);
+            acc = summod(acc, Experimental.modpow(i, i, M), M);
         }
         System.out.println(acc);
+    }
+
+    public static void test2() {
+        System.out.println(expmod(9223372036854775807l, 9223372036854775807l, 100000000000l));
+        System.out.println(Experimental.modpow(9223372036854775807l, 9223372036854775807l, 100000000000l));
     }
 
     public static void solver() {
@@ -79,8 +55,9 @@ public class ProjectEuler48 {
         try {
             long n = Long.parseLong(bufferedReader.readLine());
             long acc = 0;
-            for (int i=17; i<=n; i++) {
-                long exp = expmod(i, i, M);
+            for (int i=1; i<=n; i++) {
+                long exp = Experimental.modpow(i, i, M);
+                //long exp = expmod(i, i, M);
                 acc = summod(acc, exp, M);
             }
             System.out.println(acc);
@@ -88,16 +65,42 @@ public class ProjectEuler48 {
     }
 
     public static void main(String[] args) {
-        //solver();
-        //test();
-        /*
-        System.out.println(expmod(9223372036854775807l, 9223372036854775807l, 100000000000l));
-        System.out.println(expmod2(9223372036854775807l, 9223372036854775807l, 100000000000l));
-        */
-        System.out.println(expmod(10, 12, 100000000000l));
-        System.out.println(expmod(10, 12, 150));
-        System.out.println(expmod2(10, 12, 100000000000l));
-        System.out.println(expmod2(10, 12, 150));
-        System.out.println(expmod3(10, 12, 150));
+        // http://comnuan.com/cmnn02/cmnn02008/
+        solver();
+    }
+
+
+    public static class Experimental {
+        // avoid overflow
+        static long modpow(long a, long b, long mod)
+        {
+            long product,pseq;
+            product=1;
+            pseq=a%mod;
+            while(b>0)
+            {
+                if((b&1) == 1)
+                    product=modmult(product,pseq,mod);
+                pseq=modmult(pseq,pseq,mod);
+                b>>=1;
+            }
+            return product;
+        }
+
+        static long modmult( long a, long b, long mod)
+        {
+            if (a == 0 || b < mod / a) {
+                return (a%mod*b%mod)%mod;
+            }
+            long sum = 0;
+            while(b>0)
+            {
+                if((b&1) == 1)
+                    sum = (sum + a) % mod;
+                a = (2*a) % mod;
+                b>>=1;
+            }
+            return sum;
+        }
     }
 }

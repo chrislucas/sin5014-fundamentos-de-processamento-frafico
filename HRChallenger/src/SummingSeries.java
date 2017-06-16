@@ -5,6 +5,7 @@ import java.io.InputStreamReader;
 /**
  * Created by r028367 on 08/06/2017.
  * https://www.hackerrank.com/challenges/summing-the-n-series?h_r=next-challenge&h_v=zen
+ * DONE
  */
 public class SummingSeries {
 
