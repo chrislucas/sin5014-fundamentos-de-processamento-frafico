@@ -1,5 +1,6 @@
 package utils;
 
+import org.opencv.core.CvType;
 import org.opencv.core.Mat;
 import org.opencv.core.Range;
 import org.opencv.imgcodecs.Imgcodecs;
@@ -10,6 +11,20 @@ import org.opencv.imgproc.Imgproc;
  */
 public class MatUtils {
 
+
+    /**
+     * CV_8U, CV_16U, CV_16S, CV_32F or CV_64F.
+     * */
+    public enum CvTI {
+
+        CV_8U(CvType.CV_8U);
+
+        private int type;
+
+        CvTI(int type) {
+            this.type = type;
+        }
+    }
 
     public static Mat toGrayScale(Mat source) {
         Range rangeRows = new Range(0, source.rows());

@@ -1,0 +1,24 @@
+Sobre filtros e kernes (matrizes de filtro)
+http://www.bogotobogo.com/OpenCV/opencv_3_tutorial_imgproc_gausian_median_blur_bilateral_filter_image_smoothing.php
+
+
+Expliccao sobre filtros
+http://docs.opencv.org/2.4/doc/tutorials/imgproc/gausian_median_blur_bilateral_filter/gausian_median_blur_bilateral_filter.html
+
+
+Filtro gaussiano em opencv
+src - input image; the image can have any number of channels, which are processed independently, but the depth should be CV_8U, CV_16U, CV_16S, CV_32F or CV_64F.
+
+dst - output image of the same size and type as src.
+
+ksize - Gaussian kernel size. ksize.width and ksize.height can differ
+but they both must be positive and odd. Or, they can be zeroÃ¢Â€Â™s and then they are computed from sigma*.
+
+sigmaX - Gaussian kernel standard deviation in X direction.
+
+sigmaY - Gaussian kernel standard deviation in Y direction; if sigmaY is zero,
+t is set to be equal to sigmaX, if both sigmas are zeros, they are computed from ksize.width and ksize.height , respectively; to fully control the result regardless of possible future modifications of all this semantics, it is recommended to specify all of ksize, sigmaX, and sigmaY.
+
+borderType - pixel extrapolation method.
+
+Como determinado o sigma(X, Y) no filtro gaussiano

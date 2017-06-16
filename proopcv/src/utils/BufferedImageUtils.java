@@ -22,6 +22,9 @@ import java.io.IOException;
  * */
 public class BufferedImageUtils {
 
+
+
+
     /**
      * RGB
      * */
@@ -43,6 +46,32 @@ public class BufferedImageUtils {
         mat.put(0, 0, buffer);
         return mat;
     }
+
+    public static Mat toMat(BufferedImage bufferedImage, int cvTypeImage) {
+        Mat mat = null;
+        DataBufferByte dataBufferByte = (DataBufferByte) bufferedImage.getRaster().getDataBuffer();
+        byte buffer [] = dataBufferByte.getData();
+        mat = new Mat(bufferedImage.getHeight(), bufferedImage.getWidth(), cvTypeImage);
+        mat.put(0, 0, buffer);
+        return mat;
+    }
+
+    public static Mat toMat(BufferedImage bufferedImage) {
+        int typeImage = bufferedImage.getType();
+        Mat mat = null;
+        switch (typeImage) {
+            case BufferedImage.TYPE_BYTE_GRAY:
+                mat = toMat(bufferedImage, CvType.CV_8SC1);
+                break;
+            case BufferedImage.TYPE_3BYTE_BGR:
+                mat = toMat(bufferedImage, CvType.CV_8SC3);
+                break;
+            default:
+                mat = toMat(bufferedImage, CvType.CV_8SC3);
+        }
+        return mat;
+    }
+
 
 
     public static BufferedImage toBufferedImage(Mat image) {

@@ -47,49 +47,6 @@ public class ImageViewer {
     private JFrame build(String title) {
         JFrame frame = new JFrame(title);
         imageView = new JLabel();
-
-        imageView.addMouseListener(new MouseListener() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-
-            }
-
-            @Override
-            public void mousePressed(MouseEvent e) {
-                System.out.println();
-                switch (e.getButton()) {
-                    case 1:     // esquerdo
-                        //Range r     = new Range(0, originalImage.height());
-                        //Range c     = new Range(0, originalImage.width());
-                        //Mat image   = new Mat(originalImage, r, c);
-                        Imgproc.circle(modifiedImage, new Point(e.getX(), e.getY())
-                                , 5, new Scalar(0,255,255), 4);
-                        updateImage(modifiedImage);
-                        break;
-                    case 3:     // direito
-                        defineImages(originalImage);
-                        updateImage(originalImage);
-                        break;
-
-                }
-            }
-
-            @Override
-            public void mouseReleased(MouseEvent e) {
-
-            }
-
-            @Override
-            public void mouseEntered(MouseEvent e) {
-
-            }
-
-            @Override
-            public void mouseExited(MouseEvent e) {
-
-            }
-        });
-
         final JScrollPane imageScrollPane = new JScrollPane(imageView);
         imageScrollPane.setPreferredSize(new Dimension(640, 480));
         frame.add(imageScrollPane, BorderLayout.CENTER);
@@ -98,12 +55,10 @@ public class ImageViewer {
     }
 
 
-    private void updateImage(Mat newMatImage) {
+    public void updateImage(Mat newMatImage) {
         image = BufferedImageUtils.toBufferedImage(newMatImage);
         imageView.setIcon(new ImageIcon(image));
     }
-
-
 
     private void setSystenLookAndFeel() {
         try {
