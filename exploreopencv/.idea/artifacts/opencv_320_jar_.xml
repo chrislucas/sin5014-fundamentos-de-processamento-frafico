@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact name="opencv-320_jar_">
-    <output-path>$PROJECT_DIR$/out/artifacts/opencv_320_jar_</output-path>
-    <root id="root">
-      <element id="extracted-dir" path="C:/opencv/build/java/opencv-320.jar" path-in-jar="/" />
-    </root>
-  </artifact>
-</component>

@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * Created by C.Lucas on 21/05/2017.
  */
-public class LoadImageOCV extends LoadOpenCvLib {
+public class LoadImageOCV /*extends LoadOpenCvLib*/ {
 
     public static Mat openFile(String filename) throws Exception {
         Mat image = Imgcodecs.imread(filename);
@@ -64,6 +64,8 @@ public class LoadImageOCV extends LoadOpenCvLib {
             imageViewer.show(image, "Processamento de images com OPENCV");
         }
     }
+
+    static{ System.loadLibrary(Core.NATIVE_LIBRARY_NAME); }
 
     public static void main(String[] args) {
         try
