@@ -159,4 +159,14 @@ public class Filters {
         return dst;
     }
 
+
+    public static final int LOWER_THRESHOLD = 0;
+    public static final int UPPER_THRESHOLD = 50;
+
+    public static Mat CannyDectectionLineDefault(Mat src) {
+        Mat dst = createMatrixSameSize(src);
+        Imgproc.Canny(src, dst, LOWER_THRESHOLD, UPPER_THRESHOLD);
+        return dst;
+    }
+
 }

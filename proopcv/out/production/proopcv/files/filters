@@ -4,7 +4,7 @@ http://www.bogotobogo.com/OpenCV/opencv_3_tutorial_imgproc_gausian_median_blur_b
 
 Expliccao sobre filtros
 http://docs.opencv.org/2.4/doc/tutorials/imgproc/gausian_median_blur_bilateral_filter/gausian_median_blur_bilateral_filter.html
-
+http://docs.opencv.org/2.4/doc/tutorials/imgproc/gausian_median_blur_bilateral_filter/gausian_median_blur_bilateral_filter.html
 
 Filtro gaussiano em opencv
 src - input image; the image can have any number of channels, which are processed independently, but the depth should be CV_8U, CV_16U, CV_16S, CV_32F or CV_64F.

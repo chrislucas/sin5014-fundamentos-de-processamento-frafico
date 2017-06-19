@@ -13,12 +13,7 @@ public class Operation {
         Imgproc.dilate(src, dst, kernel);
     }
 
-    public static void testDilation() {
-        Mat src = new Mat();
+    public static void erode(Mat src, Mat dst, int elementSize, int elementShape) {
+        Mat element = null;
     }
-
-    public static void main(String[] args) {
-
-    }
-
 }

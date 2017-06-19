@@ -4,13 +4,14 @@ package utils; /**
 
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
+import views.ImageViewer;
 
 import javax.imageio.ImageIO;
-import javax.xml.crypto.Data;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferByte;
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 /**
  * Classe que une as funcoes de {@link BufferedImage}
@@ -21,9 +22,6 @@ import java.io.IOException;
  *
  * */
 public class BufferedImageUtils {
-
-
-
 
     /**
      * RGB
@@ -36,6 +34,16 @@ public class BufferedImageUtils {
             System.out.println(ioex.getMessage());
         }
         return image;
+    }
+
+    /**
+     * TODO
+     *
+     * */
+    public static BufferedImage toBinary(BufferedImage image) {
+        int w = image.getWidth(), h = image.getHeight();
+        BufferedImage result = new BufferedImage(h, w, BufferedImage.TYPE_BYTE_BINARY);
+        return result;
     }
 
     public static Mat toMat3Channels(BufferedImage bufferedImage) {
@@ -112,6 +120,38 @@ public class BufferedImageUtils {
             String message = String.format("%s\n%s", e.getMessage(), e.getCause());
             System.out.println(message);
             return false;
+        }
+    }
+
+
+    public interface ApplyCallbackImageViewer {
+        public void execute(ImageViewer imageViewer);
+    }
+
+    public interface ApplyCallbackImageViewerFilter extends ApplyCallbackImageViewer {
+        public void execute(ImageViewer imageViewer);
+    }
+
+    public interface ApplyCallbackImageViewerMorphologycalOp extends ApplyCallbackImageViewer {
+        public void execute(ImageViewer imageViewer);
+    }
+
+
+    public static void openOnFrame(ApplyCallbackImageViewer ApplyCallbackImageViewer, Mat image, String title) {
+        if(image != null) {
+            ImageViewer imageView = new ImageViewer();
+            imageView.show(image, title);
+            if(ApplyCallbackImageViewer != null)
+                ApplyCallbackImageViewer.execute(imageView);
+        }
+    }
+
+
+    public static void openOnFrame(List<ApplyCallbackImageViewer> callbacks, Mat image, String title) {
+        if (callbacks != null && callbacks.size() > 0) {
+            for(ApplyCallbackImageViewer callback : callbacks) {
+                openOnFrame(callback, image, title);
+            }
         }
     }
 }
