@@ -4,6 +4,7 @@ package javacpp.structures;
 import app.methods.ModelOpencv;
 
 
+
 /**
  * Created by C_Luc on 11/06/2017.
  */
