@@ -68,8 +68,6 @@ public class BlurMethodOpCv {
     }
 
     public static void test() {
-
-
         BufferedImage image = BufferedImageUtils.readImage3Channels(new File("images/zebra.jpg"));
         if(image != null) {
             ImageViewer imageView = new ImageViewer();
@@ -94,8 +92,9 @@ public class BlurMethodOpCv {
             });
             thread.start();
         }
-
     }
+
+
 
 
     public static void main(String[] args) {
