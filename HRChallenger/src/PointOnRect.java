@@ -7,6 +7,8 @@ import java.util.StringTokenizer;
 /**
  * Created by r028367 on 13/06/2017.
  * https://www.hackerrank.com/challenges/points-on-rectangle
+ *
+ * DONE
  */
 public class PointOnRect {
 
