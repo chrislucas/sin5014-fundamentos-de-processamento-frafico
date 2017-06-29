@@ -123,34 +123,35 @@ public class BufferedImageUtils {
         }
     }
 
-
-    public interface ApplyCallbackImageViewer {
-        public void execute(ImageViewer imageViewer);
+    public interface ApplyCallbackImageViewerFilter {
+        public Mat executeAndUpdate(ImageViewer imageViewer, Mat mat);
     }
 
-    public interface ApplyCallbackImageViewerFilter extends ApplyCallbackImageViewer {
-        public void execute(ImageViewer imageViewer);
+    public interface ApplyOpImageViewer {
+        public void op(ImageViewer imageViewer, Mat mat);
     }
 
-    public interface ApplyCallbackImageViewerMorphologycalOp extends ApplyCallbackImageViewer {
-        public void execute(ImageViewer imageViewer);
-    }
-
-
-    public static void openOnFrame(ApplyCallbackImageViewer ApplyCallbackImageViewer, Mat image, String title) {
+    public static void openOnFrame(ApplyCallbackImageViewerFilter applyCallbackImageViewerFilter
+            , Mat image, String title) {
         if(image != null) {
             ImageViewer imageView = new ImageViewer();
             imageView.show(image, title);
-            if(ApplyCallbackImageViewer != null)
-                ApplyCallbackImageViewer.execute(imageView);
+            if(applyCallbackImageViewerFilter != null) {
+                applyCallbackImageViewerFilter.executeAndUpdate(imageView, image);
+            }
         }
     }
 
 
-    public static void openOnFrame(List<ApplyCallbackImageViewer> callbacks, Mat image, String title) {
-        if (callbacks != null && callbacks.size() > 0) {
-            for(ApplyCallbackImageViewer callback : callbacks) {
-                openOnFrame(callback, image, title);
+    public static void applyCallbacks(List<ApplyCallbackImageViewerFilter> callbacks, Mat image, String title) {
+        if(image != null) {
+            ImageViewer imageView = new ImageViewer();
+            imageView.show(image, title);
+            if (callbacks != null && callbacks.size() > 0) {
+                for(ApplyCallbackImageViewerFilter callback : callbacks) {
+                    Mat rs  = callback.executeAndUpdate(imageView, image);
+                    image   = rs.clone();
+                }
             }
         }
     }

@@ -1,10 +1,9 @@
-package app.methods;
+package app.tests;
 
 
 
 
 import net.sourceforge.tess4j.ITesseract;
-import net.sourceforge.tess4j.TessAPI;
 import net.sourceforge.tess4j.Tesseract;
 import net.sourceforge.tess4j.TesseractException;
 import net.sourceforge.tess4j.util.LoadLibs;

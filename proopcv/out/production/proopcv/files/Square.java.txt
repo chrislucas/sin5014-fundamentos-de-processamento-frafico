@@ -270,7 +270,7 @@ public class Square {
             }
             img = cvCloneImage(img0);
 
-            // create window and a trackbar (slider) with parent "image" and set execute
+            // create window and a trackbar (slider) with parent "image" and set executeAndUpdate
             // (the slider regulates upper threshold, passed to Canny edge detector)
             // Java translation
             canvas = new CanvasFrame(wndname, 1);

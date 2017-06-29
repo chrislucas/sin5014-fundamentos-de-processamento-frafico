@@ -1,4 +1,4 @@
-package app.methods;
+package app.tests;
 
 import org.opencv.core.Core;
 

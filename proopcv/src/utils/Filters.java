@@ -1,4 +1,4 @@
-package app.methods;
+package utils;
 
 import org.opencv.core.*;
 import org.opencv.imgproc.Imgproc;
@@ -68,6 +68,10 @@ public class Filters {
         return dst;
     }
 
+    public static void blur(Mat src, Mat dst, Size mask, Point anchor) {
+        Imgproc.blur(src, dst, mask, anchor);
+    }
+
     public static Mat blur(Mat src, Size mask, Point point, BorderType borderType) {
         int cols = src.width(), rows = src.height();
         //int ksize = cols * rows;
@@ -79,7 +83,7 @@ public class Filters {
     public static Mat createMatrixSameSize(Mat src) {
         int cols = src.width(), rows = src.height();
         //int ksize = cols * rows;
-        Mat dst = new Mat(rows, cols, CvType.CV_8SC3);
+        Mat dst = new Mat(rows, cols, src.type());
         return dst;
     }
 
@@ -167,6 +171,10 @@ public class Filters {
         Mat dst = createMatrixSameSize(src);
         Imgproc.Canny(src, dst, LOWER_THRESHOLD, UPPER_THRESHOLD);
         return dst;
+    }
+
+    public static void CannyDectectionLineDefault(Mat src, Mat dst) {
+        Imgproc.Canny(src, dst, LOWER_THRESHOLD, UPPER_THRESHOLD);
     }
 
 }

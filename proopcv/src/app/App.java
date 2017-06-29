@@ -1,6 +1,6 @@
 package app;
 
-import app.methods.Filters;
+import utils.Filters;
 import org.opencv.core.*;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
