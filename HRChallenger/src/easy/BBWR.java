@@ -14,7 +14,14 @@ public class BBWR {
         int cMin = 0;
 
         for(int i=1; i<sz; i++) {
-
+            if(max < array[i]) {
+                cMax++;
+                max = array[i];
+            }
+            if(min > array[i]) {
+                cMin--;
+                min = array[i];
+            }
         }
 
         return rs;
