@@ -5,6 +5,7 @@ import java.util.StringTokenizer;
 import static java.lang.Math.cos;
 import static java.lang.Math.sin;
 import static java.lang.Math.toRadians;
+import static java.lang.Math.sqrt;
 
 /**
  * Created by r028367 on 16/06/2017.
@@ -18,7 +19,7 @@ public class CNS {
     public static int euclidianDistance(int x1, int y1, int x2, int y2) {
         int distX = x2-x1;
         int distY = y2-y1;
-        return (int) Math.sqrt( (distX*distX) + (distY*distY));
+        return (int) sqrt( (distX*distX) + (distY*distY));
     }
 
     static class Circle {

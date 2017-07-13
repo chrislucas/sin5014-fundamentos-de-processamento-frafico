@@ -1,11 +1,10 @@
 package app;
 
-import app.methods.Filters;
+import utils.Filters;
 import org.opencv.core.*;
 import utils.BufferedImageUtils;
 import views.ImageViewer;
 
-import javax.swing.text.html.ImageView;
 import java.awt.image.BufferedImage;
 import java.io.File;
 
@@ -93,9 +92,6 @@ public class BlurMethodOpCv {
             thread.start();
         }
     }
-
-
-
 
     public static void main(String[] args) {
         test();

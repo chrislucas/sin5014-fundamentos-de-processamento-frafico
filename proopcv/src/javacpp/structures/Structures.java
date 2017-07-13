@@ -1,7 +1,7 @@
 package javacpp.structures;
 
 
-import app.methods.ModelOpencv;
+import app.tests.ModelOpencv;
 
 
 

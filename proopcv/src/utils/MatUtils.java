@@ -1,11 +1,11 @@
 package utils;
 
-import org.opencv.core.CvType;
-import org.opencv.core.Mat;
-import org.opencv.core.Range;
-import org.opencv.core.Scalar;
+import org.opencv.core.*;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
+
+import java.util.List;
+import java.util.Scanner;
 
 /**
  * Created by C_Luc on 11/06/2017.
@@ -58,7 +58,6 @@ public class MatUtils {
         }
     }
 
-
     public static Mat read(String filename) {
         Mat image = null;
         try {
@@ -76,6 +75,35 @@ public class MatUtils {
         kernel.setTo(new Scalar(1,1,1));
         kernel.setTo(new Scalar(1,1,1));
         //System.out.println(kernel.dump());
+        return kernel;
+    }
+
+    public static Mat buildSimpleKernel(List<Scalar> scalars) {
+        Mat mat = new Mat();
+        if(scalars != null) {
+            for (Scalar scalar: scalars) {
+                mat.setTo(scalar);
+            }
+        }
+        return mat;
+    }
+
+    public static Mat buildMatrix(List<Scalar> scalarList, int cvTypeMatrix, Size sizeMatrix) {
+        Mat kernel = new Mat(sizeMatrix, cvTypeMatrix);
+        for(Scalar scalar : scalarList) {
+            kernel.setTo(scalar);
+        }
+        return kernel;
+    }
+
+    public static Mat getKernelFromShapeDefault(int eSize, int eShape) {
+        Mat kernel = Imgproc.getStructuringElement(eShape
+                , new Size(eSize*2+1, eSize*2+1), new Point(eSize, eSize));
+        return kernel;
+    }
+
+    public static Mat getKernelFromShape(int eShape, Size size, Point point) {
+        Mat kernel = Imgproc.getStructuringElement(eShape, size, point);
         return kernel;
     }
 
