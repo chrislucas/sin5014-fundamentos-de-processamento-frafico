@@ -30,6 +30,14 @@ public class CNS {
         }
     }
 
+    static class Point {
+        int x; int y;
+        public Point(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
+    }
+
     static class Rect {
         // pontos opostos na diagonal
         int x1, y1, x2, y2;
@@ -62,7 +70,6 @@ public class CNS {
             int mp [] = centerPoint();
             return new int[] {mp[0] + hd[1], mp[1] - hd[0]};
         }
-
 
         static int [][] pMatRotate = {
                 {(int) cos(toRadians(90)), (int) -sin(toRadians(90))}
