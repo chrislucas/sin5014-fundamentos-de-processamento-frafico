@@ -16,6 +16,17 @@ public class CNS {
 
     static char [][] matrix;
 
+    static int [][] positiveRotate = {
+         {(int) cos(toRadians(90)), (int) -sin(toRadians(90))}
+        ,{(int) sin(toRadians(90)), (int)  cos(toRadians(90))}
+    };
+
+    static int [][] negativeRotate = {
+         {(int)  cos(toRadians(90)), (int) sin(toRadians(90))}
+        ,{(int) -sin(toRadians(90)), (int) cos(toRadians(90))}
+    };
+
+
     public static int euclidianDistance(int x1, int y1, int x2, int y2) {
         int distX = x2-x1;
         int distY = y2-y1;
@@ -33,54 +44,34 @@ public class CNS {
 
     static class Rect {
         // pontos opostos na diagonal
-        int x1, y1, x2, y2;
-        public Rect(int x1, int y1, int x2, int y2) {
+        int x1, y1, x3, y3;
+        public Rect(int x1, int y1, int x3, int y3) {
             this.x1 = x1;
             this.y1 = y1;
-            this.x2 = x2;
-            this.y2 = y2;
+            this.x3 = x3;
+            this.y3 = y3;
         }
 
         public int [] centerPoint() {
-            return new int[] {(x2 + x1)/2, (y2 + y1)/2};
+            return new int[] {(x3 + x1)/2, (y3 + y1)/2};
         }
 
         public int [] halfDiagonal() {
-            return new int[] {(x1 - x2)/2, (y1 - y2)/2};
+            return new int[] {(x1 - x3)/2, (y1 - y3)/2};
         }
 
         /**
-         * https://math.stackexchange.com/questions/506785/given-two-diagonally-opposite-points-on-a-square-how-to-calculate-the-other-two
+         * Area do triangulo
          * */
-        public int [] getP2() {
-            int hd [] = halfDiagonal();
-            int cp [] = centerPoint();
-            return new int[] {cp[0] - hd[1], cp[1] + hd[0]};
-        }
-
-        public int [] getP4() {
-            int hd [] = halfDiagonal();
-            int mp [] = centerPoint();
-            return new int[] {mp[0] + hd[1], mp[1] - hd[0]};
-        }
-
-
-        static int [][] pMatRotate = {
-                {(int) cos(toRadians(90)), (int) -sin(toRadians(90))}
-                ,{(int) sin(toRadians(90)), (int)  cos(toRadians(90))}
-        };
-
-        static int [][] nMatRotate = {
-                {(int)  cos(toRadians(90)), (int) sin(toRadians(90))}
-                ,{(int) -sin(toRadians(90)), (int) cos(toRadians(90))}
-        };
-
         public int aT(int x1, int y1, int x2, int y2, int x3, int y3) {
             int a = ((x1*y2)-(y1*x2)) + ((x2*y3)-(y2*x3)) + ((x3*y1)-(y3*x1));
             a /= 2;
             return a < 0 ? -a : a;
         }
 
+        /**
+         * Area do retangulo
+         * */
         public int aR(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4) {
             int a = ((x1*y2)-(y1*x2)) + ((x2*y3)-(y2*x3)) + ((x3*y4)-(y3*x4)) + ((x4*y1)-(y4*x1));
             a /= 2;
@@ -91,10 +82,17 @@ public class CNS {
          * Usando o metodo dos triangulos
          * */
         public  boolean insideRect(int x, int y) {
+            /**
+             * Conhecendo os pontos A e C, vamos achar
+             * B e D
+             * */
+            // https://math.stackexchange.com/questions/506785/given-two-diagonally-opposite-points-on-a-square-how-to-calculate-the-other-two
+            int half []     = halfDiagonal();
+            int center []   = centerPoint();
             int a [] = {x1, y1};
-            int b [] = getP2();
-            int c [] = {x2, y2};
-            int d [] = getP4();
+            int b [] = {half[0] - center[1], half[1] + center[0]};
+            int c [] = {x3, y3};
+            int d [] = {half[0] + center[1], half[1] - center[0]};
 
             int rectArea = BSGS.distance(a[0], a[1], c[0], c[1]) / 2;
 
@@ -166,24 +164,10 @@ public class CNS {
     }
 
 
-    private static void rotate() {
-        Rect r = new Rect(2, 6, 8, 4);
-        int p [] = r.rotate90(new int[] {r.x1, r.x1}, Rect.pMatRotate);
-        System.out.printf("%d %d\n", p[0], p[1]);
-        int n [] = r.rotate90(new int[] {r.x1, r.x1}, Rect.nMatRotate);
-        System.out.printf("%d %d\n", n[0], n[1]);
-    }
-
 
     private static void getPoints() {
         //Rect r = new Rect(2, 6, 10, 2);
         Rect r = new Rect(2, 6, 8, 4);
-        //Rect r = new Rect(10, 0, 0, 10);
-        int b [] = r.getP2();
-        int p [] = r.getP4();
-        System.out.printf("%d %d\n", b[0], b[1]);
-        System.out.printf("%d %d\n", p[0], p[1]);
-
         System.out.println(r.insideRect(8, 4));
         System.out.println(r.insideRect(4, 2));
         System.out.println(r.insideRect(8, 4));
@@ -193,7 +177,7 @@ public class CNS {
     }
 
     public static void main(String[] args) {
-
+        getPoints();
     }
 
 }
