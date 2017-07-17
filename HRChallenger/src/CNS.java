@@ -42,6 +42,14 @@ public class CNS {
         }
     }
 
+    static class Point {
+        int x; int y;
+        public Point(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
+    }
+
     static class Rect {
         // pontos opostos na diagonal
         int x1, y1, x3, y3;
@@ -60,9 +68,8 @@ public class CNS {
             return new int[] {(x1 - x3)/2, (y1 - y3)/2};
         }
 
-        /**
-         * Area do triangulo
-         * */
+
+
         public int aT(int x1, int y1, int x2, int y2, int x3, int y3) {
             int a = ((x1*y2)-(y1*x2)) + ((x2*y3)-(y2*x3)) + ((x3*y1)-(y3*x1));
             a /= 2;
