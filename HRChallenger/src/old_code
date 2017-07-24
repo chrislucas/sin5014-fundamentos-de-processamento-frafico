@@ -1,0 +1,59 @@
+old_cns
+
+
+https://math.stackexchange.com/questions/506785/given-two-diagonally-opposite-points-on-a-square-how-to-calculate-the-other-two
+sabendo os 2 pontos opostos de um quadrado achar outros 2 pontos
+
+ x1 = ?  ;  y1 = ? ;    // First diagonal point
+  x2 = ?  ;  y2 = ? ;    // Second diagonal point
+
+  xc = (x1 + x2)/2  ;  yc = (y1 + y2)/2  ;    // Center point
+  xd = (x1 - x2)/2  ;  yd = (y1 - y2)/2  ;    // Half-diagonal
+
+  x3 = xc - yd  ;  y3 = yc + xd;    // Third corner
+  x4 = xc + yd  ;  y4 = yc - xd;    // Fourth corne
+
+insideRect
+            /**
+             * Conhecendo os pontos A e C, vamos achar
+             * B e D
+             * */
+            // https://math.stackexchange.com/questions/506785/given-two-diagonally-opposite-points-on-a-square-how-to-calculate-the-other-two
+            int half []     = halfDiagonal();
+            int center []   = centerPoint();
+            int a [] = {x1, y1};
+            int b [] = {half[0] - center[1], half[1] + center[0]};
+            int c [] = {x3, y3};
+            int d [] = {half[0] + center[1], half[1] - center[0]};
+
+            int rectArea = BSGS.distance(a[0], a[1], c[0], c[1]) / 2;
+
+            int ABPT = aT(a[0], a[1], b[0], b[1], x, y);
+            int CBPT = aT(c[0], c[1], b[0], b[1], x, y);
+            int ADPT = aT(a[0], a[1], d[0], d[1], x, y);
+            //int ACPT = aT(a[0], a[1], c[0], c[1], x, y);
+            //int CDPT = aT(c[0], c[1], d[0], d[1], x, y);
+            //int BDPT = aT(b[0], b[1], d[0], d[1], x, y);
+
+            int sum = (ABPT + CBPT + ADPT);
+            if(sum > rectArea) {
+                return false;
+            }
+
+            else if( sum == rectArea){
+                if(ABPT * CBPT * ADPT == 0)
+                    return true;
+                else
+                    return false;
+            }
+
+            return true;
+
+
+    https://math.stackexchange.com/questions/1143570/given-two-diagonally-opposite-points-of-a-rectangle-how-to-calculate-the-other
+
+    point inside rect
+    https://math.stackexchange.com/questions/190111/how-to-check-if-a-point-is-inside-a-rectangle
+    https://martin-thoma.com/how-to-check-if-a-point-is-inside-a-rectangle/
+    http://www.cplusplus.com/forum/general/35443/
+    https://stackoverflow.com/questions/2752725/finding-whether-a-point-lies-inside-a-rectangle-or-not

@@ -16,10 +16,21 @@ public class CNS {
 
     static char [][] matrix;
 
-    public static int euclidianDistance(int x1, int y1, int x2, int y2) {
-        int distX = x2-x1;
-        int distY = y2-y1;
-        return (int) sqrt( (distX*distX) + (distY*distY));
+    static double [][] positiveRotate = {
+         {(int) cos(toRadians(90)),  -sin(toRadians(90))}
+        ,{(int) sin(toRadians(90)), cos(toRadians(90))}
+    };
+
+    static double [][] negativeRotate = {
+         { cos(toRadians(90)), sin(toRadians(90))}
+        ,{-sin(toRadians(90)), cos(toRadians(90))}
+    };
+
+
+    public static double euclidianDistance(double x1, double y1, double x2, double y2) {
+        double distX = x2-x1;
+        double distY = y2-y1;
+        return sqrt( (distX*distX) + (distY*distY));
     }
 
     static class Circle {
@@ -31,100 +42,82 @@ public class CNS {
         }
     }
 
-    static class Point {
-        int x; int y;
-        public Point(int x, int y) {
-            this.x = x;
-            this.y = y;
-        }
-    }
-
     static class Rect {
         // pontos opostos na diagonal
-        int x1, y1, x2, y2;
-        public Rect(int x1, int y1, int x2, int y2) {
+        double x1, y1, x3, y3, x2, y2, x4, y4;
+        public Rect(double x1, double y1, double x3, double y3) {
             this.x1 = x1;
             this.y1 = y1;
-            this.x2 = x2;
-            this.y2 = y2;
+            this.x3 = x3;
+            this.y3 = y3;
+            double half []     = halfDiagonal();   // [x:0, y:1]
+            double center []   = centerPoint();    // [x:0, y:1]
+            this.x2 = center[0] - half[1];
+            this.y2 = center[1] + half[0];
+            this.x4 = center[0] + half[1];
+            this.y4 = center[1] - half[0];
         }
 
-        public int [] centerPoint() {
-            return new int[] {(x2 + x1)/2, (y2 + y1)/2};
+        public double [] centerPoint() {
+            return new double[] {(x3 + x1)/2, (y3 + y1)/2};
         }
 
-        public int [] halfDiagonal() {
-            return new int[] {(x1 - x2)/2, (y1 - y2)/2};
+        public double [] halfDiagonal() {
+            return new double[] {(x1 - x3)/2, (y1 - y3)/2};
         }
 
-        /**
-         * https://math.stackexchange.com/questions/506785/given-two-diagonally-opposite-points-on-a-square-how-to-calculate-the-other-two
-         * */
-        public int [] getP2() {
-            int hd [] = halfDiagonal();
-            int cp [] = centerPoint();
-            return new int[] {cp[0] - hd[1], cp[1] + hd[0]};
-        }
-
-        public int [] getP4() {
-            int hd [] = halfDiagonal();
-            int mp [] = centerPoint();
-            return new int[] {mp[0] + hd[1], mp[1] - hd[0]};
-        }
-
-        static int [][] pMatRotate = {
-                {(int) cos(toRadians(90)), (int) -sin(toRadians(90))}
-                ,{(int) sin(toRadians(90)), (int)  cos(toRadians(90))}
-        };
-
-        static int [][] nMatRotate = {
-                {(int)  cos(toRadians(90)), (int) sin(toRadians(90))}
-                ,{(int) -sin(toRadians(90)), (int) cos(toRadians(90))}
-        };
-
-        public int aT(int x1, int y1, int x2, int y2, int x3, int y3) {
-            int a = ((x1*y2)-(y1*x2)) + ((x2*y3)-(y2*x3)) + ((x3*y1)-(y3*x1));
+        public double aT(double x1, double y1, double x2, double y2, double x3, double y3) {
+            double a = ((x1*y2)-(y1*x2)) + ((x2*y3)-(y2*x3)) + ((x3*y1)-(y3*x1));
             a /= 2;
             return a < 0 ? -a : a;
         }
 
-        public int aR(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4) {
-            int a = ((x1*y2)-(y1*x2)) + ((x2*y3)-(y2*x3)) + ((x3*y4)-(y3*x4)) + ((x4*y1)-(y4*x1));
+        /**
+         * Area do retangulo
+         * */
+        public double aR(double x1, double y1, double x2, double y2
+                , double x3, double y3, double x4, double y4) {
+            double a = ((x1*y2)-(y1*x2)) + ((x2*y3)-(y2*x3)) + ((x3*y4)-(y3*x4)) + ((x4*y1)-(y4*x1));
             a /= 2;
             return  a;
+        }
+
+        // https://martin-thoma.com/how-to-check-if-a-point-is-inside-a-rectangle/
+        public double aR2() {
+            double a = (y3 - y1) * (x4 - x2) + (y2 - y4) * (x1 - x3);
+            a /= 2;
+            return  a < 0 ? -a : a;
+        }
+
+        public double aT2(double x1, double y1, double x2, double y2, double x3, double y3) {
+            double a  = (x1*(y2 - y3) + x2*(y3 - y1) + x3*(y1-y2));
+            a /= 2;
+            return  a < 0 ? -a : a;
         }
 
         /**
          * Usando o metodo dos triangulos
          * */
         public  boolean insideRect(int x, int y) {
-            int a [] = {x1, y1};
-            int b [] = getP2();
-            int c [] = {x2, y2};
-            int d [] = getP4();
+            /**
+             * Conhecendo os pontos A e C, vamos achar
+             * B e D
+             * */
+            // https://math.stackexchange.com/questions/506785/given-two-diagonally-opposite-points-on-a-square-how-to-calculate-the-other-two
 
-            int rectArea = BSGS.distance(a[0], a[1], c[0], c[1]) / 2;
-
-            int ABPT = aT(a[0], a[1], b[0], b[1], x, y);
-            int CBPT = aT(c[0], c[1], b[0], b[1], x, y);
-            int ADPT = aT(a[0], a[1], d[0], d[1], x, y);
-            //int ACPT = aT(a[0], a[1], c[0], c[1], x, y);
-            //int CDPT = aT(c[0], c[1], d[0], d[1], x, y);
-            //int BDPT = aT(b[0], b[1], d[0], d[1], x, y);
-
-            int sum = (ABPT + CBPT + ADPT);
-            if(sum > rectArea) {
-                return false;
-            }
-
-            else if( sum == rectArea){
-                if(ABPT * CBPT * ADPT == 0)
-                    return true;
-                else
-                    return false;
-            }
-
-            return true;
+            double ar = aR2();
+            /**
+             * triangulos ABP, BCP, CDP e ADP
+             * */
+            // ABP
+            double abp = aT2(x1, y1, x2, y2, x, y);
+            // bcp
+            double bcp = aT2(x2, y2, x3, y3, x, y);
+            //cdp
+            double cdp = aT2(x3, y3, x4, y4, x, y);
+            // adp
+            double adp = aT2(x1, y1, x4, y4, x, y);
+            return ar == adp+bcp+cdp+adp;
         }
 
         public int [] rotate90(int vect[], int matrixRotate [][]) {
@@ -140,11 +133,15 @@ public class CNS {
 
     public static void solver(int w, int h, Circle c, Rect r) {
         matrix = new char[h][w];
-        // circulo
         for(int i=0; i<h; i++) {
             for(int j=0; j<w; j++) {
-                boolean valid = euclidianDistance(c.centerX, c.centerY, i, j) <= c.radius ||  r.insideRect(i, j);
-                matrix[i][j]  = valid ? '#' : '.';
+                /**
+                 * Se o pixel estiver a uma distancia <= ao raio do circulo
+                 * ou dentro do quadrado eh um pixel pixel da imagem '#' senao
+                 * eh um pixel de fundo '.'
+                 * */
+                boolean inside = euclidianDistance(c.centerX, c.centerY, i, j) <= c.radius ||  r.insideRect(i, j);
+                matrix[i][j]  = inside ? '#' : '.';
             }
         }
     }
@@ -153,54 +150,40 @@ public class CNS {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         try {
             StringTokenizer tokenizer = new StringTokenizer(bufferedReader.readLine(), " ");
+            // dimensao da imagem
             int w = Integer.parseInt(tokenizer.nextToken());
             int h = Integer.parseInt(tokenizer.nextToken());
-
+            // parametros do circulo, centro e raio
             int cx = Integer.parseInt(tokenizer.nextToken());
             int cy = Integer.parseInt(tokenizer.nextToken());
             int rd = Integer.parseInt(tokenizer.nextToken());
             Circle c = new Circle(cx, cy, rd);
-
+            // pontos na diagonal do quadrilatero
             int px1 = Integer.parseInt(tokenizer.nextToken());
             int py1 = Integer.parseInt(tokenizer.nextToken());
             int px2 = Integer.parseInt(tokenizer.nextToken());
             int py2 = Integer.parseInt(tokenizer.nextToken());
-
             Rect r = new Rect(px1, py1, px2, py2);
             solver(w, h, c, r);
-
         } catch (Exception e) {}
     }
 
-
-    private static void rotate() {
-        Rect r = new Rect(2, 6, 8, 4);
-        int p [] = r.rotate90(new int[] {r.x1, r.x1}, Rect.pMatRotate);
-        System.out.printf("%d %d\n", p[0], p[1]);
-        int n [] = r.rotate90(new int[] {r.x1, r.x1}, Rect.nMatRotate);
-        System.out.printf("%d %d\n", n[0], n[1]);
-    }
 
 
     private static void getPoints() {
         //Rect r = new Rect(2, 6, 10, 2);
         Rect r = new Rect(2, 6, 8, 4);
-        //Rect r = new Rect(10, 0, 0, 10);
-        int b [] = r.getP2();
-        int p [] = r.getP4();
-        System.out.printf("%d %d\n", b[0], b[1]);
-        System.out.printf("%d %d\n", p[0], p[1]);
-
+        //Rect r = new Rect(2, 5, 8, 5);
+        System.out.println(r.insideRect(4, 1));
         System.out.println(r.insideRect(8, 4));
         System.out.println(r.insideRect(4, 2));
         System.out.println(r.insideRect(8, 4));
         System.out.println(r.insideRect(6, 8));
         System.out.println(r.insideRect(3, 3));
-        System.out.println(r.insideRect(4, 1));
     }
 
     public static void main(String[] args) {
-
+        getPoints();
     }
 
 }
