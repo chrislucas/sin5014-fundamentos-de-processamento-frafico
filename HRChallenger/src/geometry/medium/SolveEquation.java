@@ -5,4 +5,8 @@ package geometry.medium;
  * https://www.hackerrank.com/challenges/solve-equations/problem
  */
 public class SolveEquation {
+
+    public static void main(String[] args) {
+
+    }
 }
