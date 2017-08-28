@@ -1,0 +1,74 @@
+Pesquisa sobre como achar o ponto (x,y) que satisfaca a seguinte equacao ax+by=c
+
+http://www.math.mtu.edu/mathlab/COURSES/holt/dnt/euclid4.html
+http://www.davdata.nl/math/axbyc.html
+
+Algoritmo de Euclides Estendido, Relação de Bézout e Equações Diofantinas
+https://matematica.obmep.org.br/index.php/modulo/ver?modulo=55
+
+The Euclidean Algorithm and Diophantine Equations
+http://zimmer.csufresno.edu/~lburger/Math149_diophantine%20I.pdf
+
+The Extended Euclidean Algorithm
+http://www-math.ucdenver.edu/~wcherowi/courses/m5410/exeucalg.html
+
+
+http://www.geeksforgeeks.org/basic-and-extended-euclidean-algorithms/
+http://www.geeksforgeeks.org/find-number-of-solutions-of-a-linear-equation-of-n-variables/
+http://www.geeksforgeeks.org/linear-diophantine-equations/
+
+**** Aplicacao para o algoritmo de euclides extendido
+https://en.wikibooks.org/wiki/Algorithm_Implementation/Mathematics/Extended_Euclidean_algorithm
+
+Linear diofantine equation
+https://brilliant.org/wiki/linear-diophantine-equations-one-equation/
+http://www.geeksforgeeks.org/find-number-of-solutions-of-a-linear-equation-of-n-variables/
+
+
+https://math.stackexchange.com/questions/20717/how-to-find-solutions-of-linear-diophantine-ax-by-c
+http://zimmer.csufresno.edu/~lburger/Math149_diophantine%20I.pdf
+
+
+http://www.geeksforgeeks.org/josephus-problem-set-1-a-on-solution/
+
+General Equation of a Line: ax + by = c
+http://www.analyzemath.com/line/line.htm
+
+Integer Divisibility
+https://www.cs.cmu.edu/~adamchik/21-127/lectures/divisibility_5_print.pdf
+
+Calculadora de equacoes diofantinas
+https://planetcalc.com/3303/
+
+
+Wiki
+https://pt.wikipedia.org/wiki/Equa%C3%A7%C3%A3o_diofantina
+https://en.wikipedia.org/wiki/Diophantine_equation
+
+https://e-maxx-eng.appspot.com/algebra/linear-diophantine-equation.html
+
+Codeforces
+http://codeforces.com/blog/entry/7901
+
+
+
+SPOJ 78. Marbles
+https://mukeshiiitm.wordpress.com/2011/05/25/spoj-78-marbles/
+http://www.spoj.com/problems/MARBLES/
+https://www.quora.com/Why-are-we-doing-n-1-C-k-1-in-MARBLES-SPOJ-and-not-directly-nCk
+http://coderscasediary.blogspot.com.br/2013/11/marbles-codechef_14.html
+https://apps.topcoder.com/forums/;jsessionid=1A6828F7412DF4DD99E93FEFFCB40D1F?module=Thread&threadID=681031&start=0&mc=3#1264092
+https://discuss.codechef.com/questions/57715/marbles-spoj-how-can-the-problem-be-solved
+
+
+Problemas em juizes online
+http://www.spoj.com/problems/HS09EQ/
+http://www.spoj.com/HSPLARCH/problems/HS09EQ/
+http://www.spoj.com/problems/HS09EQ/
+http://codeforces.com/problemset/problem/530/C
+
+NTHEORY
+https://a2oj.com/contest?ID=20441
+https://www.a2oj.com/contest?ID=25055
+https://a2oj.com/contest?ID=24849
+https://a2oj.com/contest?ID=29021
